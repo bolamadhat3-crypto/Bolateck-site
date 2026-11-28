@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050507">
+<meta name="robots" content="noindex,nofollow">
+<title>مكتب بولاتك</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050507;--s1:#0d0d12;--s2:#14141b;--ln:#24242e;--tx:#f4f4f7;--mu:#9a9aa8;--red:#ff1e42;--red2:#b3122e;--ok:#2fd27a;--warn:#ffb020;--r:18px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:#050507}
+body{margin:0;background:radial-gradient(1200px 500px at 50% -10%,#2a0710 0,transparent 60%),var(--bg);color:var(--tx);font-family:'Cairo',system-ui,sans-serif;line-height:1.6;padding-bottom:84px;min-height:100vh}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+header.top{display:flex;align-items:center;gap:14px;padding:6px 2px 14px}
+.cube3{width:44px;height:44px;perspective:200px;flex:none}
+.cube3 i{display:block;width:100%;height:100%;position:relative;transform-style:preserve-3d;animation:spin 9s linear infinite}
+.cube3 b{position:absolute;inset:0;border:2px solid var(--red);background:rgba(255,30,66,.18);box-shadow:inset 0 0 12px rgba(255,30,66,.5)}
+.cube3 b:nth-child(1){transform:translateZ(22px)}.cube3 b:nth-child(2){transform:rotateY(90deg) translateZ(22px)}.cube3 b:nth-child(3){transform:rotateY(180deg) translateZ(22px)}.cube3 b:nth-child(4){transform:rotateY(-90deg) translateZ(22px)}.cube3 b:nth-child(5){transform:rotateX(90deg) translateZ(22px)}.cube3 b:nth-child(6){transform:rotateX(-90deg) translateZ(22px)}
+@keyframes spin{to{transform:rotateX(-24deg) rotateY(360deg)}}
+@media (prefers-reduced-motion:reduce){.cube3 i{animation:none;transform:rotateX(-24deg) rotateY(35deg)}}
+h1{font-size:22px;margin:0;font-weight:900}
+.sub{color:var(--mu);font-size:13px}
+.card{background:linear-gradient(180deg,var(--s2),var(--s1));border:1px solid var(--ln);border-radius:var(--r);padding:14px}
+.card.act{border-color:rgba(255,30,66,.55);box-shadow:0 0 0 1px rgba(255,30,66,.15),0 10px 40px -20px rgba(255,30,66,.6)}
+.note{border:1px dashed rgba(255,30,66,.5);border-radius:14px;padding:11px 13px;font-size:13.5px;color:#ddd;background:rgba(255,30,66,.05)}
+.note b{color:#ff6b82}
+.grid{display:grid;gap:12px}
+@media(min-width:700px){.grid.g2{grid-template-columns:1fr 1fr}.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.ag{display:flex;gap:12px;align-items:flex-start;cursor:pointer;text-align:right;width:100%}
+.ag svg{width:54px;height:54px;flex:none}
+.ag h3{margin:0;font-size:17px}
+.ag .role{color:var(--mu);font-size:13px}
+.st{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;margin-top:2px}
+.dot{width:9px;height:9px;border-radius:50%;background:#555}
+.st.on{color:var(--ok)}.st.on .dot{background:var(--ok);box-shadow:0 0 8px var(--ok)}
+.st.off{color:var(--mu)}
+.ag p{margin:6px 0 0;font-size:14px;color:#cfcfd8}
+.meta{font-size:12.5px;color:var(--mu);margin-top:6px}
+nav.bn{position:fixed;bottom:0;inset-inline:0;background:rgba(8,8,11,.92);backdrop-filter:blur(14px);border-top:1px solid var(--ln);display:flex;justify-content:center;padding:6px 6px calc(6px + env(safe-area-inset-bottom));z-index:20}
+nav.bn .in{display:flex;max-width:980px;width:100%;gap:2px}
+nav.bn button{flex:1;min-width:0;font-size:10.5px!important;background:none;border:0;padding:6px 2px;color:var(--mu);font-size:11.5px;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:2px;position:relative;cursor:pointer;border-radius:12px}
+nav.bn button svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav.bn button.on{color:var(--red)}
+.badge{position:absolute;top:0;inset-inline-start:calc(50% + 6px);background:var(--red);color:#fff;border-radius:99px;font-size:10.5px;min-width:17px;height:17px;display:grid;place-items:center;padding:0 4px}
+.btn{background:var(--s2);border:1px solid var(--ln);border-radius:12px;padding:9px 14px;font-weight:700;cursor:pointer;font-size:14px}
+.btn.pri{background:linear-gradient(135deg,var(--red),var(--red2));border-color:transparent;color:#fff}
+.btn.ok{background:rgba(47,210,122,.14);border-color:rgba(47,210,122,.5);color:var(--ok)}
+.btn.no{background:rgba(255,30,66,.1);border-color:rgba(255,30,66,.4);color:#ff6b82}
+.btn.sm{padding:6px 10px;font-size:13px;border-radius:10px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+input[type=text],input[type=search],input[type=url],select,textarea{width:100%;background:#09090d;border:1px solid var(--ln);border-radius:12px;padding:10px 12px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--red)}
+textarea{min-height:90px;resize:vertical}
+h2{font-size:18px;margin:18px 0 10px}
+.tabs{display:flex;gap:6px;margin:6px 0 12px;overflow:auto}
+.tabs button{white-space:nowrap}
+.tag{display:inline-block;border:1px solid var(--ln);border-radius:99px;padding:1px 9px;font-size:12px;color:var(--mu)}
+.tag.r{border-color:rgba(255,30,66,.5);color:#ff6b82}.tag.g{border-color:rgba(47,210,122,.5);color:var(--ok)}.tag.y{border-color:rgba(255,176,32,.5);color:var(--warn)}
+.empty{text-align:center;color:var(--mu);padding:26px 12px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--ln);text-align:right;vertical-align:top}
+th{color:var(--mu);font-size:12.5px;position:sticky;top:0;background:var(--s1)}
+.tw{max-height:70vh;overflow:auto;border:1px solid var(--ln);border-radius:var(--r)}
+.pc{display:grid;gap:4px}
+.pc .nm{font-weight:800}
+.hide-d{display:block}.show-d{display:none}
+@media(min-width:900px){.hide-d{display:none}.show-d{display:block}}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.chip{border:1px solid var(--ln);background:var(--s1);border-radius:99px;padding:5px 12px;font-size:13px;cursor:pointer;font-weight:600}
+.chip.on{border-color:var(--red);color:#fff;background:rgba(255,30,66,.18)}
+pre{background:#09090d;border:1px solid var(--ln);border-radius:12px;padding:12px;overflow:auto;font-size:12px;direction:ltr;text-align:left;white-space:pre-wrap}
+.kv{display:grid;gap:6px;font-size:14px}
+.ls li{margin:4px 0}.ls{padding-inline-start:18px;margin:6px 0}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:40;display:none;align-items:flex-end;justify-content:center}
+.modal.on{display:flex}
+.sheet{background:var(--s1);border:1px solid var(--ln);border-radius:22px 22px 0 0;width:100%;max-width:640px;max-height:88vh;overflow:auto;padding:16px}
+@media(min-width:700px){.modal{align-items:center}.sheet{border-radius:22px}}
+.toast{position:fixed;bottom:92px;inset-inline:0;margin:auto;width:max-content;max-width:90%;background:#1b1b24;border:1px solid var(--red);border-radius:12px;padding:9px 14px;font-size:14px;z-index:60;opacity:0;pointer-events:none;transition:.25s}
+.toast.on{opacity:1}
+a{color:#ff6b82}
+.small{font-size:12.5px;color:var(--mu)}
+.msgs{display:flex;flex-direction:column;gap:8px;padding:8px 0;min-height:200px}
+.bub{max-width:86%;border-radius:16px;padding:8px 12px;font-size:14.5px;white-space:pre-wrap;word-break:break-word;background:var(--s2);border:1px solid var(--ln);align-self:flex-start}
+.bub.me{align-self:flex-end;background:rgba(255,30,66,.16);border-color:rgba(255,30,66,.45)}
+.bub .who{font-size:12px;font-weight:800;color:#ff6b82;display:flex;gap:6px;align-items:center}
+.bub .tm{font-size:11px;color:var(--mu)}
+.composer{position:sticky;bottom:72px;background:linear-gradient(180deg,transparent,var(--bg) 25%);padding-top:10px}
+.composer .row{align-items:flex-end;flex-wrap:nowrap}
+.composer textarea{min-height:46px;max-height:140px;flex:1}
+.mode{border:1px solid var(--ln);border-radius:12px;padding:8px 12px;font-size:13px}
+.mode.live{border-color:rgba(47,210,122,.5);color:var(--ok)}
+
+/* v4 look */
+body{background:radial-gradient(900px 420px at 85% -8%,rgba(255,30,66,.28),transparent 60%),radial-gradient(700px 400px at 0% 0%,#1a0409,transparent 60%),linear-gradient(#050507,#050507);background-attachment:fixed}
+body:before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse at 50% 0,#000 0,transparent 70%);mask-image:radial-gradient(ellipse at 50% 0,#000 0,transparent 70%);pointer-events:none;z-index:-1}
+header.top{background:linear-gradient(135deg,rgba(255,30,66,.14),rgba(255,255,255,.02));border:1px solid rgba(255,30,66,.28);border-radius:22px;padding:14px 16px;margin-bottom:12px;backdrop-filter:blur(10px);box-shadow:0 20px 60px -30px rgba(255,30,66,.7)}
+.cube3{width:50px;height:50px;filter:drop-shadow(0 0 14px rgba(255,30,66,.6))}
+h1{background:linear-gradient(90deg,#fff,#ff8da0);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:24px;letter-spacing:.2px}
+.card{background:linear-gradient(180deg,rgba(28,28,38,.85),rgba(13,13,18,.9));backdrop-filter:blur(8px);transition:transform .15s,border-color .2s}
+.card.ag:hover,.card.cn:hover{transform:translateY(-2px);border-color:rgba(255,30,66,.5)}
+.btn{transition:.15s}.btn:active{transform:scale(.97)}.btn.pri{box-shadow:0 8px 24px -10px rgba(255,30,66,.9)}
+.btn[disabled]{opacity:.55}
+nav.bn{inset-inline:8px;bottom:8px;border:1px solid var(--ln);border-radius:22px;background:rgba(10,10,14,.82);box-shadow:0 10px 40px rgba(0,0,0,.6)}
+nav.bn button.on{background:rgba(255,30,66,.12)}
+nav.bn button span{font-size:10px}
+h2{display:flex;align-items:center;gap:8px}h2:before{content:"";width:4px;height:18px;border-radius:3px;background:linear-gradient(var(--red),var(--red2))}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 12px}
+.stat{background:rgba(255,255,255,.03);border:1px solid var(--ln);border-radius:16px;padding:10px 6px;text-align:center}
+.stat b{display:block;font-size:22px;font-weight:900;color:#fff;line-height:1.2}.stat span{font-size:11.5px;color:var(--mu)}
+.stat.hot b{color:var(--red)}
+code{background:#09090d;border:1px solid var(--ln);border-radius:6px;padding:0 5px;font-size:12.5px}
+label.small{display:block}label.small input,label.small select{margin-top:4px}
+
+/* v5 look */
+:root{--r:20px}
+body{font-feature-settings:"ss01"}
+header.top{position:sticky;top:8px;z-index:15;border-radius:24px;background:linear-gradient(135deg,rgba(255,30,66,.2),rgba(10,10,14,.82) 60%);box-shadow:0 18px 50px -24px rgba(255,30,66,.8),inset 0 1px 0 rgba(255,255,255,.06)}
+header.top .hq{margin-inline-start:auto;white-space:nowrap}
+.sub{font-size:12px}
+.card.agc{padding:0;overflow:hidden;position:relative}
+.card.agc:before{content:"";position:absolute;inset-inline-start:0;top:0;bottom:0;width:3px;background:var(--ln)}
+.card.agc.act:before{background:linear-gradient(var(--red),var(--red2))}.card.agc.wrn:before{background:var(--warn)}
+.card.agc.wrn{border-color:rgba(255,176,32,.45)}
+.card.agc .ag{padding:14px 14px 8px}
+.card.agc .ctl{padding:8px 14px 12px;border-top:1px solid var(--ln);background:rgba(0,0,0,.18)}
+.pill{display:inline-flex;align-items:center;gap:7px;border-radius:99px;padding:3px 11px;font-size:12.5px;font-weight:800;border:1px solid var(--ln);color:var(--mu);margin:3px 0}
+.pill i{width:8px;height:8px;border-radius:50%;background:#555}
+.pill.on{color:var(--ok);border-color:rgba(47,210,122,.45);background:rgba(47,210,122,.08)}.pill.on i{background:var(--ok)}
+.pill.warn{color:var(--warn);border-color:rgba(255,176,32,.5);background:rgba(255,176,32,.08)}.pill.warn i{background:var(--warn)}
+.pill.live i{animation:pl 1.4s infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 rgba(47,210,122,.7)}100%{box-shadow:0 0 0 9px rgba(47,210,122,0)}}
+@media (prefers-reduced-motion:reduce){.pill.live i{animation:none}}
+.stat.warnx b{color:var(--warn)}
+.stats{grid-template-columns:repeat(4,1fr)}.stat span{font-size:11px;line-height:1.3;display:block}
+input[type=time]{background:#09090d;border:1px solid var(--ln);border-radius:12px;padding:9px 8px;outline:none;color:var(--tx);color-scheme:dark}
+.ctlbox{margin-bottom:6px}
+.hrs{display:flex;justify-content:space-between;font-size:11px;color:var(--mu);direction:ltr;margin-bottom:4px}
+.shr{display:grid;grid-template-columns:84px 1fr;gap:8px;align-items:center;margin:6px 0}
+.shn{font-size:13px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer}
+.bar{display:grid;grid-template-columns:repeat(24,1fr);gap:2px;direction:ltr}
+.bar i{height:16px;border-radius:3px;background:#1b1b24}.bar i.f{background:linear-gradient(var(--red),var(--red2))}.bar i.f2{background:#ff6b82}.bar i.gap{background:repeating-linear-gradient(45deg,#3a0f18,#3a0f18 3px,#1b1b24 3px,#1b1b24 6px)}
+.shr.cv{border-top:1px dashed var(--ln);padding-top:8px;margin-top:10px}
+.how{display:grid;gap:10px;margin:12px 0}
+.hs{display:flex;gap:12px;background:linear-gradient(180deg,rgba(28,28,38,.8),rgba(13,13,18,.9));border:1px solid var(--ln);border-radius:var(--r);padding:12px}
+.hs>b{flex:none;width:34px;height:34px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--red),var(--red2));color:#fff}
+.hs h3{margin:0 0 2px;font-size:15.5px}.hs div{font-size:14px;color:#d6d6de}
+nav.bn button{font-size:9.5px!important}nav.bn button span{font-size:9.5px}
+nav.bn button svg{width:21px;height:21px}
+
+/* v6 */
+.dl{font-size:11.5px;color:var(--mu);margin-top:4px;border-top:1px dashed var(--ln);padding-top:4px}
+select{margin:4px 0}
+.bub{max-width:92%}
+#tprev pre{max-height:50vh}
+nav.bn button{font-size:11px!important}nav.bn button span{font-size:11px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="cube3"><i><b></b><b></b><b></b><b></b><b></b><b></b></i></div><div><h1>مكتب بولاتك</h1><div class="sub" id="hsub"></div></div><button class="btn sm hq" data-go="how" aria-label="كيف يشتغل">؟ كيف يشتغل</button></header>
+<main id="main"></main>
+</div>
+<nav class="bn"><div class="in" id="nav"></div></nav>
+<div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
+<div class="toast" id="toast"></div>
+<script>
+(()=>{
+"use strict";
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const K={st:'bto_state_v1',pros:'bto_pros_v1',pst:'bto_pst_v1',feed:'bto_feed_v1',fb:'bto_fb_v1',imps:'bto_imports_v1',undo:'bto_undo_v1',conn:'bto_conn_v1',ctl:'bto_ctl_v1',train:'bto_train_v1'};
+const ld=(k,d)=>{try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}};
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){toast('المساحة المحلية ممتلئة');return false}};
+const ICON={
+ team:'<svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12L4 7.5M12 12v9"/></svg>',
+ tasks:'<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l3 3 5-6"/></svg>',
+ appr:'<svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+ pros:'<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M16 5.5a3 3 0 010 5.6M18 14c1.8.7 3 2.3 3 5"/></svg>',
+ chat:'<svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>',
+ train:'<svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M7 10.5V15c0 1.5 2.2 3 5 3s5-1.5 5-3v-4.5"/><path d="M21 7.5V13"/></svg>',
+ clock:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>',
+ more:'<svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg>',
+ conn:'<svg viewBox="0 0 24 24"><rect x="3" y="8" width="7" height="8" rx="2"/><rect x="14" y="8" width="7" height="8" rx="2"/><path d="M10 12h4M6.5 8V5M17.5 8V5"/></svg>',
+ rep:'<svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h7M9 9h2"/></svg>',
+ link:'<svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg>'
+};
+function cubeSvg(on){const a=on?'#ff3a5c':'#4a4a55',b=on?'#b3122e':'#2f2f38',c=on?'#ff1e42':'#3b3b45';
+return `<svg viewBox="0 0 64 64"><path d="M32 6l22 12v26L32 58 10 44V18z" fill="${b}"/><path d="M32 6l22 12-22 12-22-12z" fill="${a}"/><path d="M32 30l22-12v26L32 58z" fill="${c}"/><path d="M32 30v28M10 18l22 12 22-12" stroke="#050507" stroke-opacity=".5" stroke-width="1.5" fill="none"/></svg>`}
+
+/* ---------- team definition (duties are fixed text; status comes from state) ---------- */
+const AGENTS=[
+ {id:'omar',n:'عمر',r:'المدير',d:'يتابع مهام الفريق كله ويبلّغك أول ما أي شغلانة تخلص. بيحوّل أهدافك لمهام ويوزّعها.'},
+ {id:'mai',n:'مي',r:'التسويق',d:'خطة المحتوى وأسبوع المنشورات ومسودات الرسائل.'},
+ {id:'karim',n:'كريم',r:'المبيعات',d:'يجهّز مسودات رسائل للعملاء المحتملين من قايمة العملاء. مفيش رسالة بتتبعت من غير موافقتك.'},
+ {id:'collector',n:'جامع البيانات',r:'تجميع وإثراء بيانات العملاء',d:'يجمع بيانات الشركات ويكمّل الناقص (تليفون، إيميل، موقع).'},
+ {id:'outreach',n:'التواصل',r:'إرسال الرسائل',d:'ما يبعتش أي حاجة من غير موافقتك على الكلام والقناة.'},
+ {id:'social',n:'الصفحات والإعلانات',r:'السوشيال والإعلانات',d:'ينشر ويدير الإعلانات بعد ما الصفحات تتوصّل وبموافقتك.'},
+ {id:'convo',n:'صاحب محادثة العميل',r:'متابعة المحادثات',d:'يمسك محادثة كل عميل من أول رد لحد الاتفاق.'},
+ {id:'yousef',n:'يوسف',r:'بناء المواقع',d:'يبني موقع أو سيستم لما عميل يطلب، تحت إشرافك.'},
+ {id:'salma',n:'سلمى',r:'خدمة العملاء',d:'ترد على العملاء وتتابع طلباتهم وحالة كل واحد.'},
+ {id:'hassan',n:'حسن',r:'المحاسب',d:'يسجّل المصاريف والتحصيلات. أي دفع أو تحصيل محتاج موافقتك.'}
+];
+const GUARD={
+ omar:['يحوّل أهدافك لمهام ويوزّعها','يبلّغك بالتقدّم','مفيش إرسال ولا دفع من عنده'],
+ mai:['يكتب خطة المحتوى والمنشورات كمسودات','النشر نفسه بعد موافقتك'],
+ karim:['يجهّز مسودات رسائل للعملاء من القايمة','مفيش رسالة تتبعت من غير موافقتك على الكلام والقناة'],
+ collector:['يجمع بيانات علنية ويكمّل الناقص','مفيش تواصل مع أي شركة'],
+ outreach:['ما يبعتش إلا اللي وافقت عليه بنصه وقناته'],
+ social:['مفيش نشر ولا إعلان ممول قبل ما تتوصّل الصفحات وتوافق'],
+ convo:['يمسك المحادثات بعد أول رد','أي التزام أو سعر بموافقتك'],
+ yousef:['يبني بعد طلب عميل وبإشرافك'],
+ salma:['ترد بصيغة معتمدة منك','أي وعد أو تعويض بموافقتك'],
+ hassan:['يسجّل بس','أي دفع أو تحصيل محتاج موافقتك']
+};
+const EXTRA=[
+ {id:'faris',n:'فارس',r:'التواصل مع العملاء',d:'يكتب مسودات الردود والمتابعة مع العملاء. أي رسالة بتتبعت بعد موافقتك.'},
+ {id:'video',n:'مونتير الفيديو',r:'مونتاج الفيديو',d:'يجهّز خطط ومونتاج الفيديوهات القصيرة للمحتوى والإعلانات.'},
+ {id:'design',n:'مصمم الصور',r:'التصوير والتصميم',d:'يجهّز تصميمات وصور المنشورات والإعلانات.'},
+ {id:'automation',n:'مهندس الأتمتة',r:'الأتمتة',d:'يبني ويربط الأتمتات (تقارير، تنبيهات، نقل بيانات) تحت إشرافك.'},
+ {id:'appdev',n:'مطوّر التطبيقات',r:'تطوير التطبيقات',d:'يبني تطبيقات الموبايل والويب لما عميل يطلب، تحت إشرافك.'},
+ {id:'hr1',n:'موارد بشرية صباحي',r:'الموارد البشرية · وردية صباحية',d:'يتابع شؤون الفريق في وردية الصباح.'},
+ {id:'hr2',n:'موارد بشرية مسائي',r:'الموارد البشرية · وردية مسائية',d:'يتابع شؤون الفريق في وردية المساء.'},
+ {id:'hr3',n:'موارد بشرية ليلي',r:'الموارد البشرية · وردية ليلية',d:'يتابع شؤون الفريق في وردية الليل.'},
+ {id:'mkt2',n:'تسويق مسائي',r:'التسويق · وردية مسائية',d:'يكمّل شغل التسويق في وردية المساء.'},
+ {id:'mkt3',n:'تسويق ليلي',r:'التسويق · وردية ليلية',d:'يكمّل شغل التسويق في وردية الليل.'},
+ {id:'sales2',n:'مبيعات مسائي',r:'المبيعات · وردية مسائية',d:'يجهّز مسودات المبيعات في وردية المساء.'},
+ {id:'sales3',n:'مبيعات ليلي',r:'المبيعات · وردية ليلية',d:'يجهّز مسودات المبيعات في وردية الليل.'},
+ {id:'data2',n:'بيانات مسائي',r:'البيانات · وردية مسائية',d:'يكمّل تجميع وإثراء البيانات في وردية المساء.'},
+ {id:'data3',n:'بيانات ليلي',r:'البيانات · وردية ليلية',d:'يكمّل تجميع وإثراء البيانات في وردية الليل.'},
+ {id:'prod1',n:'إنتاج صباحي',r:'الإنتاج · وردية صباحية',d:'ينفّذ شغل الإنتاج (تسليم الخدمات للعملاء) في وردية الصباح.'},
+ {id:'prod2',n:'إنتاج مسائي',r:'الإنتاج · وردية مسائية',d:'ينفّذ شغل الإنتاج في وردية المساء.'},
+ {id:'prod3',n:'إنتاج ليلي',r:'الإنتاج · وردية ليلية',d:'ينفّذ شغل الإنتاج في وردية الليل.'}
+];
+AGENTS.push(...EXTRA);
+{const D0={omar:['mgmt'],mai:['marketing','m'],karim:['sales','m'],collector:['data','m'],outreach:['comms'],social:['marketing'],convo:['comms'],yousef:['tech'],salma:['comms'],hassan:['admin'],faris:['comms'],video:['creative'],design:['creative'],automation:['tech'],appdev:['tech'],hr1:['hr','m'],hr2:['hr','e'],hr3:['hr','n'],mkt2:['marketing','e'],mkt3:['marketing','n'],sales2:['sales','e'],sales3:['sales','n'],data2:['data','e'],data3:['data','n'],prod1:['production','m'],prod2:['production','e'],prod3:['production','n']};
+ for(const a of AGENTS){const d=D0[a.id]||['mgmt'];a.dept=d[0];a.shift=d[1]||''}
+ AGENTS.find(a=>a.id==='yousef').r='مطوّر مواقع';
+ for(const a of AGENTS)if(!GUARD[a.id])GUARD[a.id]=['يجهّز مسودات واقتراحات بس','مفيش إرسال لعميل ولا دفع من غير موافقتك']}
+const AMAP=Object.fromEntries(AGENTS.map(a=>[a.id,a]));
+const DEF_STATUS={
+ omar:{on:false,line:'في وضع الاستعداد. هيتفعّل لما باقي الفريق يقف على رجله.',sch:''},
+ mai:{on:true,line:'خلّصت خطة محتوى أول أسبوع ومسودات الرسائل، مستنية موافقتك عليها.',sch:'يوميًا 9:00 صباحًا'},
+ karim:{on:true,line:'جهّز أول 12 مسودة رسالة للعملاء المحتملين ومستني مراجعتك. مفيش ولا رسالة اتبعتت.',sch:'يوميًا 10:00 صباحًا'},
+ collector:{on:true,line:'بيكمّل بيانات العملاء المحتملين من الصف 13.',sch:'يوميًا 8:00 صباحًا'},
+ outreach:{on:false,line:'استعداد. مش بيبعت أي حاجة من غير موافقتك على الكلام والقناة.',sch:''},
+ social:{on:false,line:'استعداد لحد ما الصفحات تتوصّل.',sch:''},
+ convo:{on:false,line:'استعداد لحد أول عميل.',sch:''},
+ yousef:{on:false,line:'استعداد لحد ما عميل يطلب موقع أو سيستم.',sch:''},
+ salma:{on:false,line:'استعداد.',sch:''},
+ hassan:{on:false,line:'استعداد. أي دفع محتاج موافقتك.',sch:''}
+};
+for(const a of AGENTS)if(!DEF_STATUS[a.id])DEF_STATUS[a.id]={on:false,line:'استعداد (حالة مبدئية).',sch:''};
+const SEED_NOTE='الحالة المبدئية جاية من مدير المكتب وقت بناء التطبيق (28 نوفمبر 12:16 ص). بتتحدّث بس لما تستورد ملف من الفريق.';
+
+/* ---------- state ---------- */
+let S=ld(K.st,null)||{agents:{},tasks:[],drafts:[],decisions:[],imported:null,seed:SEED_NOTE};
+S.agents=S.agents||{};S.tasks=S.tasks||[];S.drafts=S.drafts||[];S.chat=S.chat||[];S.decisions=S.decisions||[];
+for(const a of AGENTS)if(!S.agents[a.id])S.agents[a.id]=Object.assign({},DEF_STATUS[a.id]);
+let P=ld(K.pros,[]);            // prospects rows
+let PS=ld(K.pst,{});            // per-prospect state
+let UI={room:'group',draft:'',tab:'team',ap:'pending',pf:{q:'',list:'',city:'',has:'',st:''},pshow:60};
+const save=()=>sv(K.st,S);
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const fmt=t=>t?new Date(t).toLocaleString('ar-EG',{dateStyle:'medium',timeStyle:'short'}):'—';
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),2200)}
+async function copy(txt){try{await navigator.clipboard.writeText(txt);toast('اتنسخ')}catch(e){const t=document.createElement('textarea');t.value=txt;document.body.appendChild(t);t.select();try{document.execCommand('copy');toast('اتنسخ')}catch(_){toast('النسخ مش متاح، حدد النص ونسخه يدويًا')}t.remove()}}
+function dl(name,txt,type){const b=new Blob([txt],{type:type||'text/plain'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500)}
+
+/* ---------- CSV ---------- */
+function parseCSV(t){t=t.replace(/^\uFEFF/,'');const rows=[];let r=[],f='',q=false;
+ for(let i=0;i<t.length;i++){const c=t[i];
+  if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}
+  else if(c=='"')q=true;else if(c==','){r.push(f);f=''}
+  else if(c=='\n'||c=='\r'){if(c=='\r'&&t[i+1]=='\n')i++;r.push(f);f='';if(r.length>1||r[0]!=='')rows.push(r);r=[]}
+  else f+=c}
+ if(f!==''||r.length){r.push(f);rows.push(r)}
+ if(!rows.length)return[];const h=rows[0].map(x=>x.trim());
+ return rows.slice(1).map(x=>{const o={};h.forEach((k,i)=>o[k]=(x[i]||'').trim());return o});
+}
+const pk=(p,i)=>i+'|'+(p.Business||'');
+const PST={new:'جديد',contacted:'اتواصلنا',interested:'مهتم',declined:'مش مهتم',client:'عميل'};
+function waNum(ph){if(!ph)return'';let n=String(ph).split('/')[0].replace(/[^\d+]/g,'');if(!n)return'';if(n[0]=='+')return n.slice(1);if(n.startsWith('00'))return n.slice(2);if(n[0]=='0')return'20'+n.slice(1);return n}
+function telNum(ph){const n=String(ph||'').split('/')[0].replace(/[^\d+]/g,'');return n}
+
+/* ---------- views ---------- */
+function nav(){
+ const pend=S.drafts.filter(d=>!d.state||d.state==='pending').length;
+ const items=[['team','الفريق',ICON.team],['chat','الشات',ICON.chat],['train','التدريب',ICON.train],['approvals','الموافقات',ICON.appr],['more','المزيد',ICON.more]];
+ $('#nav').innerHTML=items.map(([k,l,i])=>`<button data-go="${k}" class="${UI.tab===k||(k==='more'&&!['team','chat','train','approvals'].includes(UI.tab))?'on':''}">${i}<span>${l}</span>${k==='approvals'&&pend?`<span class="badge">${pend}</span>`:''}</button>`).join('');
+}
+function hdr(){const loc=AGENTS.filter(a=>agStatus(a.id).k==='run').length,rl=AGENTS.filter(a=>!boundConn(a.id)&&S.agents[a.id].real&&S.agents[a.id].on).length,bon=AGENTS.filter(a=>!boundConn(a.id)&&!S.agents[a.id].real&&!cloudOn()&&S.agents[a.id].on&&!reqPending(a.id)).length,rq=AGENTS.filter(a=>reqPending(a.id)).length;$('#hsub').textContent=`${loc} شغال فعلًا هنا · ${rl} وكيل حقيقي موصّل${bon?' · '+bon+' شغال حسب آخر حالة من عمر':''} · ${rq} طلب مش متنفذ`}
+
+function statsHtml(){const on=AGENTS.filter(a=>S.agents[a.id].on).length,pend=S.drafts.filter(d=>!d.state||d.state==='pending').length,open=S.tasks.filter(t=>t.state!=='done').length,cn=CN().filter(c=>c.last&&c.last.ok).length;
+ return `<div class="stats"><div class="stat"><b>${on}</b><span>وكلاء شغالين</span></div><div class="stat ${pend?'hot':''}"><b>${pend}</b><span>مسودات مستنية</span></div><div class="stat"><b>${open}</b><span>مهام مفتوحة</span></div><div class="stat"><b>${cn}</b><span>موصّلات ناجحة</span></div></div>`}
+function agSheet(id){const a=AMAP[id],s=S.agents[id];
+ const ts=S.tasks.filter(t=>t.agent===id);const ds=S.drafts.filter(d=>d.agent===id);
+ const dc=k=>ds.filter(d=>(d.state||'pending')===k).length;
+ const hist=(s.hist||[]).slice().reverse();
+ return `<div class="row" style="justify-content:space-between"><h2 style="margin:0">${esc(a.n)} <span class="small">${esc(a.r)}</span></h2><button class="btn sm" data-close>إغلاق</button></div>
+ <div class="st ${s.on?'on':'off'}" style="margin:8px 0"><span class="dot"></span>${s.on?'شغال دلوقتي':'لسه مش متفعّل'}</div>
+ <p>${esc(a.d)}</p><div class="card" style="margin:8px 0"><div class="small">آخر حالة وصلت</div><div>${esc(s.line||'—')}</div>${s.sch?`<div class="small" style="margin-top:4px">وردية: ${esc(s.sch)}</div>`:''}<div class="small" style="margin-top:4px">${s.updated?'اتحدّثت: '+esc(fmt(s.updated)):'حالة مبدئية، لسه ما وصلش تحديث من الفريق'}</div></div>
+ ${s.report?`<h2>تقرير ${esc(a.n)}</h2><div class="card" style="white-space:pre-wrap">${esc(s.report)}</div>`:''}
+ <h2>حدوده</h2><ul class="ls">${(GUARD[id]||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+ <h2>مسوداته</h2><div class="row"><span class="tag y">منتظرة ${dc('pending')}</span><span class="tag g">موافق عليها ${dc('approved')}</span><span class="tag r">مرفوضة ${dc('rejected')}</span></div>
+ <h2>مهامه (${ts.length})</h2>${ts.length?ts.map(t=>`<div class="card" style="margin:6px 0"><span class="tag ${t.state==='done'?'g':t.state==='doing'?'y':''}">${t.state==='done'?'خلصت':t.state==='doing'?'شغالة':'مستنية'}</span> ${esc(t.text)}${t.note?`<div class="small">ملاحظة: ${esc(t.note)}</div>`:''}</div>`).join(''):'<div class="empty">مفيش مهام</div>'}
+ <h2>سجل التحديثات</h2>${hist.length?`<ul class="ls">${hist.map(h=>`<li><span class="small">${esc(fmt(h.t))}</span> ${h.on?'شغال':'استعداد'}: ${esc(h.line||'')}</li>`).join('')}</ul>`:'<div class="small">مفيش تحديثات مستوردة لسه</div>'}
+ <div class="row" style="margin-top:12px"><button class="btn pri" data-newtask="${esc(id)}">مهمة جديدة لـ ${esc(a.n)}</button></div>`}
+
+function vTasks(){
+ const open=S.tasks.filter(t=>t.state!=='done'),done=S.tasks.filter(t=>t.state==='done');
+ let h=`<h2>اكتب هدف أو مهمة للفريق</h2><div class="card"><textarea id="tt" placeholder="مثال: عايز أول 20 مصنع في العاشر من رمضان يوصلهم عرض مبدئي"></textarea>
+ <div class="row" style="margin-top:8px"><select id="tag" style="flex:1;min-width:140px">${AGENTS.map(a=>`<option value="${a.id}" ${a.id==='omar'?'selected':''}>${esc(a.n)} (${esc(a.r)})</option>`).join('')}</select><button class="btn pri" data-act="addtask">حفظ المهمة</button></div></div>
+ <div class="note" style="margin-top:10px"><b>مهم:</b> المهمة بتتحفظ هنا على جهازك بحالة "مستنية". الفريق بيشتغل خارج التطبيق ومش بيشوفها تلقائيًا. اضغط "نسخ المهام للفريق" وابعتها لعمر، وهو يرجّع التحديثات في تبويب الربط.</div>
+ <div class="row" style="margin:10px 0"><button class="btn" data-act="copytasks">نسخ المهام للفريق</button></div>
+ <h2>مفتوحة (${open.length})</h2>`;
+ h+=open.length?open.map(taskCard).join(''):'<div class="empty">مفيش مهام مفتوحة</div>';
+ if(done.length)h+=`<h2>خلصت (${done.length})</h2>`+done.map(taskCard).join('');
+ return h}
+function taskCard(t){const a=AMAP[t.agent];return `<div class="card" style="margin:8px 0"><div class="row" style="justify-content:space-between"><span class="tag r">${esc(a?a.n:'—')}</span><span class="small">${esc(fmt(t.created))}</span></div><p style="margin:6px 0">${esc(t.text)}</p>${t.note?`<p class="small">ملاحظة الفريق: ${esc(t.note)}</p>`:''}<div class="row"><select data-ts="${esc(t.id)}" style="width:auto"><option value="todo" ${t.state==='todo'||!t.state?'selected':''}>مستنية</option><option value="doing" ${t.state==='doing'?'selected':''}>شغالة</option><option value="done" ${t.state==='done'?'selected':''}>خلصت</option></select><button class="btn sm no" data-deltask="${esc(t.id)}">مسح</button></div></div>`}
+
+const KIND={outreach:'رسالة لعميل',post:'منشور',ad:'إعلان',other:'أخرى'};
+const CH={whatsapp:'واتساب',email:'إيميل',call:'مكالمة',facebook:'فيسبوك',instagram:'إنستجرام',linkedin:'لينكدإن',other:'—'};
+function vApprovals(){
+ const g=s=>S.drafts.filter(d=>(d.state||'pending')===s);
+ const tabs=[['pending','منتظرة'],['approved','موافق عليها'],['rejected','مرفوضة']];
+ let h=`<h2>طابور الموافقات</h2><div class="note"><b>الموافقة هنا قرار بس.</b> التطبيق نفسه ما بيبعتش أي رسالة لأي حد. بعد ما توافق، انسخ النص أو افتح واتساب بنفسك وابعت.</div>
+ <div class="tabs">${tabs.map(([k,l])=>`<button class="chip ${UI.ap===k?'on':''}" data-ap="${k}">${l} (${g(k).length})</button>`).join('')}</div>${g('pending').length?`<button class="btn pri" data-act="review" style="width:100%;margin-bottom:6px">ابدأ المراجعة السريعة (${g('pending').length})</button>`:''}`;
+ const l=g(UI.ap);
+ if(!l.length)h+=`<div class="empty">${UI.ap==='pending'&&!S.drafts.length?'مفيش مسودات لسه. أول ما الفريق يرجّع ملف فيه مسودات (تبويب الربط) هتظهر هنا.':'مفيش حاجة هنا'}</div>`;
+ for(const d of l){const a=AMAP[d.agent];
+  h+=`<div class="card" style="margin:10px 0"><div class="row" style="justify-content:space-between"><span><span class="tag r">${esc(a?a.n:'—')}</span> <span class="tag">${esc(KIND[d.kind]||d.kind||'')}</span> <span class="tag">${esc(CH[d.channel]||d.channel||'')}</span></span></div>
+  ${d.title?`<h3 style="margin:8px 0 2px;font-size:16px">${esc(d.title)}</h3>`:''}${d.to?`<div class="small">إلى: ${esc(d.to)}${d.phone?' · '+esc(d.phone):''}</div>`:''}
+  <textarea data-body="${esc(d.id)}" ${UI.ap!=='pending'?'readonly':''} style="margin-top:8px;min-height:120px">${esc(d.body)}</textarea>
+  <div class="row" style="margin-top:8px">${UI.ap==='pending'?`<button class="btn ok" data-dec="approved" data-id="${esc(d.id)}">موافقة (من غير إرسال)</button><button class="btn" data-savebody="${esc(d.id)}">حفظ التعديل</button><button class="btn no" data-dec="rejected" data-id="${esc(d.id)}">رفض</button>`:
+  UI.ap==='approved'?`<button class="btn pri" data-copydraft="${esc(d.id)}">نسخ النص</button>${waNum(d.phone)&&d.channel==='whatsapp'?`<a class="btn" target="_blank" rel="noopener" href="https://wa.me/${waNum(d.phone)}?text=${encodeURIComponent(d.body)}">فتح واتساب (أنت اللي تبعت)</a>`:''}<button class="btn sm" data-dec="pending" data-id="${esc(d.id)}">رجّعها للمنتظرة</button><span class="small">وافقت: ${esc(fmt(d.decidedAt))}</span>`:
+  `<button class="btn sm" data-dec="pending" data-id="${esc(d.id)}">رجّعها للمنتظرة</button><span class="small">رفضت: ${esc(fmt(d.decidedAt))}</span>`}</div></div>`}
+ return h}
+
+function filtered(){const f=UI.pf,q=f.q.trim().toLowerCase();
+ return P.map((p,i)=>({p,i,k:pk(p,i)})).filter(({p,k})=>{
+  if(f.list&&p.List!==f.list)return false;if(f.city&&p.City!==f.city)return false;
+  if(f.has==='phone'&&!p.Phone)return false;if(f.has==='email'&&!p.Email)return false;if(f.has==='web'&&!p.Website)return false;
+  const st=(PS[k]&&PS[k].s)||'new';if(f.st&&st!==f.st)return false;
+  if(q&&!(p.Business+' '+p.Type+' '+p.Phone+' '+p.Email+' '+p.Address).toLowerCase().includes(q))return false;return true})}
+function vPros(){
+ if(!P.length)return `<h2>العملاء المحتملين</h2><div class="card"><p>مفيش قايمة محمّلة على الجهاز ده لسه.</p><p class="small">اختار ملف CSV بتاع العملاء (combined_prospects_v2) مرة واحدة. بيتقري ويتحفظ على جهازك بس، وما بيترفعش لأي سيرفر. وده عمدًا: رابط التطبيق عام، فمش هنحط أرقام العملاء جواه.</p><div class="row"><label class="btn pri" style="cursor:pointer">اختيار ملف CSV<input type="file" id="csvf" accept=".csv,text/csv,.txt" hidden></label></div></div>`;
+ const lists=[...new Set(P.map(p=>p.List))],cities=[...new Set(P.map(p=>p.City))];
+ const r=filtered();const f=UI.pf;
+ const cnt=Object.fromEntries(Object.keys(PST).map(k=>[k,0]));P.forEach((p,i)=>{const s=(PS[pk(p,i)]||{}).s||'new';cnt[s]++});
+ let h=`<h2>العملاء المحتملين (${P.length})</h2>
+ <input type="search" id="pq" placeholder="ابحث بالاسم أو النشاط أو التليفون" value="${esc(f.q)}">
+ <div class="row" style="margin-top:8px"><select data-pf="list" style="flex:1;min-width:130px"><option value="">كل القوايم</option>${lists.map(x=>`<option ${f.list===x?'selected':''}>${esc(x)}</option>`).join('')}</select><select data-pf="city" style="flex:1;min-width:110px"><option value="">كل المدن</option>${cities.map(x=>`<option ${f.city===x?'selected':''}>${esc(x)}</option>`).join('')}</select></div>
+ <div class="chips">${[['','الكل'],['phone','فيه تليفون'],['email','فيه إيميل'],['web','فيه موقع']].map(([k,l])=>`<button class="chip ${f.has===k?'on':''}" data-has="${k}">${l}</button>`).join('')}</div>
+ <div class="chips">${[['','كل الحالات']].concat(Object.entries(PST)).map(([k,l])=>`<button class="chip ${f.st===k?'on':''}" data-pst="${k}">${l}${k?' '+cnt[k]:''}</button>`).join('')}</div>
+ <div class="row" style="margin:6px 0"><span class="small">النتيجة: ${r.length}</span><button class="btn sm" data-act="exportcsv">تصدير النتيجة CSV</button><label class="btn sm" style="cursor:pointer">استبدال الملف<input type="file" id="csvf" accept=".csv,text/csv,.txt" hidden></label></div>`;
+ const rs=r.slice(0,UI.pshow);
+ h+=`<div class="hide-d grid">${rs.map(({p,k})=>{const s=(PS[k]||{}).s||'new';return `<button class="card pc" data-pr="${esc(k)}" style="text-align:right"><span class="nm">${esc(p.Business)}</span><span class="small">${esc(p.City)}${p.Type?' · '+esc(p.Type.slice(0,70)):''}</span><span class="row"><span class="tag ${s==='new'?'':s==='interested'||s==='client'?'g':s==='declined'?'r':'y'}">${PST[s]}</span>${p.Phone?'<span class="tag">تليفون</span>':''}${p.Email?'<span class="tag">إيميل</span>':''}${p.Website?'<span class="tag">موقع</span>':''}</span></button>`}).join('')}</div>`;
+ h+=`<div class="show-d tw"><table><thead><tr><th>الشركة</th><th>المدينة</th><th>النشاط</th><th>تليفون</th><th>إيميل</th><th>الحالة</th></tr></thead><tbody>${rs.map(({p,k})=>{const s=(PS[k]||{}).s||'new';return `<tr data-pr="${esc(k)}" style="cursor:pointer"><td><b>${esc(p.Business)}</b></td><td>${esc(p.City)}</td><td>${esc((p.Type||'').slice(0,60))}</td><td dir="ltr" style="text-align:right">${esc(p.Phone.split('/')[0])}</td><td dir="ltr" style="text-align:right">${esc(p.Email)}</td><td>${PST[s]}</td></tr>`}).join('')}</tbody></table></div>`;
+ if(r.length>rs.length)h+=`<div class="row" style="justify-content:center;margin:12px"><button class="btn" data-act="more">عرض المزيد (${r.length-rs.length})</button></div>`;
+ return h}
+let PRB={};
+async function prDraft(k){const i=P.findIndex((p,j)=>pk(p,j)===k);if(i<0)return;const p=P[i],c=boundConn('mai');if(!c){toast('مي مالهاش موصّل. ضيف موصّل وعيّنه افتراضي من المزيد.');return}if(PRB[k]){toast('لسه بتكتب');return}
+ if(PROV[c.provider].cloud&&!confirm('الطلب ده بيتحاسب من حسابك على الخدمة السحابية. تكمّل؟'))return;PRB[k]=1;toast('مي بتكتب...');
+ try{const out=String(await askConn(c,`اكتب رسالة تواصل أولى قصيرة (حد أقصى 60 كلمة) بالمصري لنشاط اسمه "${p.Business||''}" (${p.Type||''}${p.City?' في '+p.City:''}) من بولاتك، شركة بتعمل مواقع وتطبيقات وأتمتة. من غير أسعار ولا أرقام ولا وعود ولا أسماء مخترعة، واختم بسؤال بسيط. اكتب نص الرسالة بس.`,sysPrompt('mai'),300)||'').trim().slice(0,1500);
+ if(!out){toast('الموديل رجّع رد فاضي');PRB[k]=0;return}
+ S.drafts.push({id:uid(),agent:'mai',kind:'other',channel:'other',to:p.Business||'',phone:p.Phone||'',title:'مسودة تواصل: '+(p.Business||''),body:out,state:'pending',created:Date.now()});save();toast('اتضافت في الموافقات كمسودة. مش اتبعتت.')}
+ catch(e){toast('فشلت: '+(/Failed to fetch|NetworkError|Load failed/.test(e.message)?errMsg(c,e):e.message))}PRB[k]=0;render0()}
+function prSheet(k){const i=P.findIndex((p,j)=>pk(p,j)===k);if(i<0)return'';const p=P[i],s=PS[k]||{};
+ const ph=telNum(p.Phone);
+ const row=(l,v)=>v?`<div><span class="small">${l}</span><br>${v}</div>`:'';
+ return `<div class="row" style="justify-content:space-between"><h2 style="margin:0">${esc(p.Business)}</h2><button class="btn sm" data-close>إغلاق</button></div>
+ <div class="kv" style="margin-top:10px">${row('المدينة',esc(p.City))}${row('النشاط',esc(p.Type))}${row('تليفون',p.Phone?`<span dir="ltr">${esc(p.Phone)}</span>`:'')}${row('إيميل',p.Email?`<a href="mailto:${esc(p.Email)}" dir="ltr">${esc(p.Email)}</a>`:'')}${row('الموقع',p.Website?`<a href="${esc(p.Website)}" target="_blank" rel="noopener" dir="ltr">${esc(p.Website)}</a>`:'')}${row('العنوان',esc(p.Address))}${row('القايمة',esc(p.List))}${row('المصدر',/^https?:/.test(p.Source)?`<a href="${esc(p.Source)}" target="_blank" rel="noopener" dir="ltr">${esc(p.Source)}</a>`:esc(p.Source))}</div>
+ <div class="row" style="margin-top:10px"><button class="btn pri" data-act="prdraft" data-k="${esc(k)}">مي تجهّز مسودة تواصل</button></div><div class="small">بتكتب مسودة بموديل حقيقي وتنزل في الموافقات. مش بتتبعت لحد.</div>
+ <h2>الحالة</h2><div class="chips">${Object.entries(PST).map(([c,l])=>`<button class="chip ${((s.s)||'new')===c?'on':''}" data-setp="${c}" data-k="${esc(k)}">${l}</button>`).join('')}</div>
+ <textarea id="pn" placeholder="ملاحظاتك عن العميل">${esc(s.n||'')}</textarea>
+ <div class="row" style="margin-top:8px"><button class="btn pri" data-savepn="${esc(k)}">حفظ الملاحظة</button>${ph?`<a class="btn" href="tel:${esc(ph)}">اتصال</a>`:''}${waNum(p.Phone)?`<a class="btn" target="_blank" rel="noopener" href="https://wa.me/${waNum(p.Phone)}">فتح واتساب</a>`:''}</div>
+ <p class="small">الأزرار دي بتفتح التطبيق بس. أنت اللي بتتواصل بنفسك. التطبيق ما بيبعتش حاجة.</p>`}
+
+const SCHEMA=`{
+  "version": 1,
+  "updated": "2026-11-28T09:00:00+02:00",
+  "agents": [
+    {"id": "mai", "on": true, "line": "خلصت منشورات الأسبوع",
+     "sch": "يوميًا 9:00 صباحًا", "report": "تقرير اليوم بنص حر"}
+  ],
+  "tasks": [
+    {"id": "<نفس رقم المهمة من التطبيق>", "state": "doing", "note": "بدأنا"}
+  ],
+  "messages": [
+    {"id": "m-001", "room": "group", "from": "omar",
+     "t": "2026-11-28T09:05:00+02:00", "text": "صباح الخير، أنا بوزع مهام النهارده"}
+  ],
+  "drafts": [
+    {"id": "karim-001", "agent": "karim", "kind": "outreach",
+     "channel": "whatsapp", "to": "اسم الشركة", "phone": "0551234567",
+     "title": "رسالة تعريف", "body": "نص المسودة هنا"}
+  ]
+}`;
+function vLink(){
+ const feed=ld(K.feed,{url:'',last:null,err:''});
+ return `<h2>الربط مع الفريق</h2>
+ <div class="note"><b>إزاي الفريق يوصّل للتطبيق؟</b> الفريق بيشتغل خارج التطبيق. أي حاجة بتظهر هنا (حالة، مهام، مسودات) بتدخل بطريقة من اتنين فقط: تلصق ملف JSON من الفريق أو تحدد رابط ملف بيتحدّث. مفيش نشاط بيتعرض من نفسه.</div>
+ <h2>1) استيراد ملف من الفريق</h2><div class="card"><textarea id="imp" placeholder="الصق ملف JSON اللي عمر بعته"></textarea><div class="row" style="margin-top:8px"><button class="btn pri" data-act="import">استيراد</button><label class="btn" style="cursor:pointer">من ملف<input type="file" id="impf" accept=".json,application/json,.txt" hidden></label></div></div>
+ <h2>2) رابط ملف بيتحدّث (اختياري)</h2><div class="card"><input type="url" id="feed" dir="ltr" placeholder="https://raw.githubusercontent.com/.../office-state.json" value="${esc(feed.url)}"><div class="row" style="margin-top:8px"><button class="btn" data-act="savefeed">حفظ وجلب الآن</button></div><p class="small">بيتجلب كل 5 دقايق والتطبيق مفتوح. لازم الرابط يسمح بالقراءة من المتصفح (raw.githubusercontent.com بيسمح). آخر جلب: ${esc(feed.last?fmt(feed.last):'لسه')} ${feed.err?'· آخر خطأ: '+esc(feed.err):''}</p></div>
+ <h2>3) رجّع قراراتك للفريق</h2><div class="card"><p class="small">قراراتك على المسودات وحالات المهام وحالات العملاء بتتصدّر كملف تبعته لعمر. لحد ما تبعته، الفريق مش بيعرفها.</p><div class="row"><button class="btn" data-act="copystate">نسخ</button><button class="btn" data-act="dlstate">تنزيل ملف</button></div></div>
+ ${fbSection()}
+ <h2>سجل الاستيراد</h2><div class="card">${ld(K.imps,[]).length?ld(K.imps,[]).map(h=>`<div class="small">${esc(fmt(h.t))} · ${esc(h.src)} · ${h.nd} مسودة جديدة</div>`).join(''):'<div class="small">لسه مفيش استيراد</div>'}<div class="row" style="margin-top:8px"><button class="btn sm" data-act="undoimp">تراجع عن آخر استيراد</button></div></div>
+ <h2>صيغة الملف</h2><pre>${esc(SCHEMA)}</pre><div class="row"><button class="btn sm" data-act="copyschema">نسخ الصيغة</button></div>
+ <h2>اللي حقيقي واللي محلي</h2><ul class="ls"><li><b>حقيقي:</b> طابور الموافقات وقراراتك، المهام، قايمة العملاء وحالاتهم وملاحظاتك. كلها بتشتغل فعلًا وبتتحفظ على جهازك.</li><li><b>محلي فقط:</b> كل البيانات على المتصفح ده بس. لو فتحت من جهاز تاني أو مسحت بيانات المتصفح مش هتلاقيها. استخدم التصدير كنسخة احتياطية.</li><li><b>برّه التطبيق:</b> تشغيل الوكلاء وإرسال أي رسالة. التطبيق ما بيبعتش ولا بيكلّم أي حد.</li></ul>
+ <h2>إعادة ضبط</h2><div class="row"><button class="btn no sm" data-act="reset">مسح بيانات التطبيق من الجهاز</button></div>`}
+
+/* ---------- team chat ---------- */
+const FBS={ready:false,user:null,msgs:[],err:'',unsub:null,unsubs:[],api:null};
+const WHO={bola:'بولا',main:'المساعد الرئيسي'};
+const whoName=id=>WHO[id]||(AMAP[id]?AMAP[id].n:'؟');
+
+const DEPTS={mgmt:'الإدارة',marketing:'التسويق',sales:'المبيعات',data:'البيانات',production:'الإنتاج',hr:'الموارد البشرية',comms:'التواصل مع العملاء',creative:'الفيديو والتصميم',tech:'التقنية',admin:'الحسابات'};
+const SHT={m:'صباحي',e:'مسائي',n:'ليلي'};
+const validRoom=r=>typeof r==='string'&&(r==='group'||(r.startsWith('dept:')&&!!DEPTS[r.slice(5)])||(r.startsWith('shift:')&&!!SHT[r.slice(6)])||!!AMAP[r]);
+const validFrom=f=>f==='bola'||f==='main'||!!AMAP[f];
+function members(r){if(r==='group')return AGENTS.map(a=>a.id);if(r.startsWith('dept:'))return AGENTS.filter(a=>a.dept===r.slice(5)).map(a=>a.id);if(r.startsWith('shift:'))return AGENTS.filter(a=>a.shift===r.slice(6)).map(a=>a.id);return AMAP[r]?[r]:[]}
+function roomName(r){if(r==='group')return 'كل الفريق';if(r.startsWith('dept:'))return 'قسم '+DEPTS[r.slice(5)];if(r.startsWith('shift:'))return 'وردية '+SHT[r.slice(6)];return AMAP[r]?AMAP[r].n:r}
+const CHATBUSY={};
+const cloudOn=()=>!!(FBS.ready&&FBS.user);
+function allMsgs(){const oids=new Set(FBS.msgs.map(m=>m.oid).filter(Boolean));return S.chat.filter(m=>!oids.has(m.id)).concat(FBS.msgs).sort((a,b)=>a.t-b.t)}
+function deliv(m){const T=(m.to&&m.to.length?m.to:members(m.room)).filter(id=>AMAP[id]);if(!T.length)return '';
+ const cl=m.src==='cloud';const c={ans:0,fail:0,busy:0,read:0,dl:0,wait:0,loc:0};
+ for(const id of T){const a=(m.ack||{})[id]||(m.ans||{})[id];const bound=!!boundConn(id);
+  if(CHATBUSY[m.id+id])c.busy++;else if(a&&a.s==='answered')c.ans++;else if(a&&a.s==='failed')c.fail++;else if(a&&a.s==='read')c.read++;else if(a&&a.s==='delivered')c.dl++;else if(cl)c.wait++;else c.loc++}
+ const P=[];if(c.busy)P.push(`بيفكّر ${c.busy}`);if(c.ans)P.push(`ردّ ${c.ans}`);if(c.fail)P.push(`فشل ${c.fail}`);if(c.read)P.push(`اتقرت ${c.read}`);if(c.dl)P.push(`وصلت للوكيل ${c.dl}`);if(c.wait)P.push(`اتحفظت، مستنية الجسر ${c.wait}`);if(c.loc)P.push(`محلية بس، الوكيل ما شافهاش ${c.loc}`);
+ const fl=T.map(id=>((m.ans||{})[id]||(m.ack||{})[id]||{}).err).filter(Boolean)[0];
+ return `<div class="dl">${T.length>1?`إلى ${T.length} وكيل: `:''}${P.join(' · ')}${fl?`<br><span style="color:#ff8da0">${esc(String(fl).slice(0,140))}</span>`:''}</div>`}
+function msgHtml(m){const me=m.from==='bola';const ag=AMAP[m.from];const trust=m.src!=='cloud'?'':(FBS.owner&&m.by===FBS.owner&&!FBS.noauth)?' · بحسابك':((FBS.agentEmails||[]).includes(m.by)?' · حساب وكيل':' · غير موثّق');const tag=m.src==='cloud'?((m.srcp==='page'?'رد حقيقي من موديل (الصفحة)':'مباشر')+trust):m.src==='run'?'رد حقيقي من موديل (محلي)':m.src==='import'?'من ملف الفريق':'محلي';
+ return `<div class="bub ${me?'me':''}"><div class="who">${esc(whoName(m.from))}${ag?`<span class="small">${esc(ag.r)}</span>`:''}</div>${esc(m.text)}<div class="tm">${esc(fmt(m.t))} · ${tag}${m.tv?` · تدريب v${m.tv}`:''}</div>${me?deliv(m):''}${ag?`<div class="row" style="margin-top:6px"><button class="btn sm" data-tr="fix" data-mid="${esc(m.id)}">صحّحه</button><button class="btn sm" data-tr="ex" data-mid="${esc(m.id)}">احفظه كمثال</button></div>`:''}</div>`}
+function roomInfo(r){const ms=members(r);if(ms.length===1){const id=ms[0];return boundConn(id)?`<span class="tag r">مربوط بموصّل</span> هيرد من الصفحة بموديل حقيقي (${esc(boundConn(id).name)}) وبتدريبه.`:`<span class="tag">وكيل خلفي</span> مش بيرد إلا لو جسر عنده بيقرا قاعدة البيانات. لحد وقتها الرسالة بتفضل "مستنية".`}
+ const b=ms.filter(id=>boundConn(id)).length;return `${ms.length} وكيل في الغرفة · ${b} مربوط بموصّل (هيردّوا من الصفحة) · ${ms.length-b} خلفي (مستني جسر).`}
+function chatList(){const l=allMsgs().filter(m=>m.room===UI.room);
+ return l.length?l.map(msgHtml).join(''):`<div class="empty">مفيش رسايل في "${esc(roomName(UI.room))}" لسه.</div>`}
+function modeHtml(){return cloudOn()?`<div class="mode live">وضع مباشر (Firebase): متصل كـ ${esc(FBS.user.email)}. الرسايل والتدريب والورديات والطلبات بتتخزن في قاعدتك وتتزامن.${FBS.noauth?'<br><b style="color:var(--warn)">مفتوح مؤقتًا: من غير دخول، أي حد معاه إعدادات المشروع يقدر يقرا ويكتب. ماتحطش أسعار أو بيانات عملاء في التدريب لحد ما تأمّنه.</b>':''}</div>`:`<div class="mode">وضع محلي: كل حاجة محفوظة على جهازك بس. للتخزين والتزامن المباشر شوف "الربط" (Firebase).</div>`}
+function liveBanner(){const ms=members(UI.room),b=ms.filter(id=>boundConn(id)).length,d=DC();
+ if(!CN().length)return `<div class="note"><b>الرد الفوري مش شغال:</b> مفيش موصّل (مفتاح ChatGPT أو Claude أو نموذج محلي). من غير ده الرسالة بتتحفظ بس وبتستنى الجسر (دقايق مش ثواني). <div class="row" style="margin-top:8px"><button class="btn sm pri" data-cact="addgem">ضيف مفتاح Gemini</button><button class="btn sm" data-go="conn">موصّلات تانية</button></div></div>`;
+ if(b<ms.length)return `<div class="note"><b>${ms.length-b} من ${ms.length} وكيل هيستنوا الجسر:</b> مفيش موصّل افتراضي متعيّن.${b?` (${b} هيردّوا فورًا).`:''} <div class="row" style="margin-top:8px"><button class="btn sm pri" data-go="conn">عيّن موصّل افتراضي</button></div></div>`;
+ return `<div class="mode live">الرد فوري: ${b} وكيل هيردّوا من الصفحة بموديل حقيقي وبتدريب كل واحد، والرد بيتحاسب من حسابك لو الخدمة سحابية.</div>`}
+function vChat(){const r=UI.room;const rt=r==='group'?'all':r.startsWith('dept:')?'dept':r.startsWith('shift:')?'shift':'one';
+ const cnt=x=>allMsgs().filter(m=>m.room===x).length;
+ const seg=[['all','الكل','group'],['dept','الأقسام','dept:'+Object.keys(DEPTS)[0]],['shift','الورديات','shift:m'],['one','فرد',AGENTS[0].id]];
+ const sub=rt==='dept'?Object.entries(DEPTS).map(([k,l])=>['dept:'+k,l]):rt==='shift'?Object.entries(SHT).map(([k,l])=>['shift:'+k,'وردية '+l]):[];
+ return `<h2>الشات</h2>${modeHtml()}${liveBanner()}<div id="discb">${discBanner()}</div>
+ <div class="chips">${seg.map(([k,l,d])=>`<button class="chip ${rt===k?'on':''}" data-room="${rt===k?r:d}">${l}</button>`).join('')}</div>
+ ${sub.length?`<div class="chips">${sub.map(([k,l])=>`<button class="chip ${r===k?'on':''}" data-room="${k}">${esc(l)}${cnt(k)?' '+cnt(k):''}</button>`).join('')}</div>`:''}
+ ${rt==='one'?`<select id="rsel">${AGENTS.map(a=>`<option value="${a.id}" ${r===a.id?'selected':''}>${esc(a.n)} · ${esc(a.r)}${cnt(a.id)?' ('+cnt(a.id)+')':''}</option>`).join('')}</select>`:''}
+ <div class="small" style="margin:8px 0">${roomInfo(r)}</div>
+ <div class="msgs" id="msgs">${chatList()}</div>
+ <div class="composer">${members(r).length>1?'<div class="row" style="margin-bottom:6px"><button class="btn sm" data-act="meet">ابدأ اجتماع فريق</button> <button class="btn sm" data-act="disc">نقاش بين الوكلاء</button></div>':''}<div class="row"><textarea id="cin" maxlength="1000" placeholder="اكتب لـ ${esc(roomName(r))}">${esc(UI.draft||'')}</textarea><button class="btn pri" data-act="sendchat">إرسال</button></div>
+ <div class="small" style="margin-top:4px">${cloudOn()?'بتتخزن في Firebase. الوكيل الخلفي يقراها لما جسره يشتغل.':'بتتحفظ هنا بس.'} ردود الموديلات الحقيقية بتتحاسب من حسابك عند الخدمات السحابية.</div></div>`}
+function refreshMsgs(){const el=$('#msgs');if(el&&UI.tab==='chat'){const near=innerHeight+scrollY>=document.body.scrollHeight-120;el.innerHTML=chatList();if(near)scrollTo(0,document.body.scrollHeight)}nav()}
+async function sendChat(){const ta=$('#cin');const text=(ta?ta.value:'').trim();if(!text)return;if(text.length>1000){toast('الرسالة طويلة (أقصى 1000 حرف)');return}
+ const room=UI.room,to=members(room);const bound=to.filter(id=>boundConn(id));
+ if(bound.length>1&&bound.some(id=>PROV[boundConn(id).provider].cloud)&&!confirm(`الرسالة هتتبعت لـ ${bound.length} وكيل مربوط بموصّل، وكل رد على خدمة سحابية بيتحاسب من حسابك. تكمّل؟`))return;
+ UI.draft='';let mid=null,cl=false;
+ if(cloudOn()){try{const ref=await FBS.api.addDoc(FBS.api.collection(FBS.db,'office_chat'),{room,from:'bola',text,t:FBS.api.serverTimestamp(),by:FBS.user.email,to});mid=ref.id;cl=true}catch(e){toast('فشل الإرسال المباشر: '+(e.code||e.message));UI.draft=text;return}}
+ else{mid=uid();S.chat.push({id:mid,room,from:'bola',text,t:Date.now(),src:'local',to});save()}
+ if(ta)ta.value='';render();scrollTo(0,document.body.scrollHeight);
+ for(const id of bound.slice(0,8))answerChat(mid,room,id,text,cl);
+ if(bound.length>8)toast('اتبعتت لأول 8 وكلاء مربوطين بس')}
+let DISC=null;
+function discBanner(){return DISC?`<div class="note"><b>نقاش شغال:</b> الدور ${DISC.n} من ${DISC.cap}. <button class="btn sm no" data-act="discstop">وقّف</button></div>`:''}
+function refreshDisc(){const e=$('#discb');if(e)e.innerHTML=discBanner()}
+async function discGo(){if(DISC){toast('فيه نقاش شغال، وقّفه الأول');return}const topic=($('#dt')?$('#dt').value:'').trim().slice(0,600);if(!topic){toast('اكتب موضوع النقاش');return}
+ const ids=[...document.querySelectorAll('[data-dp]:checked')].map(x=>x.dataset.dp).filter(i=>boundConn(i));const cap=Math.min(20,+$('#dcap').value||10);
+ if(ids.length<2||ids.length>6){toast('اختار من 2 لـ 6 وكلاء موصّلين');return}
+ const room=UI.room;if(ids.some(i=>PROV[boundConn(i).provider].cloud)&&!confirm(`النقاش هيعمل لحد ${cap} طلب على خدمة سحابية بتتحاسب من حسابك. تقدر توقّفه في أي وقت. تكمّل؟`))return;
+ closeSheet();const text=`نقاش بين ${ids.map(whoName).join(' و')}: ${topic}`;let mid,cl=false;
+ if(cloudOn()){try{const ref=await FBS.api.addDoc(FBS.api.collection(FBS.db,'office_chat'),{room,from:'bola',text:text.slice(0,1000),t:FBS.api.serverTimestamp(),by:FBS.user.email,to:ids});mid=ref.id;cl=true}catch(e){toast('فشل الإرسال: '+(e.code||e.message));return}}else{mid=uid();S.chat.push({id:mid,room,from:'bola',text,t:Date.now(),src:'local',to:ids});save()}
+ DISC={n:0,cap,stop:false};render();scrollTo(0,document.body.scrollHeight);
+ const prev=['بولا (موضوع النقاش): '+topic];let fails=0,done=0,why='خلص الحد';
+ for(let i=0;i<cap;i++){if(DISC.stop){why='اتوقّف';break}const id=ids[i%ids.length];DISC.n=i+1;refreshDisc();
+  const o=await answerChat(mid,room,id,'كمّل النقاش',cl,prev,'disc');
+  if(o){prev.push(whoName(id)+': '+o);fails=0;done++;if(/^اتفقنا/.test(o.trim())&&done>=ids.length){why='الفريق اتفق';break}}else if(++fails>=2){why='وقف: ردّين فشلوا ورا بعض (شوف الخطأ تحت الرسالة)';break}
+  await new Promise(r=>setTimeout(r,DISCGAP))}
+ DISC=null;refreshDisc();refreshMsgs();toast(`النقاش ${why}: ${done} رد`)}
+let DISCGAP=(typeof window!=="undefined"&&window.__gap)?150:1200;
+async function meetGo(){const topic=($('#mt')?$('#mt').value:'').trim().slice(0,600);if(!topic){toast('اكتب موضوع الاجتماع');return}
+ const room=UI.room,all=members(room),part=all.filter(id=>boundConn(id));
+ if(!part.length){closeSheet();toast('مفيش وكيل ليه موصّل، والاجتماع محتاج موديل حقيقي. ضيف موصّل وعيّنه افتراضي.');return}
+ const run=part.slice(0,10),cloud=run.some(id=>PROV[boundConn(id).provider].cloud);
+ if(cloud&&!confirm(`الاجتماع هيعمل ${run.length+(run.includes('omar')||!boundConn('omar')?0:1)+1} طلب على خدمة سحابية بتتحاسب من حسابك. تكمّل؟`))return;
+ closeSheet();const text='اجتماع: '+topic;let mid,cl=false;
+ if(cloudOn()){try{const ref=await FBS.api.addDoc(FBS.api.collection(FBS.db,'office_chat'),{room,from:'bola',text:text.slice(0,1000),t:FBS.api.serverTimestamp(),by:FBS.user.email,to:run});mid=ref.id;cl=true}catch(e){toast('فشل الإرسال: '+(e.code||e.message));return}}else{mid=uid();S.chat.push({id:mid,room,from:'bola',text,t:Date.now(),src:'local',to:run});save()}
+ render();scrollTo(0,document.body.scrollHeight);
+ const prev=['بولا (موضوع الاجتماع): '+topic];let n=0;
+ for(const id of run){const o=await answerChat(mid,room,id,text,cl,prev,'meet');if(o){prev.push(whoName(id)+': '+o);n++}}
+ if(n&&boundConn('omar')){const o=await answerChat(mid,room,'omar','لخّص الاجتماع',cl,prev,'sum');if(o)prev.push('عمر (ملخص): '+o)}
+ toast(`الاجتماع خلص: ${n} من ${run.length} ردّوا`+(all.length>run.length?` · ${all.length-run.length} ما شاركوش (مش موصّلين أو فوق حد 10)`:''))}
+async function setAck(mid,id,cl,v){if(cl&&cloudOn()){try{await FBS.api.setDoc(FBS.api.doc(FBS.db,'office_chat',mid),{ack:{[id]:{...v,by:'page'}}},{merge:true});return}catch(e){}}
+ const m=S.chat.find(x=>x.id===mid);if(m){m.ans=m.ans||{};m.ans[id]=v;save()}}
+async function answerChat(mid,room,id,text,cl,prev,mode){const conn=boundConn(id);if(!conn)return '';CHATBUSY[mid+id]=1;refreshMsgs();
+ const hist=prev?prev.join('\n'):allMsgs().filter(m=>m.room===room).slice(-9).map(m=>(m.from==='bola'?'بولا':whoName(m.from))+': '+m.text).join('\n');
+ const sys=sysPrompt(id)+`\n\nانت دلوقتي في شات مباشر مع بولا (${roomName(room)}). رد كـ ${AMAP[id].n} بس، باختصار وبالمصري.${members(room).length>1?' الرسالة اتبعتت لمجموعة، رد على اللي يخصّ دورك بس ولو مش من دورك قول كده.':''}`;
+ const sys2=mode==='meet'?'\n\nده اجتماع فريق. اتكلم من زاوية دورك بس في 2-3 جمل، وعلّق على اللي اتقال قبلك لو يهمّك. ما تخترعش أرقام.':mode==='disc'?'\n\nده نقاش بين الوكلاء قدام بولا. رد في جملتين على اللي اتقال، ضيف فكرة جديدة أو اعترض بأدب، وما تكررش. لو الفريق اتفق اكتب "اتفقنا:" وبعدها القرار. ما تخترعش أرقام.':mode==='sum'?'\n\nانت مدير الاجتماع. لخّص اللي اتقال: القرارات المقترحة ونقط العمل (حد أقصى 5 نقط). من غير اختراع حاجة اتقالتش.':'';
+ const usr=`المحادثة لحد دلوقتي:\n${hist}\n\nآخر رسالة من بولا: ${text}\nرد دلوقتي.`;
+ let out='',err='';try{out=String(await askConn(conn,usr,sys+sys2,mode==='sum'?600:500)||'').slice(0,1500);if(!out)err='الموديل رجّع رد فاضي'}catch(e){err=/Failed to fetch|NetworkError|Load failed/.test(e.message)?errMsg(conn,e):(e.name==='AbortError'?'انتهت المهلة':e.message)}
+ CHATBUSY[mid+id]=0;const tv=T(id).v||0;
+ if(!err){let posted=false;if(cl&&cloudOn()){try{await FBS.api.addDoc(FBS.api.collection(FBS.db,'office_chat'),{room,from:id,text:out,t:FBS.api.serverTimestamp(),by:FBS.user.email,srcp:'page',tv,to:[]});posted=true}catch(e){}}
+  if(!posted){S.chat.push({id:uid(),room,from:id,text:out,t:Date.now(),src:'run',tv});save()}
+  await setAck(mid,id,cl,{s:'answered',at:Date.now()})}
+ else await setAck(mid,id,cl,{s:'failed',at:Date.now(),err});
+ refreshMsgs();return err?'':out}
+/* ---------- training ---------- */
+const TR=ld(K.train,{});let TD=null,TDid=null,TSTAT={},TACK={};
+const emptyT=()=>({v:0,updated:0,instruction:'',knowledge:[],examples:[],corrections:[],history:[]});
+function T(id){if(!TR[id])TR[id]=emptyT();const t=TR[id];for(const k of ['knowledge','examples','corrections','history'])t[k]=Array.isArray(t[k])?t[k]:[];t.instruction=String(t.instruction||'');return t}
+const saveTR=()=>sv(K.train,TR);
+function trainText(id){const t=T(id);if(!t.v)return '';
+ let p=`\n\n[تدريب بولا لك · نسخة v${t.v}]`;if(t.instruction)p+=`\nالتعليمات:\n${t.instruction}`;
+ const ex=t.examples.length?'\nأمثلة على الأسلوب الصح:\n'+t.examples.map(e=>`المستخدم: ${e.user}\nانت: ${e.agent}`).join('\n---\n'):'';
+ const co=t.corrections.length?'\nتصحيحات (متكررش الغلط ده):\n'+t.corrections.map(c=>`- غلط: ${c.wrong}\n  الصح: ${c.right}`).join('\n'):'';
+ let kn=t.knowledge.length?'\nمعرفة تعتمد عليها:\n'+t.knowledge.map(k=>`- ${k.title}: ${k.text}`).join('\n'):'';
+ let out=p+co+ex+kn;if(out.length>12000)out=p+co+ex.slice(0,3000)+kn.slice(0,12000-(p+co).length-Math.min(ex.length,3000))+'\n(اتقصّ لطول التدريب)';return out.slice(0,12500)}
+function trLoad(id){if(TDid!==id||!TD){TDid=id;TD=JSON.parse(JSON.stringify(T(id)))}return TD}
+function trSyncTI(){const el=$('#ti');if(el&&TD)TD.instruction=el.value.slice(0,6000)}
+function trDirty(id){if(!TD||TDid!==id)return false;trSyncTI();const t=T(id);return JSON.stringify([TD.instruction,TD.knowledge,TD.examples,TD.corrections])!==JSON.stringify([t.instruction,t.knowledge,t.examples,t.corrections])}
+function trStatus(id){const t=T(id),b=boundConn(id),s=TSTAT[id],a=TACK[id];
+ let h=b?`<div class="note"><b>الوكيل ده مربوط بموصّل (${esc(b.name)}):</b> التدريب المحفوظ (نسخة v${t.v||0}) بيتحقن فعلًا في تعليمات الموديل في كل رد وتشغيل.${(()=>{const l=C(id).runs.filter(r=>r.ok).slice(-1)[0];return l&&l.tv!=null?' آخر تشغيل ناجح استخدم v'+l.tv+'.':''})()}</div>`
+ :`<div class="note"><b>الوكيل ده خلفي:</b> التدريب بيتحفظ ${cloudOn()?'محليًا وفي Firebase (office_training/'+esc(id)+')':'محليًا بس (الربط مع Firebase مش شغال)'}. لكنه <b>ما بيوصلوش ولا بيأثّر عليه</b> إلا لو الجسر بتاعه بيقرا الdocument ده. ${a?'الجسر سجّل إنه استلم v'+esc(a.v)+' ('+esc(fmt(a.at))+').':'مفيش تأكيد استلام من الجسر لحد دلوقتي.'}</div>`;
+ h+=`<div class="small" style="margin-top:6px">${s&&s.ok?`اتخزّن في Firebase ✓ نسخة v${s.v} (${esc(fmt(s.at))})`:s&&s.err?`<span style="color:#ff8da0">فشل التخزين في Firebase: ${esc(s.err)}</span>`:cloudOn()?'لسه ما اتخزّنش في Firebase في الجلسة دي.':''}</div>`;return h}
+function vTrain(){const id=UI.tag&&AMAP[UI.tag]?UI.tag:AGENTS[0].id;UI.tag=id;const d=trLoad(id),t=T(id);
+ const dirty=trDirty(id);
+ return `<h2>التدريب</h2><select id="tsel">${AGENTS.map(a=>`<option value="${a.id}" ${a.id===id?'selected':''}>${esc(a.n)} · ${esc(a.r)} ${T(a.id).v?'(v'+T(a.id).v+')':''}</option>`).join('')}</select>
+ ${trStatus(id)}
+ <div class="row" style="margin:8px 0"><span class="tag ${t.v?'g':''}">النسخة المحفوظة: v${t.v||0}</span>${t.updated?`<span class="small">${esc(fmt(t.updated))}</span>`:''}${dirty?'<span class="tag y">تعديلات مش محفوظة</span>':''}</div>
+ <h2>التعليمات</h2><div class="card"><textarea id="ti" maxlength="6000" style="min-height:130px" placeholder="مثلًا: ردّ دايمًا بجملتين، ما تذكرش أسعار، ناديني يا بوس...">${esc(d.instruction)}</textarea></div>
+ <h2>المعرفة (${d.knowledge.length}/20)</h2>${d.knowledge.map((k,i)=>`<div class="card" style="margin:6px 0"><b>${esc(k.title)}</b><div class="small" style="white-space:pre-wrap">${esc(k.text)}</div><button class="btn no sm" data-tr="delk" data-i="${i}" style="margin-top:6px">مسح</button></div>`).join('')}
+ <div class="card"><input type="text" id="kt" maxlength="80" placeholder="العنوان (مثلًا: خدماتنا)"><textarea id="kx" maxlength="3000" placeholder="المعلومة نفسها" style="margin-top:6px"></textarea><button class="btn sm" data-tr="addk" style="margin-top:6px">+ ضيف معلومة</button></div>
+ <h2>أمثلة (${d.examples.length}/20)</h2>${d.examples.map((e,i)=>`<div class="card" style="margin:6px 0"><div class="small">لو اتقال:</div>${esc(e.user)}<div class="small" style="margin-top:4px">يرد:</div>${esc(e.agent)}<br><button class="btn no sm" data-tr="dele" data-i="${i}" style="margin-top:6px">مسح</button></div>`).join('')}
+ <div class="card"><textarea id="eu" maxlength="500" placeholder="لو العميل/بولا قال..." style="min-height:60px"></textarea><textarea id="ea" maxlength="1000" placeholder="الرد الصح يبقى..." style="min-height:60px;margin-top:6px"></textarea><button class="btn sm" data-tr="adde" style="margin-top:6px">+ ضيف مثال</button></div>
+ <h2>تصحيحات (${d.corrections.length}/30)</h2>${d.corrections.map((c,i)=>`<div class="card" style="margin:6px 0"><div class="small">غلط:</div>${esc(c.wrong)}<div class="small" style="margin-top:4px">الصح:</div>${esc(c.right)}<br><button class="btn no sm" data-tr="delc" data-i="${i}" style="margin-top:6px">مسح</button></div>`).join('')}
+ <div class="card"><textarea id="cw" maxlength="800" placeholder="اللي قاله الوكيل غلط..." style="min-height:60px">${esc((UI.pre||{}).cw||'')}</textarea><textarea id="cr" maxlength="800" placeholder="المفروض يقول..." style="min-height:60px;margin-top:6px"></textarea><button class="btn sm" data-tr="addc" style="margin-top:6px">+ ضيف تصحيح</button></div>
+ <div class="card act" style="margin-top:12px"><input type="text" id="tn" maxlength="80" placeholder="ملاحظة على النسخة (اختياري)"><div class="row" style="margin-top:8px"><button class="btn pri" data-tr="save">حفظ نسخة جديدة</button><button class="btn sm" data-tr="prev">شوف الprompt الكامل</button><button class="btn sm" data-tr="chat">افتح الشات</button></div></div>
+ <div id="tprev"></div>
+ <h2>النسخ السابقة</h2>${t.history.length?t.history.slice().reverse().map(h=>`<div class="card" style="margin:6px 0"><div class="row" style="justify-content:space-between"><b>v${h.v}</b><span class="small">${esc(fmt(h.t))}${h.note?' · '+esc(h.note):''}</span></div>${h.knowledge?`<button class="btn sm" data-tr="restore" data-v="${h.v}" style="margin-top:6px">استرجاعها كمسودة</button>`:'<div class="small">النسخة دي جاية من جهاز تاني وما فيهاش تفاصيل</div>'}</div>`).join(''):'<div class="small">لسه مفيش نسخ محفوظة.</div>'}`}
+function trAct(t){const a=t.dataset.tr,id=UI.tag;
+ if(a==='fix'||a==='ex'){const m=allMsgs().find(x=>x.id===t.dataset.mid);if(!m||!AMAP[m.from])return;UI.tag=m.from;trLoad(m.from);
+  if(a==='fix'){UI.pre={cw:m.text.slice(0,800)};toast('اكتب الصح تحت وضيفه')}
+  else{const prev=allMsgs().filter(x=>x.room===m.room&&x.t<m.t&&x.from==='bola').slice(-1)[0];TD.examples.push({id:uid(),user:(prev?prev.text:'').slice(0,500),agent:m.text.slice(0,1000)});toast('اتضاف كمسودة مثال. احفظ نسخة')}
+  UI.tab='train';render();scrollTo(0,0);return}
+ if(!AMAP[id])return;const d=trLoad(id);trSyncTI();const V=s=>$(s)?$(s).value.trim():'';
+ if(a==='addk'){const ti=V('#kt'),tx=V('#kx');if(!ti||!tx){toast('اكتب العنوان والمعلومة');return}if(d.knowledge.length>=20){toast('وصلت للحد (20)');return}d.knowledge.push({id:uid(),title:ti,text:tx});render();return}
+ if(a==='adde'){const u=V('#eu'),g=V('#ea');if(!u||!g){toast('اكتب الاتنين');return}if(d.examples.length>=20){toast('وصلت للحد (20)');return}d.examples.push({id:uid(),user:u,agent:g});render();return}
+ if(a==='addc'){const w=V('#cw'),r=V('#cr');if(!w||!r){toast('اكتب الاتنين');return}if(d.corrections.length>=30){toast('وصلت للحد (30)');return}d.corrections.push({id:uid(),wrong:w,right:r});UI.pre=null;render();return}
+ if(a==='delk'||a==='dele'||a==='delc'){d[{delk:'knowledge',dele:'examples',delc:'corrections'}[a]].splice(+t.dataset.i,1);render();return}
+ if(a==='restore'){const h=T(id).history.find(x=>String(x.v)===t.dataset.v);if(h&&h.knowledge){TD.instruction=h.instruction||'';TD.knowledge=JSON.parse(JSON.stringify(h.knowledge));TD.examples=JSON.parse(JSON.stringify(h.examples||[]));TD.corrections=JSON.parse(JSON.stringify(h.corrections||[]));render();toast('اتحمّلت كمسودة. احفظها كنسخة جديدة');scrollTo(0,0)}return}
+ if(a==='prev'){$('#tprev').innerHTML=`<div class="small" style="margin-top:8px">ده اللي هيتبعت للموديل كـ system prompt (المحفوظ بس، من غير المسودة): ${sysPrompt(id).length} حرف</div><pre style="direction:rtl;text-align:right">${esc(sysPrompt(id))}</pre>`;return}
+ if(a==='chat'){UI.room=id;UI.tab='chat';render();scrollTo(0,0);return}
+ if(a==='save'){const cur=T(id);if(!trDirty(id)){toast('مفيش تغيير يتحفظ');return}
+  const snap={v:cur.v,t:cur.updated,note:cur.note||'',instruction:cur.instruction,knowledge:cur.knowledge,examples:cur.examples,corrections:cur.corrections};
+  const nv={v:(cur.v||0)+1,updated:Date.now(),note:V('#tn'),instruction:d.instruction,knowledge:d.knowledge,examples:d.examples,corrections:d.corrections.filter(c=>c.right),history:cur.history.slice()};
+  if(cur.v)nv.history.push(snap);nv.history=nv.history.slice(-10);TR[id]=nv;TD=null;saveTR();fbPutTrain(id);render();toast('اتحفظت نسخة v'+nv.v);return}}
+/* ---------- firebase sync ---------- */
+const FBV='11.6.1';
+function rulesText(owner,agents){const ag=(agents||[]).filter(Boolean).map(x=>`'${x}'`).join(', ');
+ return `rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function owner() { return request.auth != null && request.auth.token.email_verified == true && request.auth.token.email == '${owner||'OWNER@EMAIL.COM'}'; }
+    function agent() { return request.auth != null && request.auth.token.email in [${ag}]; }
+    function only(keys) { return request.resource.data.diff(resource.data).affectedKeys().hasOnly(keys); }
+    function msgOk() { return request.resource.data.text is string && request.resource.data.text.size() > 0 && request.resource.data.text.size() <= 1500
+      && request.resource.data.room is string && request.resource.data.from is string
+      && request.resource.data.t == request.time && request.resource.data.by == request.auth.token.email; }
+    function trainOk() { return request.resource.data.instruction is string && request.resource.data.instruction.size() <= 6000; }
+    match /office_chat/{id} {
+      allow read: if owner() || agent();
+      allow create: if (owner() && msgOk()) || (agent() && msgOk() && request.resource.data.from != 'bola');
+      allow update: if (owner() && only(['ack', 'hidden'])) || (agent() && only(['ack']));
+      allow delete: if false;
+    }
+    match /office_training/{id} {
+      allow read: if owner() || agent();
+      allow create: if owner() && trainOk();
+      allow update: if (owner() && trainOk()) || (agent() && only(['trainAck']));
+      allow delete: if false;
+    }
+    match /office_ctl/{id} {
+      allow read: if owner() || agent();
+      allow create, update: if owner() && request.resource.data.ut is number;
+      allow delete: if false;
+    }
+    match /office_status/{id} {
+      allow read: if owner() || agent();
+      allow create, update: if (owner() || agent()) && request.resource.data.updated is number;
+      allow delete: if false;
+    }
+  }
+}`}
+const BRIDGE=`// بروتوكول الجسر (بيعمله اللي بيشغّل الوكيل الخلفي، بحساب Firebase خاص بيه)
+// 1) يقرا رسايل الوكيل:   office_chat  where to array-contains "<agentId>"
+// 2) يكتب تأكيد الاستلام: office_chat/<msgId>  merge  { ack: { "<agentId>": { s: "delivered" | "read" | "answered", at: <millis> } } }
+// 3) يرد برسالة:          office_chat  add  { room, from: "<agentId>", text, t: serverTimestamp(), to: [] }
+// 4) يقرا التدريب:        office_training/<agentId>  { v, instruction, knowledge[], examples[], corrections[] }
+//    ويسجّل الاستلام:     office_training/<agentId>  merge  { trainAck: { v: <رقم النسخة>, at: <millis> } }
+// 5) يحدّث حالته:         office_status/<agentId>    set  { on: true|false, line: "...", sch: "...", updated: <millis> }
+// 6) يقرا الورديات/الطلبات: office_ctl/<agentId>     { shifts[], backup, req: {want, at} }`;
+const sanArr=(a,n)=>Array.isArray(a)?a.slice(0,n):[];
+const str=(v,n)=>String(v==null?'':v).slice(0,n);
+function normT(x){const t=emptyT();t.v=+x.v||0;t.updated=+x.updated||0;t.note=str(x.note,80);t.instruction=str(x.instruction,6000);
+ t.knowledge=sanArr(x.knowledge,20).map(k=>({id:str(k.id,20)||uid(),title:str(k.title,80),text:str(k.text,3000)}));
+ t.examples=sanArr(x.examples,20).map(k=>({id:str(k.id,20)||uid(),user:str(k.user,500),agent:str(k.agent,1000)}));
+ t.corrections=sanArr(x.corrections,30).map(k=>({id:str(k.id,20)||uid(),wrong:str(k.wrong,800),right:str(k.right,800)}));
+ t.history=sanArr(x.history,10).map(h=>({v:+h.v||0,t:+h.t||0,note:str(h.note,80),...(h.knowledge?{instruction:str(h.instruction,6000),knowledge:sanArr(h.knowledge,20),examples:sanArr(h.examples,20),corrections:sanArr(h.corrections,30)}:{})}));return t}
+async function fbPutTrain(id){if(!cloudOn())return;const t=T(id);try{await FBS.api.setDoc(FBS.api.doc(FBS.db,'office_training',id),{v:t.v,updated:t.updated,note:t.note||'',instruction:t.instruction,knowledge:t.knowledge,examples:t.examples,corrections:t.corrections,history:t.history.slice(-5)},{merge:true});TSTAT[id]={ok:1,v:t.v,at:Date.now()}}catch(e){TSTAT[id]={err:e.code||e.message}}if(UI.tab==='train')render()}
+async function fbPutCtl(id){if(!cloudOn())return;const c=C(id);try{await FBS.api.setDoc(FBS.api.doc(FBS.db,'office_ctl',id),{ut:c.ut||Date.now(),shifts:c.shifts.map(x=>({name:x.name,from:x.from,to:x.to,days:x.days})),backup:c.backup||'',every:+c.every||60,cap:+c.cap||12,req:c.req?{want:!!c.req.want,at:+c.req.at}:null})}catch(e){toast('فشل مزامنة الورديات/الطلبات: '+(e.code||e.message))}}
+function fbUnsub(){FBS.tpush=0;FBS.cpush=0;for(const u of FBS.unsubs||[]){try{u()}catch(e){}}FBS.unsubs=[];FBS.unsub=null;FBS.msgs=[]}
+function fbSub(){fbUnsub();const f=FBS.api,db=FBS.db,er=e=>{FBS.err='خطأ في القراءة: '+(e.code||e.message);render()};
+ FBS.unsubs=[
+ f.onSnapshot(f.query(f.collection(db,'office_chat'),f.orderBy('t'),f.limit(120)),snap=>{FBS.msgs=snap.docs.map(d=>{const x=d.data();const t=x.t&&x.t.toMillis?x.t.toMillis():Date.now();return{id:d.id,oid:x.oid||'',room:x.room,from:x.from,text:String(x.text||''),t,src:'cloud',srcp:x.srcp==='page'?'page':'',tv:+x.tv||0,to:Array.isArray(x.to)?x.to.filter(i=>AMAP[i]):[],ack:x.ack&&typeof x.ack==='object'?x.ack:{},by:str(x.by,80).toLowerCase(),hid:x.hidden===true||!!(x.ack&&x.ack._hide)}}).filter(m=>!m.hid&&validRoom(m.room)&&validFrom(m.from));refreshMsgs()},er),
+ f.onSnapshot(f.collection(db,'office_training'),snap=>{let ch=false;const rem={};for(const d of snap.docs){rem[d.id]=+d.data().updated||0;const id=d.id;if(!AMAP[id])continue;const x=d.data();if(x.trainAck&&typeof x.trainAck==='object'){TACK[id]={v:str(x.trainAck.v,10),at:+x.trainAck.at||0}}
+   if((+x.updated||0)>(T(id).updated||0)){TR[id]=normT(x);saveTR();if(TDid===id)TD=null;ch=true;TSTAT[id]={ok:1,v:TR[id].v,at:Date.now()}}}if(!FBS.tpush){FBS.tpush=1;for(const a of AGENTS){if(T(a.id).v&&(rem[a.id]||0)<T(a.id).updated)fbPutTrain(a.id)}}if(ch||UI.tab==='train')render()},er),
+ f.onSnapshot(f.collection(db,'office_ctl'),snap=>{let ch=false;const rem={};for(const d of snap.docs){rem[d.id]=+d.data().ut||0;const id=d.id;if(!AMAP[id])continue;const x=d.data(),c=C(id);if((+x.ut||0)>(c.ut||0)){
+   c.shifts=sanArr(x.shifts,6).map(s=>({name:str(s.name,30),from:/^\d{1,2}:\d{2}$/.test(s.from)?s.from:'08:00',to:/^\d{1,2}:\d{2}$/.test(s.to)?s.to:'16:00',days:sanArr(s.days,7).filter(j=>j>=0&&j<=6)}));
+   c.backup=AMAP[x.backup]?x.backup:'';if([15,30,60,180,360].includes(+x.every))c.every=+x.every;if(x.cap>0&&x.cap<=96)c.cap=+x.cap;
+   c.req=x.req&&typeof x.req.want==='boolean'?{want:x.req.want,at:+x.req.at||Date.now()}:null;c.ut=+x.ut;ch=true}}if(!FBS.cpush){FBS.cpush=1;for(const a of AGENTS){const c=C(a.id);if(c.ut&&c.ut>(rem[a.id]||0))fbPutCtl(a.id)}}if(ch){saveCtl();render()}},er),
+ f.onSnapshot(f.collection(db,'office_status'),snap=>{let ch=false;for(const d of snap.docs){const id=d.id;if(!AMAP[id])continue;const x=d.data(),s=S.agents[id];const u=+x.updated||Date.parse(x.updated)||0;if(u&&u>(s.updated?Date.parse(s.updated):0)){s.on=!!x.on;if(typeof x.line==='string')s.line=x.line.slice(0,300);if(typeof x.sch==='string')s.sch=x.sch.slice(0,100);s.via='fb';s.real=x.real===true;s.updated=new Date(u).toISOString();s.hist=(s.hist||[]).concat({t:s.updated,on:s.on,line:s.line}).slice(-20);ch=true}}if(ch){save();render()}},er)];
+}
+
+
+const DEFAULT_FB={apiKey:'AIzaSyCufRSHQBe1BYFiv1j-tUhjBkKqp-6gfg0',authDomain:'bolateck-office.firebaseapp.com',projectId:'bolateck-office',storageBucket:'bolateck-office.firebasestorage.app',messagingSenderId:'1013924958275',appId:'1:1013924958275:web:44ee98838255d0de05c4f6',measurementId:'G-7LSH5KGE8W'};
+const DEFAULT_FB_TXT='const firebaseConfig = {\n'+Object.entries(DEFAULT_FB).map(([k,v])=>`  ${k}: "${v}"`).join(',\n')+'\n};';
+function rulesOpen(){return `rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /office_chat/{id} {
+      allow read: if true;
+      allow create: if request.resource.data.text is string && request.resource.data.text.size() <= 1500
+        && request.resource.data.room is string && request.resource.data.from is string;
+      allow update: if request.resource.data.diff(resource.data).affectedKeys().hasOnly(['ack']);
+      allow delete: if false;
+    }
+    match /office_training/{id} {
+      allow read: if true;
+      allow create, update: if request.resource.data.instruction is string
+        && request.resource.data.instruction.size() <= 6000;
+      allow delete: if false;
+    }
+    match /office_ctl/{id} {
+      allow read: if true;
+      allow create, update: if request.resource.data.ut is number;
+      allow delete: if false;
+    }
+    match /office_status/{id} {
+      allow read: if true;
+      allow create, update: if request.resource.data.updated is number;
+      allow delete: if false;
+    }
+  }
+}`}
+async function fbConnect(cfg,email,quiet,noauth){
+ try{FBS.err='';fbUnsub();
+  const [a,au,fs]=await Promise.all([import(`https://www.gstatic.com/firebasejs/${FBV}/firebase-app.js`),import(`https://www.gstatic.com/firebasejs/${FBV}/firebase-auth.js`),import(`https://www.gstatic.com/firebasejs/${FBV}/firebase-firestore.js`)]);
+  for(const x of a.getApps().filter(x=>x.name==='office'))await a.deleteApp(x);const app=a.initializeApp(cfg,'office');FBS.auth=au.getAuth(app);FBS.db=fs.getFirestore(app,cfg.databaseId||'default');
+  const lh=v=>/^(localhost|127\.0\.0\.1):\d+$/.test(String(v||''));FBS.emu=!!cfg.emulatorHost;if(lh(cfg.emulatorHost)){const [h,pt]=cfg.emulatorHost.split(':');fs.connectFirestoreEmulator(FBS.db,h,+pt)}if(lh(cfg.authEmulator))au.connectAuthEmulator(FBS.auth,'http://'+cfg.authEmulator,{disableWarnings:true});FBS.cfg=cfg;FBS.agentEmails=String((ld(K.fb,{}).agents)||'').split(',').map(x=>x.trim().toLowerCase()).filter(Boolean);FBS.au=au;FBS.api=fs;FBS.owner=String(email||'').trim().toLowerCase();FBS.ready=true;FBS.noauth=!!noauth;
+  if(noauth){FBS.user={email:'بدون دخول (مؤقت)'};fbSub();rulesProbe();render();return true}
+  au.onAuthStateChanged(FBS.auth,u=>{
+   if(u&&String(u.email||'').toLowerCase()!==FBS.owner){FBS.err='الحساب ده مش مصرّح له';au.signOut(FBS.auth);FBS.user=null;fbUnsub();render();return}
+   FBS.user=u?{email:u.email}:null;if(u)fbSub();else fbUnsub();rulesProbe();render()});
+  return true}catch(e){FBS.ready=false;FBS.err='تعذّر الاتصال: '+(e.message||e);if(!quiet)toast(FBS.err);render();return false}}
+async function rulesProbe(){FBS.rules='unknown';if(!FBS.cfg||FBS.emu||!FBS.cfg.apiKey||!FBS.cfg.projectId)return;
+ try{const r=await fetch(`https://firestore.googleapis.com/v1/projects/${encodeURIComponent(FBS.cfg.projectId)}/databases/${encodeURIComponent(FBS.cfg.databaseId||'default')}/documents:runQuery?key=${encodeURIComponent(FBS.cfg.apiKey)}`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({structuredQuery:{from:[{collectionId:'office_chat'}],limit:1}}),credentials:'omit',cache:'no-store'});FBS.rules=r.status===200?'open':r.status===403?'secured':'unknown'}catch(e){FBS.rules='unknown'}if(UI.tab==='team'||UI.tab==='link')render()}
+async function fbPushImported(list){if(!(FBS.ready&&FBS.user))return 0;let n=0;for(const m of list){try{await FBS.api.setDoc(FBS.api.doc(FBS.db,'office_chat','imp_'+m.id),{room:m.room,from:m.from,text:m.text,t:FBS.api.serverTimestamp(),oid:m.id,by:FBS.user.email});n++}catch(e){}}return n}
+function fbSection(){const c=ld(K.fb,{cfg:'',email:'',agents:''});
+ return `<h2>شات مباشر (Firebase) - اختياري</h2><div class="card act"><b>أسرع طريقة</b><p class="small">إعدادات مشروعك (bolateck-office) متحطّة جاهزة تحت. دوس الزرار وخلاص، من غير لصق.</p><button class="btn pri" data-act="fbnoauth" style="width:100%">وصّل Firebase دلوقتي (مؤقت، من غير دخول)</button><p class="small">ده مؤقت لحد ما تفعّل تسجيل الدخول. بعدها استخدم "اتصال" و"دخول بجوجل" تحت وانشر القواعد المؤمّنة.</p></div><div class="card" style="margin-top:10px"><div class="mode ${FBS.ready&&FBS.user?'live':''}">${FBS.ready&&FBS.user?'متصل كـ '+esc(FBS.user.email):FBS.ready?'اتصلت بالمشروع، سجّل دخول':'مش متصل'}${FBS.err?' · '+esc(FBS.err):''}</div>
+ <p class="small">من غير ده الشات محلي. للمباشر محتاج مشروع Firebase بتاعك (مجاني): Authentication بـ Google أو Email، وFirestore، والصق القواعد من تحت.</p>
+ <textarea id="fbcfg" dir="ltr" placeholder="الصق firebaseConfig هنا (const firebaseConfig = {...})" style="min-height:110px">${esc(c.cfg||DEFAULT_FB_TXT)}</textarea>
+ <input type="text" id="fbem" dir="ltr" placeholder="إيميلك (المالك)" value="${esc(c.email||'bolamadhat8@gmail.com')}" style="margin-top:8px">
+ <input type="text" id="fbag" dir="ltr" placeholder="إيميلات الوكلاء المسموح لهم بالكتابة (اختياري، مفصولة بفاصلة)" value="${esc(c.agents)}" style="margin-top:8px">
+ <div class="row" style="margin-top:8px"><button class="btn pri" data-act="fbconnect">اتصال</button><button class="btn" data-act="fbgoogle">دخول بجوجل</button><button class="btn sm no" data-act="fbout">فصل</button></div>
+ <div class="row" style="margin-top:8px"><input type="text" id="fbmail" dir="ltr" placeholder="بريد" style="flex:1;min-width:120px"><input type="text" id="fbpw" dir="ltr" placeholder="كلمة المرور" style="flex:1;min-width:120px" autocomplete="off"><button class="btn" data-act="fbpass">دخول</button></div>
+ <h2 style="font-size:15px">القواعد المؤقتة (دلوقتي، من غير دخول)</h2><p class="small">أضيق من test mode: بتسمح بس بالـ4 collections بتوعنا وبشكل بيانات محدد، ومفيش مسح. لسه مفتوحة لأي حد معاه إعدادات المشروع.</p><pre id="fbrules0">${esc(rulesOpen())}</pre><div class="row"><button class="btn sm" data-act="copyrules0">نسخ القواعد المؤقتة</button></div><h2 style="font-size:15px">القواعد المؤمّنة (بعد تفعيل الدخول)</h2><pre id="fbrules">${esc(rulesText(c.email,String(c.agents||'').split(',').map(x=>x.trim().toLowerCase())))}</pre><div class="row"><button class="btn sm" data-act="copyrules">نسخ القواعد</button></div>
+ <p class="small">الوكلاء مش بيكتبوا مباشرة إلا لو اتعمللهم حساب Firebase خاص (إيميل وكلمة سر محفوظين بشكل آمن، مش في الشات). غير كده كلامهم بيدخل بملف "messages" وبيترفع للغرفة وقت الاستيراد.</p><h2 style="font-size:15px">بروتوكول الجسر للوكلاء الخلفيين</h2><pre>${esc(BRIDGE)}</pre><div class="row"><button class="btn sm" data-act="copybridge">نسخ</button></div></div>`}
+async function fbNoAuth(){const raw=$('#fbcfg').value||DEFAULT_FB_TXT;const cfg={};for(const mm of raw.matchAll(/([A-Za-z_]+)\s*:\s*["']([^"']*)["']/g))cfg[mm[1]]=mm[2];if(!cfg.apiKey||!cfg.projectId){toast('محتاج apiKey وprojectId');return}
+ sv(K.fb,{cfg:raw,email:$('#fbem').value.trim(),agents:$('#fbag').value,cfgObj:cfg,noauth:true});if(await fbConnect(cfg,'',false,true))toast('اتوصّل (مؤقت من غير دخول)')}
+async function fbDoConnect(){const raw=$('#fbcfg').value;const em=$('#fbem').value.trim();const ag=$('#fbag').value;
+ const cfg={};for(const mm of raw.matchAll(/([A-Za-z_]+)\s*:\s*["']([^"']*)["']/g))cfg[mm[1]]=mm[2];
+ if(!cfg||!cfg.apiKey||!cfg.projectId){toast('محتاج apiKey وprojectId');return}if(!/^\S+@\S+\.\S+$/.test(em)){toast('اكتب إيميلك صح');return}
+ sv(K.fb,{cfg:raw,email:em,agents:ag,cfgObj:cfg});if(await fbConnect(cfg,em)){toast('اتصلت. سجّل دخول بجوجل أو بالبريد')}}
+
+/* ---------- quick review ---------- */
+let RV={i:0,edit:false};
+function reviewHtml(){const l=S.drafts.filter(d=>(d.state||'pending')==='pending');
+ if(!l.length)return `<div class="row" style="justify-content:space-between"><h2 style="margin:0">خلصت المراجعة</h2><button class="btn sm" data-close>إغلاق</button></div><div class="empty">مفيش مسودات منتظرة. لسه ما اتبعتش حاجة، النسخ والإرسال بإيدك من تبويب "موافق عليها".</div>`;
+ if(RV.i>=l.length)RV.i=0;const d=l[RV.i],a=AMAP[d.agent];const pr=!d.phone&&d.to?findPros(d.to):null;
+ return `<div class="row" style="justify-content:space-between"><span class="small">${RV.i+1} من ${l.length}</span><button class="btn sm" data-close>إغلاق</button></div>
+ <div style="height:5px;background:var(--ln);border-radius:9px;margin:6px 0 10px"><div style="height:100%;width:${(RV.i+1)/l.length*100}%;background:var(--red);border-radius:9px"></div></div>
+ <div class="row"><span class="tag r">${esc(a?a.n:'—')}</span><span class="tag">${esc(KIND[d.kind]||d.kind||'')}</span><span class="tag">${esc(CH[d.channel]||d.channel||'')}</span></div>
+ ${d.title?`<h3 style="margin:8px 0 2px">${esc(d.title)}</h3>`:''}${d.to?`<div class="small">إلى: ${esc(d.to)}${d.phone?' · '+esc(d.phone):''}</div>`:''}
+ <textarea id="rvbody" style="margin-top:8px;min-height:160px" ${RV.edit?'':'readonly'}>${esc(d.body)}</textarea>
+ <div class="small" style="margin:6px 0">الموافقة قرار بس. مش هتتبعت حاجة من هنا.</div>
+ <div class="row"><button class="btn ok" style="flex:2;padding:14px" data-rv="approve">موافقة</button><button class="btn no" style="flex:1;padding:14px" data-rv="reject">رفض</button></div>
+ <div class="row" style="margin-top:8px"><button class="btn" style="flex:1" data-rv="edit">${RV.edit?'تم التعديل':'تعديل'}</button><button class="btn" style="flex:1" data-rv="skip">تخطي</button></div>`}
+function findPros(n){const q=String(n).trim().toLowerCase();return P.find(p=>p.Business.toLowerCase()===q)||null}
+function rvAct(act){const l=S.drafts.filter(d=>(d.state||'pending')==='pending');const d=l[RV.i];if(!d)return;
+ const ta=$('#rvbody');
+ if(act==='edit'){if(RV.edit&&ta){d.body=ta.value;save()}RV.edit=!RV.edit;$('#sheet').innerHTML=reviewHtml();return}
+ if(act==='skip'){RV.edit=false;RV.i=(RV.i+1)%l.length;$('#sheet').innerHTML=reviewHtml();return}
+ if(ta&&RV.edit)d.body=ta.value;RV.edit=false;
+ d.state=act==='approve'?'approved':'rejected';d.decidedAt=Date.now();save();hdr();nav();
+ if(act==='approve'&&d.channel==='whatsapp'&&waNum(d.phone)){$('#sheet').innerHTML=`<div class="row" style="justify-content:space-between"><h2 style="margin:0">تمت الموافقة</h2><button class="btn sm" data-close>إغلاق</button></div><p>لسه ما اتبعتش حاجة. لو عايز تبعتها دلوقتي بنفسك:</p><div class="row"><a class="btn pri" target="_blank" rel="noopener" href="https://wa.me/${waNum(d.phone)}?text=${encodeURIComponent(d.body)}">فتح واتساب بالنص</a><button class="btn" data-copydraft="${esc(d.id)}">نسخ النص</button><button class="btn" data-rv="skipnext">التالية</button></div>`;return}
+ $('#sheet').innerHTML=reviewHtml();render()}
+
+/* ---------- daily report ---------- */
+const dayKey=t=>new Date(t).toLocaleDateString('en-CA',{timeZone:'Africa/Cairo'});
+function reportData(){const today=dayKey(Date.now());const isT=t=>t&&dayKey(t)===today;
+ const dd=S.drafts;const dec=k=>dd.filter(d=>d.state===k&&isT(d.decidedAt)).length;
+ const ps=Object.values(PS);const cnt={};Object.keys(PST).forEach(k=>cnt[k]=0);P.forEach((p,i)=>{const s=(PS[pk(p,i)]||{}).s||'new';cnt[s]++});
+ return {today,on:AGENTS.filter(a=>S.agents[a.id].on),
+  tOpen:S.tasks.filter(t=>t.state!=='done').length,tDone:S.tasks.filter(t=>t.state==='done'&&isT(t.doneAt||t.created)).length,
+  pend:dd.filter(d=>(d.state||'pending')==='pending').length,apT:dec('approved'),rjT:dec('rejected'),
+  chT:ps.filter(v=>v.s&&v.s!=='new'&&isT(v.t)).length,cnt,np:P.length}}
+function reportText(){const r=reportData();const L=[];
+ L.push('تقرير مكتب بولاتك - '+new Date().toLocaleDateString('ar-EG',{timeZone:'Africa/Cairo',dateStyle:'full'}));
+ L.push('الشغالين: '+(r.on.map(a=>a.n).join('، ')||'مفيش'));
+ L.push(`مسودات منتظرة موافقتك: ${r.pend}. وافقت النهارده على ${r.apT} ورفضت ${r.rjT}.`);
+ L.push(`مهام مفتوحة: ${r.tOpen}. خلصت النهارده: ${r.tDone}.`);
+ if(r.np)L.push(`العملاء (${r.np}): `+Object.entries(PST).map(([k,l])=>l+' '+r.cnt[k]).join('، ')+`. اتغيّرت حالتهم النهارده: ${r.chT}.`);
+ for(const a of AGENTS){const s=S.agents[a.id];if(s.report)L.push(`\n${a.n} (${a.r}):\n${s.report}`)}
+ L.push('\nكل الأرقام من اللي على جهازك. تقارير الفريق بتظهر بس لما تتستورد.');return L.join('\n')}
+function vReport(){const r=reportData();
+ const box=(n,l,c)=>`<div class="card" style="text-align:center"><div style="font-size:28px;font-weight:900;color:${c||'#fff'}">${n}</div><div class="small">${l}</div></div>`;
+ const withRep=AGENTS.filter(a=>S.agents[a.id].report);
+ return `<h2>تقرير اليوم</h2><div class="small" style="margin-bottom:8px">${esc(new Date().toLocaleDateString('ar-EG',{timeZone:'Africa/Cairo',dateStyle:'full'}))}</div>
+ <div class="grid g3" style="grid-template-columns:repeat(2,1fr)">${box(r.on.length,'شغالين دلوقتي','var(--ok)')}${box(r.pend,'مسودات منتظرة موافقتك','var(--warn)')}${box(r.apT,'وافقت عليها النهارده')}${box(r.rjT,'رفضتها النهارده')}${box(r.tOpen,'مهام مفتوحة')}${box(r.tDone,'مهام خلصت النهارده')}</div>
+ <h2>العملاء</h2><div class="card">${r.np?`<div class="row">${Object.entries(PST).map(([k,l])=>`<span class="tag ${k==='interested'||k==='client'?'g':k==='declined'?'r':''}">${l} ${r.cnt[k]}</span>`).join('')}</div><div class="small" style="margin-top:6px">اتغيّرت حالتهم النهارده: ${r.chT}</div>`:'<div class="small">لسه ما حمّلتش قايمة العملاء على الجهاز ده.</div>'}</div>
+ <h2>تقارير الفريق</h2>${withRep.length?withRep.map(a=>`<div class="card" style="margin:8px 0"><b>${esc(a.n)}</b> <span class="small">${esc(a.r)} · ${esc(fmt(S.agents[a.id].updated))}</span><div style="white-space:pre-wrap;margin-top:4px">${esc(S.agents[a.id].report)}</div></div>`).join(''):'<div class="empty">مفيش تقارير وصلت من الفريق لسه. لما عمر يبعت ملف فيه "report" لكل وكيل بيظهر هنا.</div>'}
+ <div class="row" style="margin-top:12px"><button class="btn pri" data-act="copyreport">نسخ التقرير</button><a class="btn" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(reportText())}">مشاركة على واتساب</a></div>
+ <p class="small">الأرقام محسوبة من بيانات جهازك دلوقتي. مفيش رقم مكتوب بإيد.</p>`}
+
+/* ---------- import: validate, preview, apply, undo ---------- */
+let PEND=null;
+function analyze(txt){const out={ok:false,errors:[],warn:[],agents:[],tasks:0,newD:[],dup:0,bad:0,d:null};let d;
+ try{d=JSON.parse(txt)}catch(e){out.errors.push('الملف مش JSON صحيح: '+e.message);return out}
+ if(!d||typeof d!=='object'||Array.isArray(d)){out.errors.push('لازم الملف يكون كائن JSON فيه agents أو tasks أو drafts أو messages');return out}
+ if(!('agents' in d||'tasks' in d||'drafts' in d||'messages' in d)){out.errors.push('مفيش agents ولا tasks ولا drafts ولا messages في الملف');return out}
+ if(d.version!==undefined&&d.version!==1)out.warn.push('رقم الصيغة '+d.version+' غير متوقع (المتوقع 1). هنكمّل بس راجع النتيجة.');
+ out.d=d;
+ for(const a of (Array.isArray(d.agents)?d.agents:[])){if(!a||!AMAP[a.id]){out.bad++;out.warn.push('وكيل مجهول: '+esc(a&&a.id));continue}
+  const c=S.agents[a.id],ch=[];if('on' in a&&!!a.on!==c.on)ch.push(a.on?'اتفعّل':'رجع استعداد');if(typeof a.line==='string'&&a.line!==c.line)ch.push('حالة جديدة');if(typeof a.report==='string'&&a.report!==c.report)ch.push('تقرير');if(typeof a.sch==='string'&&a.sch!==c.sch)ch.push('وردية');
+  out.agents.push({id:a.id,ch})}
+ for(const t of (Array.isArray(d.tasks)?d.tasks:[])){if(t&&S.tasks.find(x=>x.id===t.id))out.tasks++;else{out.bad++;out.warn.push('مهمة برقم غير موجود: '+esc(t&&t.id))}}
+ for(const x of (Array.isArray(d.drafts)?d.drafts:[])){if(!x||!x.id||typeof x.body!=='string'||!x.body.trim()){out.bad++;out.warn.push('مسودة ناقصة (محتاجة id وbody)');continue}
+  if(S.drafts.find(y=>y.id===String(x.id)))out.dup++;else out.newD.push(x)}
+ out.newM=[];out.dupM=0;for(const m of (Array.isArray(d.messages)?d.messages:[])){if(!m||!m.id||typeof m.text!=='string'||!m.text.trim()||m.text.length>1000||!validRoom(m.room)||!validFrom(m.from)){out.bad++;out.warn.push('رسالة ناقصة أو غير صالحة (id وroom وfrom وtext)');continue}
+  if(S.chat.find(y=>y.id===String(m.id)))out.dupM++;else out.newM.push(m)}
+ out.ok=true;return out}
+function previewHtml(o,src){
+ if(!o.ok)return `<div class="row" style="justify-content:space-between"><h2 style="margin:0">مش هينفع الاستيراد</h2><button class="btn sm" data-close>إغلاق</button></div><div class="note">${o.errors.map(esc).join('<br>')}</div>`;
+ const chg=o.agents.filter(a=>a.ch.length);
+ return `<div class="row" style="justify-content:space-between"><h2 style="margin:0">معاينة الاستيراد</h2><button class="btn sm" data-close>إغلاق</button></div><p class="small">المصدر: ${esc(src)}. لسه ما اتطبّقش حاجة.</p>
+ <div class="card"><div>تحديث حالة: <b>${chg.length}</b> وكيل</div>${chg.map(a=>`<div class="small">- ${esc(AMAP[a.id].n)}: ${a.ch.join('، ')}</div>`).join('')}<div style="margin-top:6px">مهام هتتحدّث: <b>${o.tasks}</b></div><div>رسايل شات جديدة: <b>${(o.newM||[]).length}</b></div><div>مسودات جديدة: <b>${o.newD.length}</b> ${o.dup?`<span class="small">(${o.dup} موجودة قبل كده وهتتجاهل)</span>`:''}</div></div>
+ ${o.newD.length?`<h2>المسودات الجديدة</h2>${o.newD.slice(0,5).map(x=>`<div class="card" style="margin:6px 0"><span class="tag r">${esc((AMAP[x.agent]||{}).n||'؟')}</span> <b>${esc(x.title||x.to||'')}</b><div class="small">${esc(String(x.body).slice(0,90))}</div></div>`).join('')}${o.newD.length>5?`<div class="small">و${o.newD.length-5} كمان</div>`:''}`:''}
+ ${o.warn.length?`<div class="note" style="margin-top:10px"><b>تنبيهات (${o.warn.length}):</b><br>${o.warn.slice(0,6).join('<br>')}</div>`:''}
+ <div class="row" style="margin-top:12px"><button class="btn pri" data-act="applyimp">تطبيق</button><button class="btn" data-close>إلغاء</button></div><p class="small">الاستيراد ما بيمسحش قراراتك السابقة. وتقدر تتراجع عنه بعد التطبيق.</p>`}
+function applyImport(){const o=PEND&&PEND.o;if(!o||!o.ok)return;const d=o.d;
+ sv(K.undo,{S:JSON.parse(JSON.stringify(S)),t:Date.now()});
+ const now=Date.now(),iso=d.updated||new Date().toISOString();
+ for(const a of (Array.isArray(d.agents)?d.agents:[])){if(!AMAP[a.id])continue;const c=S.agents[a.id];const before=c.on+'|'+c.line;
+  if('on' in a)c.on=!!a.on;if(typeof a.line==='string')c.line=a.line;if(typeof a.sch==='string')c.sch=a.sch;if(typeof a.report==='string')c.report=a.report;c.updated=iso;c.via='';
+  if(before!==c.on+'|'+c.line){c.hist=(c.hist||[]);c.hist.push({t:iso,on:c.on,line:c.line});c.hist=c.hist.slice(-20)}}
+ for(const t of (Array.isArray(d.tasks)?d.tasks:[])){const m=S.tasks.find(x=>x.id===t.id);if(m){if(['todo','doing','done'].includes(t.state)){if(t.state==='done'&&m.state!=='done')m.doneAt=now;m.state=t.state}if(typeof t.note==='string')m.note=t.note}}
+ let nd=0;for(const x of o.newD){let ph=x.phone||'';if(!ph&&x.to){const p=findPros(x.to);if(p)ph=p.Phone}
+  S.drafts.push({id:String(x.id),agent:AMAP[x.agent]?x.agent:'omar',kind:x.kind||'other',channel:x.channel||'other',to:x.to||'',phone:ph,title:x.title||'',body:x.body,state:'pending',created:now});nd++}
+ const nm=[];for(const m of (o.newM||[])){const tt=Date.parse(m.t);const r={id:String(m.id),room:m.room,from:m.from,text:m.text,t:isNaN(tt)?now:tt,src:'import'};S.chat.push(r);nm.push(r)}
+ S.imported=new Date().toISOString();save();fbPushImported(nm);
+ const h=ld(K.imps,[]);h.unshift({t:S.imported,src:PEND.src,nd,na:o.agents.length,nt:o.tasks});sv(K.imps,h.slice(0,10));
+ PEND=null;closeSheet();render();toast(`اتطبّق: ${nd} مسودة، ${nm.length} رسالة`)}
+function undoImport(){const u=ld(K.undo,null);if(!u){toast('مفيش حاجة تتراجع عنها');return}if(!confirm('التراجع عن آخر استيراد؟ أي قرار أخدته بعده هيضيع.'))return;S=u.S;save();localStorage.removeItem(K.undo);render();toast('اتراجع عن آخر استيراد')}
+function startImport(txt,src){const o=analyze(txt);PEND={o,src};openSheet(previewHtml(o,src))}
+
+/* ---------- agent connectors (keys stay in this browser only) ---------- */
+const PROV={
+ openai:{n:'ChatGPT (OpenAI API)',ep:'https://api.openai.com/v1',model:'gpt-4o-mini',key:true,cloud:true},
+ anthropic:{n:'Claude (Anthropic API)',ep:'https://api.anthropic.com',model:'claude-3-5-haiku-latest',key:true,cloud:true},
+ gemini:{n:'Gemini (Google AI)',ep:'https://generativelanguage.googleapis.com/v1beta',model:'gemini-3.5-flash-lite',key:true,cloud:true},
+ ollama:{n:'نموذج محلي - Ollama (مثلًا Qwen)',ep:'http://localhost:11434',model:'qwen2.5:7b',key:false},
+ lmstudio:{n:'نموذج محلي - LM Studio',ep:'http://localhost:1234/v1',model:'',key:false}
+};
+const CN=()=>ld(K.conn,[]);
+const saveCN=l=>sv(K.conn,l);
+function epOk(p,u){let x;try{x=new URL(u)}catch(e){return 'الرابط مش صحيح'}
+ if(p==='openai'&&x.origin!=='https://api.openai.com')return 'رابط OpenAI لازم يكون https://api.openai.com/v1 (الرابط ده الوحيد المسموح من حماية الصفحة)';
+ if(p==='gemini'&&x.origin!=='https://generativelanguage.googleapis.com')return 'رابط Gemini لازم يكون https://generativelanguage.googleapis.com/v1beta';
+ if(p==='anthropic'&&x.origin!=='https://api.anthropic.com')return 'رابط Claude لازم يكون https://api.anthropic.com';
+ if(p==='ollama'||p==='lmstudio'){if(x.protocol!=='http:'&&x.protocol!=='https:')return 'لازم http:// أو https://';if(!['localhost','127.0.0.1'].includes(x.hostname))return 'المحلي لازم يكون localhost أو 127.0.0.1 (حماية الصفحة بتمنع غيره)'}
+ return ''}
+const trim=s=>String(s||'').trim().replace(/\/+$/,'');
+function tmo(ms){const c=new AbortController();const t=setTimeout(()=>c.abort(),ms);return {s:c.signal,done:()=>clearTimeout(t)}}
+async function jf(url,opt,ms){const T=tmo(ms||9000);try{const r=await fetch(url,{...opt,signal:T.s,cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'});let j=null;const tx=await r.text();try{j=JSON.parse(tx)}catch(e){}return {r,j,tx}}finally{T.done()}}
+const GB={};
+async function gjf(c,url,opt,ms){if(GB[c.key]){const h={...(opt.headers||{})};delete h['x-goog-api-key'];h.Authorization='Bearer '+c.key;const z=await jf(url,{...opt,headers:h},ms);if(z.r.ok)return z;GB[c.key]=0}let x=await jf(url,opt,ms);if(!x.r.ok&&[400,401,403].includes(x.r.status)&&String(c.key||'').startsWith('AQ.')){const h={...(opt.headers||{})};delete h['x-goog-api-key'];h.Authorization='Bearer '+c.key;const y=await jf(url,{...opt,headers:h},ms);if(y.r.ok){GB[c.key]=1;return y}}return x}
+function hdrs(c){const h={};if(c.provider==='openai')h.Authorization='Bearer '+c.key;
+ if(c.provider==='lmstudio'&&c.key)h.Authorization='Bearer '+c.key;
+ if(c.provider==='gemini')h['x-goog-api-key']=c.key;
+ if(c.provider==='anthropic'){h['x-api-key']=c.key;h['anthropic-version']='2023-06-01';h['anthropic-dangerous-direct-browser-access']='true'}
+ return h}
+function errMsg(c,e){const loc=!PROV[c.provider].cloud;
+ if(e&&e.name==='AbortError')return 'انتهت المهلة (9 ثواني) من غير رد'+(loc?'. تأكد إن البرنامج شغال على اللابتوب':'');
+ return loc?'مفيش اتصال بالسيرفر المحلي. غالبًا البرنامج مش شغال، أو الصفحة مش مسموحلها (OLLAMA_ORIGINS أو CORS في LM Studio)، أو المتصفح بيمنع الوصول للـ localhost. افتح الشرح تحت.':'مفيش اتصال بالخدمة (النت أو حماية المتصفح)'}
+async function testConn(c){const t0=Date.now();const out=ok=>({ok,t:Date.now(),ms:Date.now()-t0});
+ const P=PROV[c.provider];if(!P)return {...out(false),msg:'مزوّد غير معروف'};
+ const bad=epOk(c.provider,c.endpoint);if(bad)return {...out(false),msg:bad};
+ if(P.key&&!c.key)return {...out(false),msg:'مفيش مفتاح API متسجّل. ما اتعملش أي طلب. ضيف المفتاح وجرّب تاني.'};
+ const ep=trim(c.endpoint);
+ try{
+  if(c.provider==='ollama'){const {r,j}=await jf(ep+'/api/tags',{headers:hdrs(c)});
+   if(!r.ok)return {...out(false),msg:'السيرفر ردّ بـ HTTP '+r.status};
+   const names=(j&&j.models||[]).map(m=>m.name);if(!names.length)return {...out(true),msg:'السيرفر شغال بس مفيش نماذج متنزّلة. نزّل واحد بـ: ollama pull '+(c.model||'qwen2.5:7b')};
+   if(c.model&&!names.some(n=>n===c.model||n.split(':')[0]===c.model))return {...out(false),msg:'السيرفر شغال لكن النموذج "'+c.model+'" مش موجود. الموجود: '+names.slice(0,6).join('، ')};
+   return {...out(true),msg:'السيرفر ردّ ✓ والنموذج موجود. نماذج متاحة: '+names.slice(0,6).join('، ')}}
+  if(c.provider==='gemini'){const {r,j}=await gjf(c,ep+'/models?pageSize=200',{headers:hdrs(c)});
+   if(r.status===400||r.status===401||r.status===403)return {...out(false),msg:'المفتاح اترفض (HTTP '+r.status+')'+(j&&j.error&&j.error.message?': '+j.error.message:'')};
+   if(r.status===429)return {...out(false),msg:'وصلت حد الاستخدام (HTTP 429). استنى شوية أو شوف الحصة في Google AI Studio'};
+   if(!r.ok)return {...out(false),msg:'الخدمة ردّت بـ HTTP '+r.status+(j&&j.error&&j.error.message?': '+j.error.message:'')};
+   const ids=(j&&j.models||[]).map(m=>String(m.name||'').replace(/^models\//,''));if(c.model&&ids.length&&!ids.includes(c.model))return {...out(false),msg:'المفتاح شغال لكن النموذج "'+c.model+'" مش في حسابك. من الموجود: '+ids.filter(x=>/^gemini-.*(flash|lite)/.test(x)).slice(0,6).join('، ')};
+   return {...out(true),msg:'المفتاح اتقبل ✓ ('+ids.length+' نموذج)'}}
+  if(c.provider==='anthropic'){const {r,j}=await jf(ep+'/v1/models',{headers:hdrs(c)});
+   if(r.status===401||r.status===403)return {...out(false),msg:'المفتاح اترفض (HTTP '+r.status+')'};
+   if(!r.ok)return {...out(false),msg:'الخدمة ردّت بـ HTTP '+r.status+(j&&j.error&&j.error.message?': '+j.error.message:'')};
+   const ids=(j&&j.data||[]).map(m=>m.id);if(c.model&&ids.length&&!ids.includes(c.model))return {...out(false),msg:'المفتاح شغال لكن النموذج "'+c.model+'" مش في حسابك'};
+   return {...out(true),msg:'المفتاح اتقبل ✓'}}
+  const {r,j}=await jf(ep+'/models',{headers:hdrs(c)});
+  if(r.status===401||r.status===403)return {...out(false),msg:'المفتاح اترفض (HTTP '+r.status+')'};
+  if(!r.ok)return {...out(false),msg:'الخدمة ردّت بـ HTTP '+r.status+(j&&j.error&&j.error.message?': '+j.error.message:'')};
+  const ids=(j&&j.data||[]).map(m=>m.id);
+  if(c.model&&ids.length&&!ids.includes(c.model))return {...out(false),msg:'الاتصال شغال لكن النموذج "'+c.model+'" مش موجود'+(c.provider==='lmstudio'?'. الموجود: '+ids.slice(0,5).join('، '):'')};
+  return {...out(true),msg:c.provider==='openai'?'المفتاح اتقبل ✓':'السيرفر ردّ ✓'+(ids.length?' ('+ids.length+' نموذج)':'')}
+ }catch(e){return {...out(false),msg:errMsg(c,e)}}}
+async function askConn(c,prompt,system,mt){const ep=trim(c.endpoint);const bad=epOk(c.provider,c.endpoint);if(bad)throw new Error(bad);
+ if(PROV[c.provider].key&&!c.key)throw new Error('مفيش مفتاح API');
+ if(!c.model)throw new Error('اكتب اسم النموذج الأول');
+ if(c.provider==='gemini'){const {r,j}=await gjf(c,ep+'/models/'+encodeURIComponent(c.model)+':generateContent',{method:'POST',headers:{...hdrs(c),'content-type':'application/json'},body:JSON.stringify({...(system?{systemInstruction:{parts:[{text:system}]}}:{}),contents:[{role:'user',parts:[{text:prompt}]}],generationConfig:{maxOutputTokens:Math.max(mt||300,1024)}})},60000);
+  if(!r.ok)throw new Error('HTTP '+r.status+(r.status===429?' (وصلت حد الاستخدام)':'')+(j&&j.error&&j.error.message?': '+j.error.message:''));
+  const cd=j&&j.candidates&&j.candidates[0];const tx=((cd&&cd.content&&cd.content.parts)||[]).map(x=>x.text||'').join('');
+  if(!tx&&j&&j.promptFeedback&&j.promptFeedback.blockReason)throw new Error('جوجل رفضت الطلب: '+j.promptFeedback.blockReason);
+  if(!tx&&cd&&cd.finishReason&&cd.finishReason!=='STOP')throw new Error('الموديل وقف من غير رد: '+cd.finishReason);
+  return tx}
+ if(c.provider==='anthropic'){const {r,j}=await jf(ep+'/v1/messages',{method:'POST',headers:{...hdrs(c),'content-type':'application/json'},body:JSON.stringify({model:c.model,max_tokens:mt||300,system:system||undefined,messages:[{role:'user',content:prompt}]})},60000);
+  if(!r.ok)throw new Error('HTTP '+r.status+(j&&j.error&&j.error.message?': '+j.error.message:''));return (j.content||[]).map(x=>x.text||'').join('')}
+ if(c.provider==='ollama'){const {r,j}=await jf(ep+'/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({model:c.model,stream:false,messages:(system?[{role:'system',content:system}]:[]).concat([{role:'user',content:prompt}])})},120000);
+  if(!r.ok)throw new Error('HTTP '+r.status+(j&&j.error?': '+j.error:''));return j.message&&j.message.content||''}
+ const {r,j}=await jf(ep+'/chat/completions',{method:'POST',headers:{...hdrs(c),'content-type':'application/json'},body:JSON.stringify({model:c.model,max_tokens:mt||300,messages:(system?[{role:'system',content:system}]:[]).concat([{role:'user',content:prompt}])})},120000);
+ if(!r.ok)throw new Error('HTTP '+r.status+(j&&j.error&&j.error.message?': '+j.error.message:''));return j.choices&&j.choices[0]&&j.choices[0].message&&j.choices[0].message.content||''}
+const mask=k=>k?(k.length>10?k.slice(0,3)+'…'+k.slice(-3):'•••'):'';
+function connCard(c){const P=PROV[c.provider]||{n:c.provider};const l=c.last;
+ const st=!l?'<span class="tag">لسه ما اتختبرش</span>':l.ok?`<span class="tag g">نجح</span>`:`<span class="tag r">فشل</span>`;
+ return `<div class="card cn"><div class="row" style="justify-content:space-between"><div><h3 style="margin:0">${esc(c.name)}</h3><div class="role small">${esc(c.role||'من غير دور محدد')} · ${esc(P.n)}</div></div>${st}</div>
+ <div class="kv small" style="margin-top:8px;direction:ltr;text-align:left"><div>endpoint: ${esc(c.endpoint)}</div><div>model: ${esc(c.model||'-')}</div>${P.key?`<div>key: ${c.key?esc(mask(c.key))+' (محفوظ في المتصفح ده بس)':'<b style="color:#ff6b82">مش متسجّل</b>'}</div>`:''}</div>
+ ${l?`<div class="small" style="margin-top:6px;color:${l.ok?'var(--ok)':'#ff8da0'}">${esc(l.msg)}<br><span style="color:var(--mu)">${esc(fmt(l.t))} · ${l.ms}ms</span></div>`:''}
+ <div class="row" style="margin-top:10px"><button class="btn pri sm" data-cact="test" data-id="${c.id}" ${CB[c.id]?'disabled':''}>${CB[c.id]?'بيختبر...':'اختبار الاتصال'}</button><button class="btn sm" data-cact="try" data-id="${c.id}">جرّب رسالة</button><button class="btn sm" data-cact="edit" data-id="${c.id}">تعديل</button><button class="btn no sm" data-cact="del" data-id="${c.id}">مسح</button></div></div>`}
+let CB={};
+function connForm(c){c=c||{id:'',name:'',role:'',provider:'ollama',endpoint:PROV.ollama.ep,model:PROV.ollama.model,key:''};
+ return `<h2 style="margin-top:0">${c.id?'تعديل':'إضافة'} موصّل</h2><div class="grid">
+ <label class="small">الاسم<input type="text" id="cf-n" value="${esc(c.name)}" placeholder="مثلًا: مساعد الكتابة"></label>
+ <label class="small">الدور<input type="text" id="cf-r" value="${esc(c.role)}" placeholder="مثلًا: يكتب مسودات الرسايل"></label>
+ <label class="small">المزوّد<select id="cf-p">${Object.entries(PROV).map(([k,v])=>`<option value="${k}" ${c.provider===k?'selected':''}>${esc(v.n)}</option>`).join('')}</select></label>
+ <label class="small">Endpoint<input type="text" id="cf-e" dir="ltr" value="${esc(c.endpoint)}"></label>
+ <label class="small">النموذج (model)<input type="text" id="cf-m" dir="ltr" value="${esc(c.model)}"></label>
+ <label class="small" id="cf-kw">مفتاح API (بيتحفظ في متصفحك بس، ومش بيدخل أي ملف ولا شات)<input type="password" id="cf-k" dir="ltr" autocomplete="off" value="${esc(c.key)}" placeholder="sk-... أو AQ...."></label>
+ <div class="row"><button class="btn pri" data-cact="save" data-id="${c.id}">حفظ</button><button class="btn" data-close>إلغاء</button></div></div>`}
+function connHowto(){const o=location.protocol==='http:'||location.protocol==='https:'?location.origin:'https://اسم-موقعك.vercel.app';
+ const win=`setx OLLAMA_ORIGINS "${o}"`,mac=`launchctl setenv OLLAMA_ORIGINS "${o}"`,lin=`sudo systemctl edit ollama.service\n# ضيف تحت [Service]:\nEnvironment="OLLAMA_ORIGINS=${o}"\nsudo systemctl restart ollama`;
+ return `<h2>إزاي تربط نموذج محلي (Ollama / Qwen) من اللابتوب</h2><div class="card"><ol class="ls">
+ <li>نزّل Ollama وشغّل نموذج: <code dir="ltr">ollama pull qwen2.5:7b</code></li>
+ <li>الصفحة دي بتكلّم Ollama من متصفحك، فلازم تسمحله بدومين الصفحة. اقفل Ollama وشغّله تاني بعد الأمر:</li></ol>
+ <div class="small">Windows (PowerShell):</div><pre>${esc(win)}</pre><div class="small">macOS:</div><pre>${esc(mac)}</pre><div class="small">Linux:</div><pre>${esc(lin)}</pre>
+ <div class="row"><button class="btn sm" data-cact="cpwin">نسخ أمر Windows</button><button class="btn sm" data-cact="cpmac">نسخ أمر macOS</button></div>
+ <ol class="ls" start="3"><li>في Endpoint سيبه <code dir="ltr">http://localhost:11434</code> واكتب اسم النموذج زي ما ظاهر في <code dir="ltr">ollama list</code>، ودوس "اختبار الاتصال".</li>
+ <li><b>LM Studio:</b> افتح Developer، شغّل السيرفر، وفعّل "Enable CORS". الـ endpoint: <code dir="ltr">http://localhost:1234/v1</code></li></ol>
+ <div class="note"><b>حدود لازم تعرفها:</b> ده بيشتغل بس من متصفح على نفس اللابتوب اللي عليه النموذج. من الموبايل "localhost" معناها الموبايل نفسه فمش هتوصل للابتوب. وبعض المتصفحات (Safari مثلًا) ممكن تمنع صفحة https من الوصول لـ http://localhost. جرّب Chrome أو Edge.</div></div>`}
+function bindMatrix(l){const dn=DC()&&l.find(x=>x.id===DC());const opt=sel=>`<option value="">الافتراضي${dn?' ('+esc(dn.name)+')':' (مفيش)'}</option>`+l.map(x=>`<option value="${x.id}" ${sel===x.id?'selected':''}>${esc(x.name)}</option>`).join('');
+ return `<h2 style="font-size:16px">ربط الوكلاء بموصّلات مختلفة</h2><div class="card"><p class="small">لو معاك أكتر من مفتاح (Gemini لقسم، ChatGPT لقسم تاني...) وزّعهم هنا. "الافتراضي" معناه إن الوكيل بيستخدم الموصّل الافتراضي اللي فوق.</p><div class="row"><select id="bk-d" style="flex:1"><option value="">كل الأقسام</option>${Object.entries(DEPTS).map(([k,v])=>`<option value="${k}">${esc(v)}</option>`).join('')}</select><select id="bk-c" style="flex:1">${opt('')}</select></div><div class="row" style="margin-top:8px"><button class="btn pri sm" data-cact="bulk">طبّق على القسم</button></div><details style="margin-top:10px"><summary class="small">تفصيل كل وكيل (${AGENTS.length})</summary>${AGENTS.map(a=>`<div class="row" style="justify-content:space-between;margin-top:6px"><span class="small">${esc(a.n)} · ${esc(a.r)}</span><select data-bind="${a.id}" style="max-width:48%">${opt(C(a.id).conn||'')}</select></div>`).join('')}</details></div>`}
+function vConn(){const l=CN();
+ return `<h2>موصّلات الوكلاء</h2>
+ <div class="note"><b>إيه اللي حقيقي هنا:</b> الاختبار بيبعت طلب فعلي من متصفحك للخدمة أو للسيرفر المحلي، وبيعرض نجح أو فشل بسببه الحقيقي. <bdi>ChatGPT</bdi> و<bdi>Claude</bdi> محتاجين مفتاح API بتاعك (من حسابك عند OpenAI / Anthropic وبيتحاسب عليه استخدامك هناك). مفيش مفتاح يعني مفيش اتصال وبيظهر "فشل".<br><b>المفاتيح:</b> بتتخزّن في المتصفح ده بس (localStorage)، مش في الملف ولا في التصدير ولا في الشات. أي حد يفتح المتصفح على جهازك ممكن يوصلها، فاستخدم مفتاح بحد صرف صغير.<br><b>مهم:</b> الموصّل بيتختبر ويتجرّب هنا بس. مفيش وكيل بيشتغل لوحده من الصفحة دي ومفيش حاجة بتتبعت لعملاء.</div>
+ <div class="row" style="margin:12px 0"><button class="btn pri" data-cact="add">+ إضافة موصّل</button></div>
+ <h2 style="font-size:16px">الموصّل الافتراضي لكل الوكلاء</h2><div class="card"><p class="small">الموصّل ده بيرد بيه أي وكيل مالوش موصّل خاص، بـ prompt الوكيل نفسه وتدريبه. ده اللي بيخلّي الرد فوري في الشات.${DC()&&l.find(x=>x.id===DC())?'':' <b>مفيش موصّل افتراضي دلوقتي.</b>'}</p><div class="chips">${l.map(x=>`<button class="chip ${DC()===x.id?'on':''}" data-cact="setdef" data-id="${x.id}">${esc(x.name)}</button>`).join('')}<button class="chip ${DC()?'':'on'}" data-cact="setdef" data-id="">من غير</button></div>${l.some(x=>PROV[x.provider]&&PROV[x.provider].cloud)?'<p class="small">الخدمة السحابية بتتحاسب من حسابك عن كل رد. المفتاح بيتخزّن في المتصفح ده بس.</p>':''}</div>
+ ${l.length?bindMatrix(l):''}
+ <div class="grid g2">${l.length?l.map(connCard).join(''):'<div class="empty card" style="grid-column:1/-1">مفيش موصّلات لسه. ضيف ChatGPT أو Claude أو نموذج محلي.</div>'}</div>
+ ${connHowto()}`}
+async function runTest(id){const l=CN();const c=l.find(x=>x.id===id);if(!c)return;CB[id]=1;render();
+ const r=await testConn(c);CB[id]=0;const l2=CN();const c2=l2.find(x=>x.id===id);if(c2){c2.last=r;saveCN(l2)}render();toast(r.ok?'نجح الاختبار':'فشل الاختبار')}
+function connAct(t){const a=t.dataset.cact,id=t.dataset.id;
+ if(a==='add'){openSheet(connForm());pSync();return}
+ if(a==='edit'){openSheet(connForm(CN().find(x=>x.id===id)));pSync();return}
+ if(a==='del'){if(confirm('مسح الموصّل ومفتاحه من المتصفح؟')){saveCN(CN().filter(x=>x.id!==id));if(DC()===id)sv('bto_dconn_v1','');render()}return}
+ if(a==='addgem'){openSheet(connForm({id:'',name:'Gemini',role:'',provider:'gemini',endpoint:PROV.gemini.ep,model:PROV.gemini.model,key:''}));pSync();return}
+ if(a==='bulk'){const d=$('#bk-d').value,cid=$('#bk-c').value;const ids=AGENTS.filter(x=>!d||x.dept===d).map(x=>x.id);const cn=CN().find(x=>x.id===cid);if(!confirm(`ربط ${ids.length} وكيل بـ ${cn?cn.name:'الموصّل الافتراضي'}؟`))return;for(const i of ids){C(i).conn=cid;saveCtl(i)}render();toast(`اتربط ${ids.length} وكيل`);return}
+ if(a==='setdef'){sv('bto_dconn_v1',id);render();toast(id?'اتعيّن موصّل افتراضي لكل الوكلاء':'اتلغى الموصّل الافتراضي');return}
+ if(a==='test'){runTest(id);return}
+ if(a==='cpwin'||a==='cpmac'){const o=/^https?:/.test(location.protocol)?location.origin:'https://اسم-موقعك.vercel.app';copy(a==='cpwin'?`setx OLLAMA_ORIGINS "${o}"`:`launchctl setenv OLLAMA_ORIGINS "${o}"`);return}
+ if(a==='try'){const c=CN().find(x=>x.id===id);openSheet(`<h2 style="margin-top:0">جرّب رسالة مع ${esc(c.name)}</h2><p class="small">دي بتبعت طلب حقيقي للنموذج (وممكن تتحاسب لو خدمة سحابية). الرد بيظهر هنا بس ومش بيتخزّن.</p><textarea id="tp">قول مرحبا في جملة واحدة بالعربي.</textarea><div class="row" style="margin-top:8px"><button class="btn pri" data-cact="tryrun" data-id="${id}">إرسال</button><button class="btn" data-close>إغلاق</button></div><pre id="tout" style="direction:rtl;text-align:right;min-height:40px"></pre>`);return}
+ if(a==='tryrun'){const c=CN().find(x=>x.id===id),o=$('#tout');o.textContent='بيستنى الرد...';askConn(c,$('#tp').value.slice(0,2000)).then(x=>{o.textContent=x||'(رد فاضي)'}).catch(e=>{o.textContent='فشل: '+(e.name==='AbortError'?'انتهت المهلة':/Failed to fetch|NetworkError/.test(e.message)?errMsg(c,e):e.message)});return}
+ if(a==='save'){const p=$('#cf-p').value,n=$('#cf-n').value.trim(),ep=trim($('#cf-e').value),m=$('#cf-m').value.trim(),k=$('#cf-k').value.trim();
+  if(!n){toast('اكتب اسم');return}const bad=epOk(p,ep);if(bad){toast(bad);return}
+  const l=CN();const o=l.find(x=>x.id===id);const rec={id:id||uid(),name:n.slice(0,60),role:$('#cf-r').value.trim().slice(0,100),provider:p,endpoint:ep,model:m.slice(0,100),key:PROV[p].key||k?k:'',last:o?o.last:null};
+  if(o)Object.assign(o,rec,{last:null});else l.push(rec);saveCN(l);const nd=!DC()&&!id;if(nd)sv('bto_dconn_v1',rec.id);closeSheet();render();toast(nd?'اتحفظ واتعيّن موصّل افتراضي لكل الوكلاء. دوس اختبار الاتصال':'اتحفظ. دوس اختبار الاتصال');return}}
+function pSync(){const p=$('#cf-p');if(!p)return;const f=()=>{const P=PROV[p.value];if(!$('#cf-e').dataset.t){}$('#cf-kw').style.display=p.value==='ollama'?'none':'block'};p.onchange=()=>{const P=PROV[p.value];$('#cf-e').value=P.ep;$('#cf-m').value=P.model;f()};f()}
+
+/* ---------- v5: control, shifts, local runners ---------- */
+const DAYS=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+const PRESETS={m:{name:'صباحي',from:'08:00',to:'16:00'},e:{name:'مسائي',from:'16:00',to:'00:00'},n:{name:'ليلي',from:'00:00',to:'08:00'}};
+let CTL=ld(K.ctl,{});
+const C=id=>{if(!CTL[id])CTL[id]={conn:'',prompt:'',every:60,cap:12,backup:'',shifts:[],req:null,runs:[]};const c=CTL[id];c.shifts=c.shifts||[];c.runs=c.runs||[];return c};
+const saveCtl=id=>{if(id)C(id).ut=Date.now();sv(K.ctl,CTL);if(id)fbPutCtl(id)};
+let RUN={};let COVN={};let SH=new Date().getDay();
+const hm=s=>{const m=/^(\d{1,2}):(\d{2})$/.exec(s||'');return m?(+m[1])*60+(+m[2]):null};
+function onShiftAt(sh,day,min){for(const x of sh){const a=hm(x.from),b=hm(x.to);if(a==null||b==null)continue;const ds=x.days||[];
+  if(a===b){if(ds.includes(day))return true}
+  else if(a<b){if(ds.includes(day)&&min>=a&&min<b)return true}
+  else{if(ds.includes(day)&&min>=a)return true;if(ds.includes((day+6)%7)&&min<b)return true}}return false}
+function onShiftNow(id,d){d=d||new Date();const sh=C(id).shifts;return sh.length?onShiftAt(sh,d.getDay(),d.getHours()*60+d.getMinutes()):null}
+const todayRuns=id=>{const t0=new Date();t0.setHours(0,0,0,0);return C(id).runs.filter(r=>r.t>=t0.getTime()&&!r.manual).length};
+const DC=()=>ld('bto_dconn_v1','');
+function boundConn(id){const c=C(id),l=CN();let x=c.conn?l.find(y=>y.id===c.conn):null;if(!x){const d=DC();x=d?l.find(y=>y.id===d)||null:null}return x||null}
+function sysPrompt(id){const a=AMAP[id];const c=C(id);
+ const base=`انت "${a.n}" (${a.r}) في فريق صغير اسمه بولاتك، وبتشتغل لحساب صاحبه بولا. دورك: ${a.d}\nحدودك: ${(GUARD[id]||[]).join('، ')}.\nاكتب بالعربي المصري وباختصار. اكتب مسودات واقتراحات بس. ما تقولش إنك بعت أو نفّذت أي حاجة برّه، وما تخترعش أرقام أو أسماء عملاء أو نتايج.`;
+ return (c.prompt?c.prompt:base)+trainText(id)}
+function roleBase(id){const c=C(id);return c.prompt?c.prompt:sysPromptDefault(id)}
+function userMsg(id){const ts=S.tasks.filter(t=>t.agent===id&&t.state!=='done').slice(0,10);const d=new Date().toLocaleString('ar-EG',{dateStyle:'full',timeStyle:'short'});
+ return `الوقت دلوقتي: ${d}\n`+(ts.length?'المهام المفتوحة عليك:\n'+ts.map(t=>'- '+String(t.text).slice(0,300)).join('\n')+'\nقولّي هتبدأ بإيه وجهّز مسودة أول خطوة.':'مفيش مهام مفتوحة عليك دلوقتي. اقترح أهم خطوة جاية في دورك في 3 نقط كحد أقصى.')}
+async function runAgent(id,asId,manual){asId=asId||id;const conn=boundConn(id);const rec={t:Date.now(),manual:!!manual,as:asId===id?'':asId,ok:false,ms:0};
+ if(!conn){rec.err='مفيش موصّل مربوط';C(asId).runs.push(rec);return rec}
+ const k=id+'>'+asId;if(RUN[k+'#busy'])return null;RUN[k+'#busy']=1;const t0=Date.now();render0();
+ try{const txt=await askConn(conn,userMsg(asId),sysPrompt(asId),700);rec.tv=T(asId).v||0;rec.ok=true;rec.text=String(txt||'').slice(0,4000);if(!rec.text)rec.ok=false,rec.err='الموديل رجّع رد فاضي'}
+ catch(e){rec.err=/Failed to fetch|NetworkError|Load failed/.test(e.message)?errMsg(conn,e):(e.name==='AbortError'?'انتهت المهلة':e.message)}
+ rec.ms=Date.now()-t0;const c=C(asId);c.runs.push(rec);c.runs=c.runs.slice(-20);saveCtl();RUN[k+'#busy']=0;
+ if(rec.ok){S.chat.push({id:uid(),room:asId,from:asId,text:rec.text.slice(0,1500),t:rec.t,src:'run'});save()}
+ render0();return rec}
+function render0(){if($('#modal').classList.contains('on')){if(UI.sheetAg)$('#sheet').innerHTML=agSheet(UI.sheetAg);return}if(['team','shifts'].includes(UI.tab))render()}
+function localStart(id){const conn=boundConn(id);if(!conn){toast('اربط الوكيل بموصّل الأول');return}
+ const c=C(id);if(PROV[conn.provider].cloud&&!confirm(`التشغيل التلقائي هيبعت طلب لـ ${PROV[conn.provider].n} كل ${c.every} دقيقة (بحد أقصى ${c.cap} مرة في اليوم) وده بيتحاسب من حسابك هناك. تكمّل؟`))return;
+ RUN[id]={on:true,next:Date.now()+c.every*60000,since:Date.now()};render0();if(onShiftNow(id)!==false)runAgent(id,id,false);else toast('برّه الوردية: هيشتغل أول ما الوردية تبدأ')}
+function localStop(id){if(RUN[id])RUN[id].on=false;render0();toast('اتوقف')}
+async function tick(){const now=Date.now();
+ for(const id of Object.keys(RUN)){const r=RUN[id];if(!r||!r.on)continue;const c=C(id);if(!boundConn(id)){r.on=false;continue}
+  const sh=onShiftNow(id);const active=sh!==false;
+  if(active&&now>=r.next&&!RUN[id+'>'+id+'#busy']){r.next=now+c.every*60000;if(todayRuns(id)<c.cap)await runAgent(id,id,false);else r.capHit=true}}
+ for(const a of AGENTS){const id=a.id;const c=C(id);const b=c.backup;if(!b||!RUN[b]||!RUN[b].on||!boundConn(b))continue;
+  const aActive=!!(RUN[id]&&RUN[id].on)&&onShiftNow(id)!==false;if(aActive)continue;
+  if(onShiftNow(b)===false)continue;const k=b+'>'+id;if(now>=(COVN[k]||0)&&!RUN[k+'#busy']){COVN[k]=now+C(b).every*60000;if(todayRuns(b)<C(b).cap)await runAgent(b,id,false)}}}
+function reqPending(id){const c=C(id),s=S.agents[id];if(!c.req)return false;return !(s.updated&&Date.parse(s.updated)>=c.req.at&&s.on===c.req.want)}
+function agStatus(id){const c=C(id),s=S.agents[id],conn=boundConn(id);
+ if(conn){const r=RUN[id];const sh=onShiftNow(id);const last=c.runs.filter(x=>!x.as).slice(-1)[0];
+  const ld2=last?` · آخر تشغيل ${fmt(last.t)}: ${last.ok?'نجح':'فشل'}`:' · لسه ما اشتغلش';
+  if(r&&r.on){if(sh===false)return {k:'idle',cls:'warn',label:'شغال بس برّه وردية',detail:'مستني بداية الوردية'+ld2};
+   return {k:'run',cls:'on',label:'شغال فعلًا في التبويب ده',detail:`التشغيل الجاي ${fmt(r.next)}${r.capHit?' · وصل الحد اليومي':''}${ld2}`}}
+  return {k:'stop',cls:'off',label:'واقف',detail:'تشغيل محلي بموصّل "'+conn.name+'"'+ld2}}
+ if(reqPending(id)){const nu=s.updated&&Date.parse(s.updated)>=c.req.at;return {k:'req',cls:'warn',label:'طلب مش متنفذ',detail:`طلبك: ${c.req.want?'تشغيل':'إيقاف'} (${fmt(c.req.at)}). التطبيق ما بيشغّلش الوكيل ده. قول لمساعدك يطبّقه.${nu?' آخر ملف من عمر لسه بيقول: '+(s.on?'شغال':'متوقف'):''}`}}
+ if(s.real&&s.via==='fb'&&s.updated)return {k:s.on?'bon':'boff',cls:s.on?'on':'off',label:'وكيل حقيقي · '+(s.on?'شغال':'متوقف'),detail:'آخر تحديث من الوكيل نفسه في قاعدة البيانات: '+fmt(s.updated)};
+ if(cloudOn()&&!s.real)return {k:'nc',cls:'off',label:'مش موصّل بوكيل حقيقي',detail:'مفيش وكيل خلفي بيرد باسم الوكيل ده لحد دلوقتي. رسايلك ليه بتتحفظ بس.'};
+ if(s.updated){const vf=s.via==='fb'?'قاعدة البيانات':'ملف عمر';return {k:s.on?'bon':'boff',cls:s.on?'on':'off',label:(s.on?'شغال حسب ':'متوقف حسب ')+vf,detail:'آخر تحديث: '+fmt(s.updated)}}
+ return {k:'seed',cls:s.on?'on':'off',label:s.on?'شغال (حالة مبدئية)':'مش متفعّل (حالة مبدئية)',detail:'من المساعد وقت بناء التطبيق. مش مؤكدة لحد ما تستورد ملف عمر.'}}
+function stPill(id){const s=agStatus(id);return `<span class="pill ${s.cls} ${s.k==='run'?'live':''}"><i></i>${esc(s.label)}</span>`}
+function ctlBtns(id){const s=agStatus(id),c=C(id);
+ if(boundConn(id)){const on=RUN[id]&&RUN[id].on;return `<button class="btn sm ${on?'no':'pri'}" data-vact="${on?'stop':'start'}" data-id="${id}">${on?'إيقاف':'تشغيل'}</button><button class="btn sm" data-vact="once" data-id="${id}">شغّل مرة</button>`}
+ if(reqPending(id))return `<button class="btn sm" data-vact="cancelreq" data-id="${id}">إلغاء الطلب</button>`;
+ const eff=S.agents[id].on;return `<button class="btn sm ${eff?'no':'pri'}" data-vact="${eff?'reqoff':'reqon'}" data-id="${id}">${eff?'سجّل طلب إيقاف':'سجّل طلب تشغيل'}</button><div class="small" style="margin-top:4px">مفيش موصّل: الطلب بيتسجّل بس ومش هيتنفذ لوحده.</div>`}
+function reqText(){const l=AGENTS.filter(a=>reqPending(a.id));return 'طلبات بولا للفريق (من مكتب بولاتك):\n'+l.map(a=>`- ${a.n} (${a.id}): ${C(a.id).req.want?'شغّله':'وقّفه'}`).join('\n')}
+function reqOut(){return AGENTS.filter(a=>reqPending(a.id)).map(a=>({agent:a.id,want:C(a.id).req.want?'on':'off',at:new Date(C(a.id).req.at).toISOString()}))}
+function shiftsOut(){return AGENTS.filter(a=>C(a.id).shifts.length||C(a.id).backup).map(a=>({agent:a.id,backup:C(a.id).backup||null,shifts:C(a.id).shifts.map(x=>({name:x.name,from:x.from,to:x.to,days:x.days}))}))}
+function shiftTxt(id){const l=C(id).shifts;return l.length?l.map(x=>`${x.name||'وردية'} ${x.from}–${x.to}`).join(' + '):'من غير ورديات (متاح دايمًا)'}
+function vTeam(){const loc=AGENTS.filter(a=>agStatus(a.id).k==='run').length,rl=AGENTS.filter(a=>!boundConn(a.id)&&S.agents[a.id].real&&S.agents[a.id].on).length,bon=AGENTS.filter(a=>!boundConn(a.id)&&!S.agents[a.id].real&&!cloudOn()&&S.agents[a.id].on&&!reqPending(a.id)).length,rq=AGENTS.filter(a=>reqPending(a.id)).length,pend=S.drafts.filter(d=>!d.state||d.state==='pending').length;
+ let h=`<div class="stats"><div class="stat ${loc?'hot':''}"><b>${loc}</b><span>شغال فعلًا هنا</span></div><div class="stat"><b>${bon}</b><span>شغال حسب عمر</span></div><div class="stat ${rq?'warnx':''}"><b>${rq}</b><span>طلبات مش متنفذة</span></div><div class="stat ${pend?'hot':''}"><b>${pend}</b><span>مسودات مستنية</span></div></div>
+ <div class="note"><b>مكتب البوس.</b> أي فلوس أو رسالة لعميل بتعدّي على موافقتك الأول.<br><span class="small">${esc(S.imported?'آخر استيراد من الفريق: '+fmt(S.imported):S.seed)}</span> <button class="btn sm" data-go="how" style="margin-top:6px">إزاي ده بيشتغل بجد؟</button></div>`;
+function setupCard(){const st=(ok,l)=>`<span class="tag ${ok===true?'g':ok==='w'?'y':'r'}">${l}</span>`;const R=FBS.rules;
+ const rows=[['قاعدة البيانات (Firebase)',cloudOn()?st(true,'متصل'):st(false,'مش متصل'),'link'],
+ ['تسجيل الدخول',cloudOn()&&!FBS.noauth?st(true,'داخل: '+esc(FBS.user.email)):cloudOn()?st('w','مؤقت من غير دخول'):st(false,'لسه'),'link'],
+ ['قواعد الأمان',!cloudOn()?st(false,'مش متصل'):R==='secured'?st(true,'مؤمّنة'):R==='open'?st(false,'مفتوحة لأي حد'):st('w','مش معروف'),'link'],
+ ['موصّل موديل (للرد الفوري)',CN().length&&DC()?st(true,'موجود وافتراضي'):CN().length?st('w','موجود من غير افتراضي'):st(false,'مفيش'),'conn'],
+ ['تدريب الوكلاء',AGENTS.some(a=>T(a.id).v)?st(true,AGENTS.filter(a=>T(a.id).v).length+' وكيل متدرّب'):st(false,'ولا واحد'),'train']];
+ const done=rows.filter(r=>r[1].includes('class="tag g"')).length;
+ return `<div class="card" style="margin-top:10px"><div class="row" style="justify-content:space-between"><b>حالة الإعداد (حقيقية، بتتفحص دلوقتي)</b><span class="small">${done} من ${rows.length}</span></div>${rows.map(r=>`<div class="row" style="justify-content:space-between;margin-top:6px"><span class="small">${r[0]}</span><span>${r[1]} <button class="btn sm" data-go="${r[2]}">افتح</button></span></div>`).join('')}${cloudOn()&&FBS.noauth?'<div class="small" style="margin-top:6px">ماتحطش أسعار أو بيانات عملاء في التدريب قبل ما الدخول والقواعد المؤمّنة يبقوا تمام.</div>':''}</div>`}
+ h+=setupCard();
+ if(rq)h+=`<div class="card act" style="margin-top:10px"><b>${rq} طلب مستني التنفيذ</b><div class="small">دي طلبات بس. مفيش حاجة اتغيّرت في الفريق لحد ما مساعدك ينفّذها وترجع تستورد ملف عمر.</div><div class="row" style="margin-top:8px"><button class="btn pri sm" data-vact="copyreq">نسخ الطلبات لمساعدك</button></div></div>`;
+ h+=`<h2>الفريق (${AGENTS.length})</h2><div class="chips"><button class="chip ${!UI.dept?'on':''}" data-dept="">الكل</button>${Object.entries(DEPTS).map(([k,l])=>`<button class="chip ${UI.dept===k?'on':''}" data-dept="${k}">${l}</button>`).join('')}</div><div class="grid g2">`;
+ for(const a of AGENTS.filter(a=>!UI.dept||a.dept===UI.dept)){const s=S.agents[a.id],st=agStatus(a.id);const nt=S.tasks.filter(t=>t.agent===a.id&&t.state!=='done').length;const nd=S.drafts.filter(d=>d.agent===a.id&&(!d.state||d.state==='pending')).length;
+  const bound=!!boundConn(a.id),shn=onShiftNow(a.id);
+  h+=`<div class="card agc ${st.cls==='on'?'act':st.cls==='warn'?'wrn':''}"><div class="ag" data-ag="${a.id}" role="button" tabindex="0">${cubeSvg(st.cls==='on')}<div style="flex:1;min-width:0"><h3>${esc(a.n)}</h3><div class="role">${esc(a.r)} · <span class="tag">${esc(DEPTS[a.dept])}</span> <span class="tag ${bound?'r':''}">${bound?'تشغيل محلي':'وكيل خلفي'}</span></div>${stPill(a.id)}<div class="meta">${esc(st.detail)}</div><p>${esc(bound?(C(a.id).runs.slice(-1)[0]&&C(a.id).runs.slice(-1)[0].ok?C(a.id).runs.slice(-1)[0].text.slice(0,110)+'…':a.d):(s.line||a.d))}</p><div class="meta">${shn===null?'مفيش ورديات':shn?'<span style="color:var(--ok)">في وردية دلوقتي</span>':'برّه وردية دلوقتي'} · ${esc(shiftTxt(a.id))}</div>${nt||nd?`<div class="meta">${nt?`${nt} مهمة مفتوحة`:''}${nt&&nd?' · ':''}${nd?`${nd} مسودة منتظرة`:''}</div>`:''}</div></div><div class="row ctl">${ctlBtns(a.id)}<button class="btn sm" data-vact="chatwith" data-id="${a.id}">شات</button><button class="btn sm" data-ag="${a.id}">تفاصيل</button></div></div>`}
+ h+=`</div><p class="small" style="margin-top:14px">"شغال فعلًا" معناها إن الصفحة دي بتشغّل الوكيل بنفسها دلوقتي. أي حاجة تانية حالتها من آخر ملف وصل من عمر، أو طلب منك لسه مش متنفذ.</p>`;return h}
+function shEditor(id){const c=C(id);
+ return `<h2>الورديات</h2>${AMAP[id].shift&&!c.shifts.length?`<button class="btn sm" data-vact="addsh" data-id="${id}" data-p="${AMAP[id].shift}">طبّق الوردية ${SHT[AMAP[id].shift]} المعتادة</button>`:''}<div class="small">وقت جهازك (${esc(Intl.DateTimeFormat().resolvedOptions().timeZone)}). الورديات خطة: التطبيق بيطبّقها بس على التشغيل المحلي. للوكيل الخلفي بتتبعت لمساعدك مع الطلبات.</div>
+ ${c.shifts.map((x,i)=>`<div class="card shc" data-shi="${i}"><div class="row"><input type="text" class="sn" value="${esc(x.name)}" placeholder="اسم الوردية" style="flex:1;min-width:110px"><input type="time" class="sf" value="${esc(x.from)}"><input type="time" class="st2" value="${esc(x.to)}"><button class="btn no sm" data-vact="delsh" data-id="${id}" data-i="${i}">مسح</button></div><div class="chips">${DAYS.map((d,j)=>`<button type="button" class="chip dy ${(x.days||[]).includes(j)?'on':''}" data-vact="dayt" data-j="${j}">${d}</button>`).join('')}</div></div>`).join('')||'<div class="small" style="margin:6px 0">مفيش ورديات: الوكيل متاح في أي وقت.</div>'}
+ <div class="row"><button class="btn sm" data-vact="addsh" data-id="${id}" data-p="m">+ صباحي</button><button class="btn sm" data-vact="addsh" data-id="${id}" data-p="e">+ مسائي</button><button class="btn sm" data-vact="addsh" data-id="${id}" data-p="n">+ ليلي</button><button class="btn sm" data-vact="addsh" data-id="${id}" data-p="x">+ مخصصة</button></div>`}
+function ctlSheet(id){const c=C(id),st=agStatus(id),bound=boundConn(id);const cn=CN();
+ const runs=c.runs.slice(-5).reverse();
+ return `<div class="row" style="margin-bottom:8px"><button class="btn pri sm" data-vact="chatwith" data-id="${id}">شات مع ${esc(AMAP[id].n)}</button><button class="btn sm" data-vact="trainwith" data-id="${id}">تدريب</button></div><div class="card ctlbox ${st.cls==='on'?'act':st.cls==='warn'?'wrn':''}"><div class="row" style="justify-content:space-between">${stPill(id)}</div><div class="small" style="margin:6px 0">${esc(st.detail)}</div><div class="row">${ctlBtns(id)}</div>
+ ${bound?'':`<div class="note" style="margin-top:10px">الوكيل ده <b>خلفي</b>: بيشتغل عند مساعدك على دورات مجدولة، مش في الصفحة. الزرار طلب بس، مش بيشغّله ولا بيوقّفه. الحالة بتتأكد لما تستورد ملف عمر.</div>`}</div>
+ <h2>التشغيل المحلي (اختياري)</h2><div class="card"><div class="small">اربط الوكيل بموصّل من تبويب الموصّلات عشان الصفحة نفسها تشغّله فعلًا: بتبعت لموديل (ChatGPT / Claude / Ollama / LM Studio) وصف دوره والمهام المفتوحة عليه بس (مفيش بيانات عملاء) وتعرض الرد. بيشتغل بس والتبويب مفتوح، وبيقف لو قفلته أو الجهاز نام.</div>
+ <label class="small">الموصّل<select id="cx-c"><option value="">من غير (وكيل خلفي)</option>${cn.map(x=>`<option value="${x.id}" ${c.conn===x.id?'selected':''}>${esc(x.name)} · ${esc(PROV[x.provider].n)}</option>`).join('')}</select></label>
+ ${cn.length?'':'<div class="small">مفيش موصّلات لسه. ضيف واحد من تبويب الموصّلات.</div>'}
+ <label class="small">كل قد إيه يشتغل تلقائيًا<select id="cx-e">${[[15,'15 دقيقة'],[30,'30 دقيقة'],[60,'ساعة'],[180,'3 ساعات'],[360,'6 ساعات']].map(([v,l])=>`<option value="${v}" ${+c.every===v?'selected':''}>${l}</option>`).join('')}</select></label>
+ <label class="small">أقصى عدد تشغيلات تلقائية في اليوم (حماية من الفاتورة)<input type="text" id="cx-cap" inputmode="numeric" dir="ltr" value="${c.cap}"></label>
+ <label class="small">بيغطّيه لما يقف أو يخرج من الوردية (لازم الوكيل ده يكون شغال محليًا)<select id="cx-b"><option value="">حد مفيش</option>${AGENTS.filter(a=>a.id!==id).map(a=>`<option value="${a.id}" ${c.backup===a.id?'selected':''}>${esc(a.n)}${boundConn(a.id)?'':' (خلفي، تغطيته ملاحظة بس)'}</option>`).join('')}</select></label>
+ <label class="small">تعليمات الدور (system prompt)<textarea id="cx-p" style="min-height:130px">${esc(roleBase(id))}</textarea></label>
+ <div class="row" style="margin-top:8px"><button class="btn pri sm" data-vact="savectl" data-id="${id}">حفظ</button><button class="btn sm" data-vact="resetp" data-id="${id}">رجّع التعليمات الأصلية</button></div></div>
+ ${shEditor(id)}<div class="row" style="margin-top:8px"><button class="btn pri sm" data-vact="savesh" data-id="${id}">حفظ الورديات</button></div>
+ <h2>آخر تشغيلات محلية</h2>${runs.length?runs.map((r,i)=>`<div class="card" style="margin:6px 0"><div class="row" style="justify-content:space-between"><span class="tag ${r.ok?'g':'r'}">${r.ok?'نجح':'فشل'}</span><span class="small">${esc(fmt(r.t))} · ${r.ms}ms${r.manual?' · يدوي':''}${r.as?' · غطّى '+esc(AMAP[r.as]?AMAP[r.as].n:''):''}</span></div><div style="white-space:pre-wrap;margin-top:6px;font-size:14px">${esc(r.ok?r.text:r.err)}</div>${r.ok?`<div class="row" style="margin-top:6px"><button class="btn sm" data-vact="r2d" data-id="${id}" data-t="${r.t}">حوّله لمسودة للموافقة</button></div>`:''}</div>`).join(''):'<div class="small">لسه ما اشتغلش محليًا. أي تشغيل حقيقي هيظهر هنا بوقته ونتيجته أو خطأه.</div>'}`}
+const agSheetBase=agSheet;
+agSheet=function(id){const base=agSheetBase(id);return base.replace('<h2>حدوده</h2>',ctlSheet(id)+'<h2>حدوده</h2>').replace(/<div class="st (on|off)" style="margin:8px 0">.*?<\/div>/,'')};
+function vShifts(){const ag=AGENTS.filter(a=>C(a.id).shifts.length);const mins=Array.from({length:24},(_,i)=>i*60+30);
+ let h=`<h2>الورديات والتغطية</h2><div class="note">ده جدول تغطية محسوب من الورديات اللي انت ضبطتها لكل وكيل (من "تفاصيل" الوكيل). هو خطة وبيوضّح الفجوات. التطبيق بيطبّقها فعليًا بس على الوكلاء اللي بيشتغلوا محليًا. الوكلاء الخلفيين بتبعت ورديتهم لمساعدك.</div>
+ <div class="row" style="margin:8px 0"><button class="btn sm" data-vact="presetall">طبّق صباحي/مسائي/ليلي على وكلاء الورديات</button></div><div class="chips">${DAYS.map((d,j)=>`<button class="chip ${SH===j?'on':''}" data-vact="shday" data-j="${j}">${d}</button>`).join('')}</div>`;
+ if(!ag.length)return h+`<div class="empty card">مفيش ورديات متضبطة لسه. افتح أي وكيل من الفريق واضبط ورديته (صباحي / مسائي / ليلي أو مخصصة).</div>`;
+ const cov=mins.map(m=>ag.filter(a=>onShiftAt(C(a.id).shifts,SH,m)));
+ h+=`<div class="card"><div class="hrs"><span>12ص</span><span>6ص</span><span>12ظ</span><span>6م</span></div>`;
+ for(const a of ag){h+=`<div class="shr"><div class="shn" data-ag="${a.id}">${esc(a.n)}</div><div class="bar">${mins.map(m=>`<i class="${onShiftAt(C(a.id).shifts,SH,m)?'f':''}"></i>`).join('')}</div></div>`}
+ h+=`<div class="shr cv"><div class="shn">التغطية</div><div class="bar">${cov.map(c=>`<i class="${c.length>1?'f2':c.length?'f':'gap'}"></i>`).join('')}</div></div></div>`;
+ const gaps=[];let st=null;cov.forEach((c,i)=>{if(!c.length&&st==null)st=i;if((c.length||i===23)&&st!=null){const en=c.length?i:24;gaps.push(`${st}:00–${en}:00`);st=null}});
+ h+=gaps.length?`<div class="note" style="margin-top:10px"><b>فجوات (مفيش حد في وردية):</b> ${gaps.join('، ')}</div>`:`<div class="note" style="margin-top:10px">مفيش فجوات في يوم ${DAYS[SH]}: في حد في وردية طول اليوم.</div>`;
+ h+=`<h2>الورديات حسب الوكيل</h2>`+ag.map(a=>`<div class="card" style="margin:6px 0"><div class="row" style="justify-content:space-between"><b>${esc(a.n)}</b><button class="btn sm" data-ag="${a.id}">تعديل</button></div><div class="small">${esc(shiftTxt(a.id))}${C(a.id).backup?' · بيغطّيه: '+esc(AMAP[C(a.id).backup].n):''}</div></div>`).join('');return h}
+function vMore(){const it=[['tasks','المهام','مهام كل وكيل وحالتها.'],['shifts','الورديات والتغطية','جدول التغطية وفجوات الورديات.'],['conn','الموصّلات','ChatGPT / Claude / Ollama / LM Studio.'],['pros','العملاء','قايمة العملاء المحتملين من ملف CSV.'],['report','التقرير','ملخص محسوب من بيانات جهازك.'],['link','الربط وFirebase','استيراد ملف عمر، Firebase، القواعد، والجسر.'],['how','كيف يشتغل المكتب','الحقيقة كاملة: إيه حقيقي وإيه لأ.']];
+ return `<h2>المزيد</h2><div class="grid g2">${it.map(([k,t,d])=>`<button class="card" data-go="${k}" style="text-align:right;cursor:pointer"><b>${t}</b><div class="small">${d}</div></button>`).join('')}</div>`}
+function vHow(){const row=(a,b,c)=>`<tr><td>${a}</td><td>${b}</td><td>${c}</td></tr>`;
+ return `<h2>كيف يشتغل المكتب</h2>
+ <div class="note"><b>الخلاصة بصراحة:</b> الصفحة دي لوحة تحكّم ومتابعة على جهازك. <b>الفريق مش كود جوّاها.</b> كل واحد من الفريق (عمر، مي، كريم...) عامل مستقل بيشغّله مساعدك في الخلفية على دورات يومية مجدولة، وبيسيب نتيجته في ملف.</div>
+ <div class="how">
+ <div class="hs"><b>1</b><div><h3>مساعدك بيشغّل الفريق</h3>كل عامل بيشتغل على دورته (مثلًا مي الساعة 9 وكريم الساعة 10). بيكتبوا مسودات وخطط ومهام. وهما برّه الصفحة دي، فالصفحة مبتشوفهمش لايف.</div></div>
+ <div class="hs"><b>2</b><div><h3>النتيجة بتوصلك في ملف</h3>عمر بيطلّع ملف JSON فيه الحالة والمسودات والمهام. انت بتستورده من "الربط" (لصق أو ملف أو رابط بيتحدّث). بعد الاستيراد بس الحالة بتتغيّر هنا. مفيش استيراد = مفيش تحديث.</div></div>
+ <div class="hs"><b>3</b><div><h3>انت اللي بتقرر</h3>المسودات بتوصلك في "الموافقات". الموافقة قرار مسجّل عندك بس. مفيش رسالة بتتبعت لأي عميل من الصفحة دي، ولا فلوس بتتحرّك.</div></div>
+ <div class="hs"><b>4</b><div><h3>زرار التشغيل والإيقاف</h3>للوكلاء الخلفيين هو <b>طلب</b> بتسجّله، وحالته "طلب مش متنفذ". لازم تقول لمساعدك (زرار "نسخ الطلبات") وهو ينفّذ، وبعدها تستورد ملف عمر فيتأكد. الصفحة ما بتقدرش تشغّل ولا توقّف حد منهم.</div></div>
+ <div class="hs"><b>5</b><div><h3>التشغيل المحلي (الاستثناء الحقيقي)</h3>لو ربطت وكيل بموصّل (ChatGPT / Claude / Ollama / LM Studio) الصفحة نفسها بتشغّله فعلًا: بتبعت للموديل دور الوكيل والمهام المفتوحة عليه وتعرض الرد، مرة بزرار أو تلقائي بجدول. ده بيشتغل بس والتبويب مفتوح والجهاز صاحي. أي رد بيظهر مع وقته الحقيقي، وأي خطأ بيظهر زي ما هو.</div></div>
+ <div class="hs"><b>6</b><div><h3>الورديات والتغطية</h3>الورديات خطة (صباحي / مسائي / ليلي). التطبيق بيطبّقها على التشغيل المحلي فقط: الوكيل المحلي بيشتغل جوه ورديته، ولو وقف أو خرج منها وكان له بديل محلي شغال، البديل بيشتغل بدوره. للخلفيين الورديات بتروح لمساعدك مع الطلبات.</div></div><div class="hs"><b>7</b><div><h3>الشات مع الوكلاء</h3>تكلّم أي وكيل لوحده أو قسم أو وردية أو الكل. الوكيل المربوط بموصّل بيرد فعلًا من الصفحة بموديل حقيقي. الوكيل الخلفي ما بيردّش إلا لو عنده جسر بيقرا قاعدة Firebase، ولحد وقتها رسالتك "مستنية". "وصلت للوكيل" و"اتقرت" مبتظهرش إلا لو الجسر كتبها فعلًا في القاعدة.</div></div><div class="hs"><b>8</b><div><h3>التدريب</h3>تعليمات ومعرفة وأمثلة وتصحيحات لكل وكيل، بنسخ مرقّمة. للمربوطين بتتحقن في تعليمات الموديل فعلًا. للخلفيين بتتخزن وبتستنى الجسر يقراها ويؤكد الاستلام.</div></div></div>
+ <h2>اللي حقيقي واللي لأ</h2><div class="tw"><table><thead><tr><th>الحاجة</th><th>حقيقي؟</th><th>ملاحظة</th></tr></thead><tbody>
+ ${row('حالة الوكيل الخلفي','من آخر ملف','قبل أول استيراد هي حالة مبدئية مش مؤكدة')}
+ ${row('زرار الخلفي','طلب بس','مش بيغيّر حاجة عند الفريق')}
+ ${row('تشغيل محلي بموصّل','حقيقي','والتبويب مفتوح، وبيتكلف عند الخدمات السحابية')}
+ ${row('الورديات','خطة','بتتطبّق فعليًا على المحلي بس')}
+ ${row('الموافقات والمهام والعملاء','حقيقية على جهازك','بتتحفظ في المتصفح ده بس')}
+ ${row('شات ورد وكيل مربوط','حقيقي','موديل فعلي، وبيتحاسب عند السحابي')}
+ ${row('شات مع وكيل خلفي','تخزين بس','رد/استلام فقط لو الجسر كتبهم في القاعدة')}
+ ${row('التدريب','محفوظ ومنسّخ','بيأثّر فعلًا على المربوطين بس')}
+ ${row('إرسال لعملاء','مفيش','التطبيق ما بيبعتش ولا بيكلّم أي حد')}</tbody></table></div>
+ <h2>الخصوصية</h2><ul class="ls"><li>مفاتيح الـ API في متصفحك بس، مش في الملف ولا التصدير.</li><li>التشغيل المحلي بيبعت لمزوّد الموديل وصف دور الوكيل ونص المهام المفتوحة عليه فقط. مفيش بيانات عملاء ولا مسودات.</li><li>الصفحة محمية بـ CSP بتحدد بتكلّم مين بس.</li></ul>`}
+function vctl(t){const a=t.dataset.vact,id=t.dataset.id;
+ if(a==='chatwith'){UI.room=id;UI.tab='chat';closeSheet();render();scrollTo(0,0);return}
+ if(a==='trainwith'){UI.tag=id;TD=null;UI.tab='train';closeSheet();render();scrollTo(0,0);return}
+ if(a==='presetall'){let n=0;for(const a2 of AGENTS){if(a2.shift&&!C(a2.id).shifts.length){const p=PRESETS[a2.shift];C(a2.id).shifts=[{...p,days:[0,1,2,3,4,5,6]}];saveCtl(a2.id);n++}}render();toast(n?'اتطبّقت ورديات على '+n+' وكيل':'مفيش وكيل محتاج');return}
+ if(a==='start'){localStart(id);return}if(a==='stop'){localStop(id);return}
+ if(a==='once'){if(!boundConn(id)){toast('اربط الوكيل بموصّل الأول');return}const cn=boundConn(id);if(PROV[cn.provider].cloud&&!confirm('ده هيبعت طلب فعلي لخدمة سحابية وبيتحاسب من حسابك. تكمّل؟'))return;toast('بيشغّل...');runAgent(id,id,true);return}
+ if(a==='reqon'||a==='reqoff'){C(id).req={want:a==='reqon',at:Date.now()};saveCtl(id);render0();toast('اتسجّل كطلب بس. مفيش حاجة هتتنفذ لحد ما وكيل أو موصّل يطبّقه');return}
+ if(a==='cancelreq'){C(id).req=null;saveCtl(id);render0();return}
+ if(a==='copyreq'){copy(reqText()+'\n\nالورديات:\n'+(shiftsOut().map(s=>`- ${AMAP[s.agent].n}: ${shiftTxt(s.agent)}${s.backup?' (بديله '+AMAP[s.backup].n+')':''}`).join('\n')||'مفيش'));return}
+ if(a==='savectl'){const c=C(id);const cap=parseInt($('#cx-cap').value,10);c.conn=$('#cx-c').value;c.every=+$('#cx-e').value||60;c.cap=cap>0&&cap<=96?cap:12;c.backup=$('#cx-b').value;const p=$('#cx-p').value.trim();c.prompt=p===sysPromptDefault(id)?'':p.slice(0,3000);if(!c.conn&&RUN[id])RUN[id].on=false;saveCtl(id);$('#sheet').innerHTML=agSheet(id);toast('اتحفظ');render();return}
+ if(a==='resetp'){C(id).prompt='';saveCtl(id);$('#sheet').innerHTML=agSheet(id);return}
+ if(a==='addsh'||a==='delsh'||a==='savesh'||a==='dayt'){
+  if(a==='dayt'){t.classList.toggle('on');return}
+  const c=C(id);const rd=()=>[...document.querySelectorAll('.shc')].map(e=>({name:e.querySelector('.sn').value.trim().slice(0,30),from:e.querySelector('.sf').value||'08:00',to:e.querySelector('.st2').value||'16:00',days:[...e.querySelectorAll('.dy')].map((x,j)=>x.classList.contains('on')?j:-1).filter(j=>j>=0)}));
+  if(a==='savesh'){c.shifts=rd();saveCtl(id);$('#sheet').innerHTML=agSheet(id);render();toast('اتحفظت الورديات');return}
+  c.shifts=rd();if(a==='delsh')c.shifts.splice(+t.dataset.i,1);else{const p=PRESETS[t.dataset.p]||{name:'وردية',from:'09:00',to:'17:00'};c.shifts.push({...p,days:[0,1,2,3,4,5,6]})}
+  saveCtl(id);$('#sheet').innerHTML=agSheet(id);return}
+ if(a==='shday'){SH=+t.dataset.j;render();return}
+ if(a==='r2d'){const r=C(id).runs.find(x=>String(x.t)===t.dataset.t);if(!r||!r.ok)return;S.drafts.push({id:uid(),agent:id,kind:'other',channel:'other',to:'',phone:'',title:'ناتج تشغيل محلي',body:r.text,state:'pending',created:Date.now()});save();toast('اتضافت في الموافقات كمسودة منتظرة');render();return}}
+function sysPromptDefault(id){const k=C(id).prompt;C(id).prompt='';const d=sysPrompt(id);C(id).prompt=k;const tt=trainText(id);return tt?d.slice(0,d.length-tt.length):d}
+
+/* ---------- render ---------- */
+function render(){hdr();nav();const m=$('#main');
+ m.innerHTML=({team:vTeam,tasks:vTasks,approvals:vApprovals,report:vReport,chat:vChat,train:vTrain,conn:vConn,shifts:vShifts,more:vMore,how:vHow,pros:vPros,link:vLink})[UI.tab]();}
+function openSheet(h){UI.sheetAg=null;$('#sheet').innerHTML=h;$('#modal').classList.add('on')}
+function closeSheet(){UI.sheetAg=null;$('#modal').classList.remove('on')}
+
+/* ---------- import ---------- */
+function doImport(txt,src){let d;try{d=JSON.parse(txt)}catch(e){toast('الملف مش JSON صحيح');return false}
+ if(!d||typeof d!=='object'){toast('صيغة غير معروفة');return false}
+ let na=0,nt=0,nd=0;const now=Date.now();
+ for(const a of (d.agents||[])){if(!AMAP[a.id])continue;const c=S.agents[a.id];if('on' in a)c.on=!!a.on;if(typeof a.line==='string')c.line=a.line;if(typeof a.sch==='string')c.sch=a.sch;c.updated=d.updated||new Date().toISOString();na++}
+ for(const t of (d.tasks||[])){const m=S.tasks.find(x=>x.id===t.id);if(m){if(['todo','doing','done'].includes(t.state))m.state=t.state;if(typeof t.note==='string')m.note=t.note;nt++}}
+ for(const x of (d.drafts||[])){if(!x||!x.id||typeof x.body!=='string')continue;if(S.drafts.find(y=>y.id===x.id))continue;
+  S.drafts.push({id:String(x.id),agent:AMAP[x.agent]?x.agent:'omar',kind:x.kind||'other',channel:x.channel||'other',to:x.to||'',phone:x.phone||'',title:x.title||'',body:x.body,state:'pending',created:now});nd++}
+ S.imported=new Date().toISOString();save();render();
+ toast(`تم: ${na} حالة، ${nt} مهمة، ${nd} مسودة جديدة (${src})`);return true}
+function hashS(t){let h=0;for(let i=0;i<t.length;i++)h=(h*31+t.charCodeAt(i))|0;return h}
+async function pollFeed(manual){const f=ld(K.feed,{url:''});if(!f.url)return;
+ try{const r=await fetch(f.url,{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const t=await r.text();f.err='';f.last=new Date().toISOString();sv(K.feed,f);const h=hashS(t);if(h!==f.hash||manual){f.hash=h;sv(K.feed,f);startImport(t,'رابط الملف')}}
+ catch(e){f.err=String(e.message||e);f.last=f.last||null;sv(K.feed,f);if(manual)toast('تعذّر الجلب: '+f.err);if(UI.tab==='link')render()}}
+function stateOut(){return JSON.stringify({exportedAt:new Date().toISOString(),decisions:S.drafts.filter(d=>d.state&&d.state!=='pending').map(d=>({id:d.id,agent:d.agent,state:d.state,decidedAt:d.decidedAt?new Date(d.decidedAt).toISOString():null,body:d.body})),tasks:S.tasks.map(t=>({id:t.id,agent:t.agent,text:t.text,state:t.state||'todo',created:new Date(t.created).toISOString()})),chatFromBola:S.chat.filter(m=>m.from==='bola'&&m.src==='local').map(m=>({id:m.id,room:m.room,text:m.text,t:new Date(m.t).toISOString()})),agentRequests:reqOut(),shifts:shiftsOut(),prospectStatuses:Object.entries(PS).map(([k,v])=>({business:k.split('|').slice(1).join('|'),status:v.s||'new',note:v.n||''})).filter(x=>x.status!=='new'||x.note)},null,1)}
+
+/* ---------- events ---------- */
+document.addEventListener('click',e=>{
+ const t=e.target.closest('[data-tr],[data-dept],[data-vact],[data-cact],[data-room],[data-rv],[data-newtask],[data-go],[data-ag],[data-ap],[data-dec],[data-savebody],[data-copydraft],[data-act],[data-deltask],[data-close],[data-has],[data-pst],[data-pr],[data-setp],[data-savepn]');
+ if(!t){if(e.target.id==='modal')closeSheet();return}
+ if(t.dataset.tr){trAct(t);return}
+ if('dept' in t.dataset){UI.dept=t.dataset.dept;render();return}
+ if(t.dataset.vact){vctl(t);return}
+ if(t.dataset.cact){connAct(t);return}
+ if(t.dataset.room){UI.room=t.dataset.room;render();scrollTo(0,document.body.scrollHeight);return}
+ if(t.dataset.rv){const a=t.dataset.rv;if(a==='skipnext'){$('#sheet').innerHTML=reviewHtml();return}rvAct(a);return}
+ if(t.dataset.newtask){closeSheet();UI.tab='tasks';render();const sel=$('#tag');if(sel)sel.value=t.dataset.newtask;scrollTo(0,0);return}
+ if(t.dataset.go){UI.tab=t.dataset.go;closeSheet();render();scrollTo(0,0);return}
+ if(t.dataset.ag){const g=t.dataset.ag;openSheet(agSheet(g));UI.sheetAg=g;return}
+ if('close' in t.dataset){closeSheet();return}
+ if(t.dataset.ap){UI.ap=t.dataset.ap;render();return}
+ if(t.dataset.dec){const d=S.drafts.find(x=>x.id===t.dataset.id);if(!d)return;
+  if(t.dataset.dec==='approved'||t.dataset.dec==='rejected'){const ta=document.querySelector(`[data-body="${CSS.escape(d.id)}"]`);if(ta)d.body=ta.value}
+  d.state=t.dataset.dec;d.decidedAt=d.state==='pending'?null:Date.now();save();render();toast(d.state==='approved'?'تمت الموافقة. لسه ما اتبعتش حاجة':d.state==='rejected'?'اترفضت':'رجعت للمنتظرة');return}
+ if(t.dataset.savebody){const d=S.drafts.find(x=>x.id===t.dataset.savebody),ta=document.querySelector(`[data-body="${CSS.escape(d.id)}"]`);if(d&&ta){d.body=ta.value;save();toast('اتحفظ التعديل')}return}
+ if(t.dataset.copydraft){const d=S.drafts.find(x=>x.id===t.dataset.copydraft);if(d)copy(d.body);return}
+ if(t.dataset.deltask){if(confirm('مسح المهمة؟')){S.tasks=S.tasks.filter(x=>x.id!==t.dataset.deltask);save();render()}return}
+ if('has' in t.dataset){UI.pf.has=t.dataset.has;UI.pshow=60;render();return}
+ if('pst' in t.dataset){UI.pf.st=t.dataset.pst;UI.pshow=60;render();return}
+ if(t.dataset.pr){openSheet(prSheet(t.dataset.pr));return}
+ if(t.dataset.setp){const k=t.dataset.k;PS[k]=PS[k]||{};PS[k].s=t.dataset.setp;PS[k].t=Date.now();sv(K.pst,PS);openSheet(prSheet(k));render();return}
+ if(t.dataset.savepn){const k=t.dataset.savepn;PS[k]=PS[k]||{};PS[k].n=$('#pn').value;sv(K.pst,PS);toast('اتحفظت الملاحظة');return}
+ const a=t.dataset.act;
+ if(a==='addtask'){const v=$('#tt').value.trim();if(!v){toast('اكتب المهمة الأول');return}S.tasks.unshift({id:uid(),agent:$('#tag').value,text:v,state:'todo',created:Date.now()});save();render();toast('اتحفظت. لسه الفريق ما شافهاش، انسخها وابعتها لعمر');return}
+ if(a==='copytasks'){const o=S.tasks.filter(t=>t.state!=='done');if(!o.length){toast('مفيش مهام مفتوحة');return}copy('مهام مفتوحة من مكتب بولاتك (رقم المهمة | المسؤول | النص):\n'+o.map(t=>`${t.id} | ${AMAP[t.agent].n} | ${t.text}`).join('\n'));return}
+ if(a==='import'){const v=$('#imp').value.trim();if(!v){toast('الصق الملف الأول');return}startImport(v,'لصق');return}
+ if(a==='applyimp'){applyImport();return}
+ if(a==='sendchat'){sendChat();return}
+ if(a==='meet'){openSheet(`<div class="row" style="justify-content:space-between"><h2 style="margin:0">اجتماع فريق: ${esc(roomName(UI.room))}</h2><button class="btn sm" data-close>إغلاق</button></div><p class="small">كل وكيل موصّل بيرد بالدور بموديل حقيقي وبتدريبه، وكل واحد بيشوف اللي قبله، وفي الآخر عمر بيلخّص (لو موصّل). الحد 10 وكلاء. اللي مش موصّل مش بيشارك. ما بيتبعتش حاجة لحد برّه.</p><textarea id="mt" placeholder="موضوع الاجتماع"></textarea><div class="row" style="margin-top:8px"><button class="btn pri" data-act="meetgo">ابدأ</button></div>`);return}
+ if(a==='meetgo'){meetGo();return}
+ if(a==='disc'){const cn=members(UI.room).filter(i=>boundConn(i));if(cn.length<2){toast('النقاش محتاج وكيلين موصّلين على الأقل. اربطهم من المزيد > الموصّلات.');return}openSheet(`<div class="row" style="justify-content:space-between"><h2 style="margin:0">نقاش بين الوكلاء</h2><button class="btn sm" data-close>إغلاق</button></div><p class="small">الوكلاء بيردّوا على بعض بالدور، كل واحد بموصّله وتدريبه، لحد الحد الأقصى للأدوار أو لما يتفقوا، وتقدر توقّف في أي وقت. الأدوار اللي بتفشل بتوقّف النقاش. مفيش حاجة بتتبعت برّه.</p><textarea id="dt" placeholder="موضوع النقاش"></textarea><div class="small" style="margin-top:8px">المشاركون (2 لـ 6):</div>${cn.map((i,k)=>`<label class="small" style="display:block"><input type="checkbox" data-dp="${i}" ${k<3?'checked':''}> ${esc(whoName(i))} · ${esc(AMAP[i].r)} · ${esc(boundConn(i).name)}</label>`).join('')}<div class="row" style="margin-top:8px"><label class="small">أقصى عدد أدوار <select id="dcap"><option>6</option><option selected>10</option><option>16</option><option>20</option></select></label></div><div class="row" style="margin-top:8px"><button class="btn pri" data-act="discgo">ابدأ</button></div>`);return}
+ if(a==='discgo'){discGo();return}
+ if(a==='discstop'){if(DISC){DISC.stop=true;toast('هيقف بعد الدور الحالي')}return}
+ if(a==='prdraft'){prDraft(t.dataset.k);return}
+ if(a==='fbconnect'){fbDoConnect();return}
+ if(a==='fbgoogle'){if(!FBS.ready){toast('اضغط اتصال الأول');return}FBS.au.signInWithPopup(FBS.auth,new FBS.au.GoogleAuthProvider()).catch(e=>{FBS.err='فشل الدخول: '+(e.code||e.message);render()});return}
+ if(a==='fbpass'){if(!FBS.ready){toast('اضغط اتصال الأول');return}FBS.au.signInWithEmailAndPassword(FBS.auth,$('#fbmail').value.trim(),$('#fbpw').value).catch(e=>{FBS.err='فشل الدخول: '+(e.code||e.message);render()});$('#fbpw').value='';return}
+ if(a==='fbout'){if(FBS.ready&&FBS.au)FBS.au.signOut(FBS.auth);fbUnsub();FBS.ready=false;FBS.user=null;FBS.noauth=false;localStorage.removeItem(K.fb);render();toast('اتفصل');return}
+ if(a==='copybridge'){copy(BRIDGE);return}
+ if(a==='fbnoauth'){fbNoAuth();return}
+ if(a==='copyrules0'){copy($('#fbrules0').textContent);return}
+ if(a==='copyrules'){copy($('#fbrules').textContent);return}
+ if(a==='undoimp'){undoImport();return}
+ if(a==='review'){RV={i:0,edit:false};openSheet(reviewHtml());return}
+ if(a==='copyreport'){copy(reportText());return}
+ if(a==='savefeed'){const u=$('#feed').value.trim();if(u&&!/^https:\/\//.test(u)){toast('لازم الرابط يبدأ بـ https://');return}sv(K.feed,{url:u,last:null,err:''});if(u)pollFeed(true);else{toast('اتمسح الرابط');render()}return}
+ if(a==='copystate'){copy(stateOut());return}
+ if(a==='dlstate'){dl('bolatech-office-decisions.json',stateOut(),'application/json');return}
+ if(a==='copyschema'){copy(SCHEMA);return}
+ if(a==='more'){UI.pshow+=60;render();return}
+ if(a==='exportcsv'){const r=filtered();const h=['List','City','Business','Type','Phone','Email','Website','Address','Source','Status','Note'];const q=v=>{v=String(v==null?'':v);if(/^[=+\-@\t\r]/.test(v))v="'"+v;return '"'+v.replace(/"/g,'""')+'"'};dl('prospects-export.csv','\uFEFF'+h.join(',')+'\n'+r.map(({p,k})=>h.map(c=>q(c==='Status'?PST[(PS[k]||{}).s||'new']:c==='Note'?(PS[k]||{}).n:p[c])).join(',')).join('\n'),'text/csv');return}
+ if(a==='reset'){if(confirm('هيتمسح كل اللي على الجهاز ده: المهام والمسودات والعملاء وحالاتهم. متأكد؟')&&confirm('تأكيد أخير: المسح نهائي. اعمل تصدير الأول لو محتاج نسخة.')){Object.values(K).forEach(k=>localStorage.removeItem(k));location.reload()}return}
+});
+document.addEventListener('change',e=>{const t=e.target;
+ if(t.id==='rsel'){UI.room=t.value;render();return}
+ if(t.dataset.bind){const i=t.dataset.bind;C(i).conn=t.value;saveCtl(i);toast(t.value?'اتربط':'رجع للافتراضي');return}
+ if(t.id==='tsel'){trSyncTI();UI.tag=t.value;TD=null;render();return}
+ if(t.dataset.ts){const m=S.tasks.find(x=>x.id===t.dataset.ts);if(m){m.state=t.value;save();render()}return}
+ if(t.dataset.pf){UI.pf[t.dataset.pf]=t.value;UI.pshow=60;render();return}
+ if(t.id==='csvf'&&t.files[0]){const fr=new FileReader();fr.onload=()=>{const rows=parseCSV(String(fr.result));if(!rows.length||!('Business' in rows[0])){toast('الملف مش بصيغة قايمة العملاء (محتاج عمود Business)');return}P=rows;sv(K.pros,P);PS=PS||{};render();toast(`اتحمّل ${rows.length} عميل`)};fr.readAsText(t.files[0],'utf-8');return}
+ if(t.id==='impf'&&t.files[0]){const fr=new FileReader();fr.onload=()=>startImport(String(fr.result),'ملف: '+t.files[0].name);fr.readAsText(t.files[0]);return}
+});
+let qt;document.addEventListener('input',e=>{if(e.target.id==='cin')UI.draft=e.target.value;if(e.target.id==='pq'){clearTimeout(qt);const v=e.target.value;qt=setTimeout(()=>{UI.pf.q=v;UI.pshow=60;render();const el=$('#pq');if(el){el.focus();el.setSelectionRange(v.length,v.length)}},250)}});
+render();
+{const f=ld(K.fb,null);if(f&&f.cfgObj)fbConnect(f.cfgObj,f.email,true,f.noauth)}
+setInterval(()=>pollFeed(false),300000);if(ld(K.feed,{}).url)pollFeed(false);
+setInterval(()=>{tick().catch(()=>{});render0()},20000);
+window.__office={RUN,TR:()=>TR,T,trAct,TD:()=>TD,FBS,members,allMsgs,sendChat,AGENTS:()=>AGENTS,sysPrompt,CTL:()=>CTL,C,tick,runAgent,agStatus,COVN,S:()=>S,P:()=>P,render,setP:r=>{P=r;sv(K.pros,P);render()},doImport};
+})();
+</script>
+</body>
+</html>
