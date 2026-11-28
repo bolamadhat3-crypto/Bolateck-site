@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>إمداد ستيل | هياكل معدنية وجلفنة — العاشر من رمضان</title>
+<meta name="description" content="إمداد ستيل: تصنيع هياكل معدنية وأعمال ألواح وأعمدة إنارة وأبراج اتصالات، وخط جلفنة بطاقة 60 ألف طن سنويًا — العاشر من رمضان.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+:root{--ink:#0b0b0b;--paper:#f4f2ed;--orange:#ff4d00;--mut:#8a8880;--line:#242424}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:Cairo,system-ui,sans-serif;line-height:1.75}
+body.lock{overflow:hidden}
+.mono{font-family:Oswald,sans-serif;letter-spacing:2px;direction:ltr;unicode-bidi:embed;font-size:.7rem}
+.wai{width:15px;height:15px;fill:currentColor;vertical-align:-2px;margin-inline-end:6px}
+.bar{position:fixed;top:0;inset-inline:0;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;z-index:80;background:linear-gradient(rgba(11,11,11,.92),rgba(11,11,11,.55),transparent)}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.mark b{width:32px;height:32px;display:grid;place-items:center;background:var(--orange);color:#0b0b0b;font-family:Oswald;font-weight:600;font-size:1rem}
+.mark span{font-weight:900;font-size:.95rem}
+#burger{width:44px;height:44px;background:none;border:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;gap:6px;cursor:pointer;padding:0}
+#burger i{display:block;height:2px;background:var(--paper);transition:.25s}
+#burger i:first-child{width:26px}
+#burger i:last-child{width:18px}
+#burger.x i:first-child{width:24px;transform:translateY(4px) rotate(45deg)}
+#burger.x i:last-child{width:24px;transform:translateY(-4px) rotate(-45deg)}
+.overlay{position:fixed;inset:0;background:var(--orange);color:#0b0b0b;z-index:70;display:flex;flex-direction:column;justify-content:center;padding:80px 30px 40px;clip-path:inset(0 0 100% 0);transition:clip-path .45s cubic-bezier(.7,0,.3,1)}
+.overlay.on{clip-path:inset(0 0 0 0)}
+.overlay nav{display:flex;flex-direction:column}
+.overlay nav a{font-size:clamp(1.8rem,7vw,3.4rem);font-weight:900;color:#0b0b0b;text-decoration:none;padding:10px 0;border-bottom:2px solid rgba(0,0,0,.18);display:flex;align-items:baseline;gap:14px;letter-spacing:-1px}
+.overlay nav a span{font-family:Oswald;font-size:.7rem;letter-spacing:2px;opacity:.6}
+.overlay nav a:hover{color:#fff}
+.ov-foot{margin-top:34px;display:flex;flex-direction:column;gap:8px;font-weight:700}
+.ov-foot a{color:#0b0b0b;text-decoration:none;font-size:.9rem}
+.poster{min-height:84vh;padding:118px 6vw 54px;display:flex;align-items:center;position:relative;overflow:hidden}
+.side{position:absolute;top:86px;inset-inline-start:6vw;font-family:Oswald;font-size:.58rem;letter-spacing:4px;color:#5a5a56}
+.pgrid{display:grid;grid-template-columns:1.45fr .55fr;gap:46px;width:100%;align-items:end}
+.pcol{display:flex;flex-direction:column;gap:22px;align-items:flex-start;padding-bottom:6px}
+.pmeta{color:#6d6b65;font-size:.58rem;letter-spacing:2px}
+.poster h1{display:flex;flex-direction:column;font-weight:900;line-height:1.0;letter-spacing:-2px;font-size:clamp(2.3rem,6.4vw,5.4rem)}
+.poster h1 span{display:block}
+.w1{color:var(--paper)}
+.w2{color:var(--orange)}
+.w3{color:var(--paper);font-size:.62em;letter-spacing:-1px}
+.w4{color:transparent;-webkit-text-stroke:2px var(--orange)}
+.pl{color:#b6b4ad;font-size:.93rem;line-height:1.8}
+.cta{display:inline-flex;align-items:center;background:var(--orange);color:#0b0b0b;text-decoration:none;font-weight:900;font-size:.9rem;padding:14px 24px;white-space:nowrap}
+.cta:hover{background:#ff6a2b}
+.pnum{position:absolute;bottom:-3vw;inset-inline-start:1vw;font-family:Oswald;font-size:clamp(7rem,20vw,17rem);line-height:.75;color:transparent;-webkit-text-stroke:1px #202020;pointer-events:none;z-index:0}
+.band{background:var(--orange);color:#0b0b0b;padding:34px 6vw;display:flex;align-items:center;gap:34px;flex-wrap:wrap}
+.band .big{font-family:Oswald;font-size:clamp(3rem,9vw,7rem);font-weight:600;line-height:.8;letter-spacing:-3px}
+.band p{max-width:40ch;font-weight:700;font-size:1rem;line-height:1.5}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.nums .st{padding:30px 6vw;border-inline-end:1px solid var(--line)}
+.nums .st:last-child{border:0}
+.nums b{display:block;font-family:Oswald;font-size:clamp(1.6rem,3.4vw,2.8rem);font-weight:500;line-height:1;color:var(--paper)}
+.nums span{font-size:.76rem;color:var(--mut);margin-top:8px;display:block}
+.caps,.hist,.why{padding:70px 6vw}
+.chead{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:26px}
+h2{font-size:clamp(1.5rem,3vw,2.4rem);font-weight:900;letter-spacing:-.5px}
+.chead .mono{color:var(--orange)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;grid-auto-rows:minmax(150px,auto)}
+.tile{background:#141414;border:1px solid var(--line);padding:22px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:.2s}
+.tile:hover{border-color:var(--orange);background:#191919}
+.tile .tn{font-family:Oswald;font-size:1.9rem;color:var(--orange);line-height:1;letter-spacing:-1px}
+.tile h3{font-size:1.05rem;font-weight:900;margin:12px 0 8px}
+.tile p{font-size:.84rem;color:#a3a19a}
+.t-a{grid-column:span 2;grid-row:span 2}
+.t-b{grid-column:span 2}
+.t-c,.t-d{grid-column:span 1}
+.t-e,.t-f{grid-column:span 2}
+.t-a .tn{font-size:3.4rem}
+.t-a h3{font-size:1.5rem}
+.plant{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;padding:70px 6vw;background:var(--paper);color:var(--ink)}
+.plant h2{font-size:clamp(1.4rem,2.6vw,2.1rem)}
+.pt p{margin-top:16px;color:#3a3833;font-size:.95rem}
+.pf{list-style:none;border-top:2px solid var(--ink);align-self:start}
+.pf li{padding:12px 0;border-bottom:1px solid #d8d5cd;font-size:.86rem;color:#3a3833}
+.steps{display:flex;gap:0;overflow-x:auto;padding-bottom:10px}
+.step{flex:1 1 0;min-width:200px;padding:0 20px;border-inline-start:1px solid var(--line)}
+.step:first-child{border:0;padding-inline-start:0}
+.step b{font-family:Oswald;font-size:1.4rem;color:var(--orange);display:block;margin-bottom:6px}
+.step p{font-size:.85rem;color:#a3a19a}
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.wgrid .w{border-top:2px solid var(--orange);padding:18px 16px 0 0}
+.wgrid span{font-family:Oswald;font-size:.7rem;letter-spacing:2px;color:var(--mut)}
+.wgrid h4{font-size:1.05rem;font-weight:900;margin:8px 0 6px}
+.wgrid p{font-size:.85rem;color:#a3a19a}
+.contact{display:grid;grid-template-columns:1.2fr .8fr;background:var(--orange);color:#0b0b0b}
+.cb{padding:56px 6vw}
+.cb h2{font-size:clamp(1.6rem,3.4vw,2.6rem);letter-spacing:-1px}
+.ad{margin-top:14px;font-weight:700;font-size:.95rem;max-width:40ch}
+.hrs{margin-top:8px;font-size:.82rem;opacity:.75}
+.cr{padding:56px 6vw;display:flex;flex-direction:column;gap:12px;justify-content:center;background:#0b0b0b;color:var(--paper)}
+.cr .wa{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:#0b0b0b;text-decoration:none;font-weight:900;padding:15px;font-size:.92rem}
+.cr a.mono{color:#b6b4ad;text-decoration:none;padding:8px 0;border-bottom:1px solid var(--line)}
+.cr a.mono:hover{color:#fff}
+footer{padding:26px 6vw 40px;font-size:.72rem;color:#6d6b65;line-height:1.9}
+footer .demo{color:#8a8880;font-weight:700;margin-top:6px}
+@media(max-width:900px){
+ .poster{min-height:auto;padding:88px 22px 40px}
+ .side{display:none}
+ .pgrid{grid-template-columns:1fr;gap:24px}
+ .poster h1{font-size:clamp(2.1rem,10.5vw,3.2rem);letter-spacing:-1px}
+ .w3{font-size:.6em}
+ .pnum{font-size:8rem;opacity:.4;bottom:-1rem}
+ .cta{width:100%;justify-content:center}
+ .pcol{gap:16px}
+ .band{padding:26px 22px;gap:18px}
+ .band .big{font-size:4rem}
+ .nums{grid-template-columns:repeat(2,1fr)}
+ .nums .st{padding:22px;border-bottom:1px solid var(--line)}
+ .nums .st:nth-child(2n){border-inline-end:0}
+ .caps,.hist,.why,.plant{padding:44px 22px}
+ .bento{grid-template-columns:1fr;grid-auto-rows:auto}
+ .t-a,.t-b,.t-c,.t-d,.t-e,.t-f{grid-column:span 1;grid-row:auto}
+ .t-a .tn{font-size:2.4rem}
+ .plant{grid-template-columns:1fr;gap:26px}
+ .steps{flex-direction:column}
+ .step{border-inline-start:0;border-top:1px solid var(--line);padding:14px 0}
+ .wgrid{grid-template-columns:1fr}
+ .contact{grid-template-columns:1fr}
+ .cb,.cr{padding:34px 22px}
+ footer{padding:22px 22px 34px}
+}
+
+</style>
+</head>
+<body>
+<div class="bar">
+  <a class="mark" href="#top"><b>E</b><span>إمداد ستيل</span></a>
+  <button id="burger" aria-label="القائمة"><i></i><i></i></button>
+</div>
+<div class="overlay" id="overlay">
+  <nav><a href="#caps"><span>01</span>القدرات</a><a href="#galv"><span>02</span>الجلفنة</a><a href="#plant"><span>03</span>المصنع</a><a href="#history"><span>04</span>الرحلة</a><a href="#contact"><span>05</span>تواصل</a></nav>
+  <div class="ov-foot">
+    <a href="https://wa.me/201552436288?text=%D9%85%D8%B3%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AE%D9%8A%D8%B1%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A5%D9%85%D9%83%D8%A7%D9%86%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%B5%D9%86%D9%8A%D8%B9%20%D9%88%D8%A7%D9%84%D8%AC%D9%84%D9%81%D9%86%D8%A9%20%D9%88%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1%20%D8%A7%D9%84%D9%87%D9%8A%D8%A7%D9%83%D9%84%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9."><svg viewBox="0 0 24 24" aria-hidden="true" class="wai"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.55 3.75 1.5 5.28L2 22l5-1.62a9.8 9.8 0 0 0 5.04 1.4c5.44 0 9.84-4.4 9.84-9.84S17.48 2 12.04 2zm5.7 13.9c-.24.68-1.4 1.3-1.94 1.34-.54.05-1.03.24-3.4-.86-2.36-1.1-3.83-3.6-3.95-3.77-.12-.17-.93-1.3-.9-2.45.03-1.15.65-1.7.88-1.94.23-.24.5-.3.67-.3h.48c.16 0 .37-.03.57.44.2.48.7 1.72.76 1.84.06.12.1.26.02.42-.08.16-.15.26-.3.42-.14.15-.3.34-.43.46-.14.14-.29.29-.13.57.16.28.72 1.2 1.55 1.94 1.06.94 1.72 1.1 1.99 1.22.2.09.42.07.57-.09.16-.17.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.8.85.26.13.44.2.5.3.06.11.06.63-.18 1.3z"/></svg> واتساب المبيعات</a>
+    <span class="mono">+20 155 243 6288</span>
+  </div>
+</div>
+
+<main id="top">
+  <header class="poster">
+    <p class="side">STEEL FABRICATION · GALVANIZING · 10TH OF RAMADAN</p>
+    <div class="pgrid">
+      <h1><span class="w1">هياكل</span><span class="w2">معدنية</span><span class="w3">وأعمال ألواح</span><span class="w4">وجلفنة</span></h1>
+      <div class="pcol">
+        <p class="pl">إمداد ستيل: ذراع التصنيع في مجموعة إمداد، من أول مصنع في العاشر من رمضان 2012 لحد 80,000 متر مربع تشغيل، وخط جلفنة بالغمس الساخن بطاقة 60 ألف طن في السنة — هياكل، ألواح، أعمدة إنارة، وأبراج اتصالات.</p>
+        <a class="cta" href="https://wa.me/201552436288?text=%D9%85%D8%B3%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AE%D9%8A%D8%B1%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A5%D9%85%D9%83%D8%A7%D9%86%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%B5%D9%86%D9%8A%D8%B9%20%D9%88%D8%A7%D9%84%D8%AC%D9%84%D9%81%D9%86%D8%A9%20%D9%88%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1%20%D8%A7%D9%84%D9%87%D9%8A%D8%A7%D9%83%D9%84%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9."><svg viewBox="0 0 24 24" aria-hidden="true" class="wai"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.55 3.75 1.5 5.28L2 22l5-1.62a9.8 9.8 0 0 0 5.04 1.4c5.44 0 9.84-4.4 9.84-9.84S17.48 2 12.04 2zm5.7 13.9c-.24.68-1.4 1.3-1.94 1.34-.54.05-1.03.24-3.4-.86-2.36-1.1-3.83-3.6-3.95-3.77-.12-.17-.93-1.3-.9-2.45.03-1.15.65-1.7.88-1.94.23-.24.5-.3.67-.3h.48c.16 0 .37-.03.57.44.2.48.7 1.72.76 1.84.06.12.1.26.02.42-.08.16-.15.26-.3.42-.14.15-.3.34-.43.46-.14.14-.29.29-.13.57.16.28.72 1.2 1.55 1.94 1.06.94 1.72 1.1 1.99 1.22.2.09.42.07.57-.09.16-.17.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.8.85.26.13.44.2.5.3.06.11.06.63-.18 1.3z"/></svg> اطلب عرض سعر</a>
+        <p class="pmeta mono">60K T / YEAR · 80,000 M² · SINCE 2012</p>
+      </div>
+    </div>
+    <div class="pnum">60K</div>
+  </header>
+
+  <section class="band" id="galv">
+    <span class="big">60K</span>
+    <p>طن جلفنة بالغمس الساخن في السنة — على خط بمساحة 50,000 متر مربع</p>
+  </section>
+
+  <section class="nums">
+    <div class="st"><b>24K</b><span>طن هياكل معدنية سنويًا</span></div>
+<div class="st"><b>18K</b><span>طن أعمال ألواح سنويًا</span></div>
+<div class="st"><b>10K</b><span>طن أعمدة إنارة سنويًا</span></div>
+<div class="st"><b>12K</b><span>طن أبراج اتصالات سنويًا</span></div>
+  </section>
+
+  <section class="caps" id="caps">
+    <div class="chead"><h2>قدرات التصنيع</h2><span class="mono">CAPABILITIES</span></div>
+    <div class="bento"><article class="tile t-a"><span class="tn">24K</span><h3>هياكل معدنية</h3><p>تصنيع هياكل الصلب للمصانع والمنشآت الصناعية بطاقة 24 ألف طن في السنة.</p></article>
+<article class="tile t-b"><span class="tn">18K</span><h3>أعمال ألواح (Plate Work)</h3><p>تقطيع وتشكيل ولحام ألواح الصلب — 18 ألف طن سنويًا — لمعدات وخطوط الإنتاج.</p></article>
+<article class="tile t-c"><span class="tn">10K</span><h3>أعمدة إنارة وأبراج</h3><p>أعمدة إنارة وصراريح 10 آلاف طن، وأبراج نقل واتصالات 12 ألف طن سنويًا.</p></article>
+<article class="tile t-d"><span class="tn">12K</span><h3>جلفنة بالغمس الساخن</h3><p>خط جلفنة على مساحة 50,000 متر مربع بطاقة 60 ألف طن في السنة لحماية الصلب من الصدأ.</p></article>
+<article class="tile t-e"><span class="tn">7K</span><h3>مواسير ومقاطع HF-Tube</h3><p>مصنع HF-Tube على 7,000 متر مربع لإنتاج المقاطع المجوفة والمواسير بطاقة 7 آلاف طن سنويًا.</p></article>
+<article class="tile t-f"><span class="tn">60K</span><h3>مخزون مواد خام</h3><p>المجموعة بتبدأ من التجارة: 60 ألف طن مخزون مواد خام متاحة، وده اللي بيثبّت المواعيد والأسعار.</p></article></div>
+  </section>
+
+  <section class="plant" id="plant">
+    <div class="pt">
+      <h2>من تجارة الصلب… لتصنيع متكامل</h2>
+      <p>مجموعة إمداد بدأت 2002 كحل متكامل لتجارة الصلب من خلال الذراع التجاري (الثالثة ستيل، برايم ستيل، فيجن ستيل)، ووصلت لأكبر مخزون مواد خام في مصر بـ 60 ألف طن متاحة. الرحلة الصناعية بدأت 2012 بأول مصنع في العاشر من رمضان على 80,000 متر مربع، وبعدها اتضاف خط الجلفنة على 50,000 متر مربع.</p>
+    </div>
+    <ul class="pf"><li>80,000 متر مربع مساحة تشغيل التصنيع في العاشر من رمضان</li>
+<li>خط جلفنة بالغمس الساخن بطاقة 60 ألف طن سنويًا</li>
+<li>60 ألف طن مخزون مواد خام من الذراع التجاري</li>
+<li>الموقع: بلوك 161، المنطقة الصناعية A4، العاشر من رمضان</li></ul>
+  </section>
+
+  <section class="hist" id="history">
+    <div class="chead"><h2>الرحلة</h2><span class="mono">SINCE 2002</span></div>
+    <div class="steps"><div class="step"><b>2002</b><p>بداية مجموعة إمداد بذراع تجارة الصلب (الثالثة ستيل) بمخزون 60 ألف طن مواد خام.</p></div>
+<div class="step"><b>2004</b><p>إضافة برايم ستيل كشركة تجارة صلب ثانية في المجموعة.</p></div>
+<div class="step"><b>2012</b><p>أول مصنع تصنيع في العاشر من رمضان على 80,000 متر مربع، ومصنع HF-Tube على 7,000 متر مربع.</p></div>
+<div class="step"><b>الآن</b><p>خط جلفنة على 50,000 متر مربع، وطاقات سنوية: 24 ألف طن هياكل و18 ألف طن ألواح و10 آلاف أعمدة و12 ألف طن أبراج.</p></div></div>
+  </section>
+
+  <section class="why">
+    <div class="chead"><h2>ليه المقاولين والمصانع بتتعامل مع إمداد</h2><span class="mono">WHY EMDAD</span></div>
+    <div class="wgrid"><div class="w"><span>01</span><h4>مادة خام جاهزة</h4><p>مخزون 60 ألف طن في المجموعة معناه إن المشروع مش بيقف مستني توريد صلب.</p></div>
+<div class="w"><span>02</span><h4>تصنيع وجلفنة في مكان واحد</h4><p>الهيكل بيتصنّع ويتجلفن قبل ما يخرج، فمفيش نقل زيادة ولا انتظار عند ورشة تانية.</p></div>
+<div class="w"><span>03</span><h4>طاقات كبيرة</h4><p>أرقام سنوية بآلاف الأطنان تناسب المشروعات الكبيرة والدفعات المتكررة.</p></div></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cb">
+      <h2>اطلب عرض سعر لمشروعك</h2>
+      <p class="ad">بلوك 161، المنطقة الصناعية A4، العاشر من رمضان، الشرقية</p>
+      <p class="hrs">الأحد – الخميس، 7:30 ص – 4:30 م</p>
+    </div>
+    <div class="cr">
+      <a class="wa" href="https://wa.me/201552436288?text=%D9%85%D8%B3%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AE%D9%8A%D8%B1%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A5%D9%85%D9%83%D8%A7%D9%86%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%B5%D9%86%D9%8A%D8%B9%20%D9%88%D8%A7%D9%84%D8%AC%D9%84%D9%81%D9%86%D8%A9%20%D9%88%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1%20%D8%A7%D9%84%D9%87%D9%8A%D8%A7%D9%83%D9%84%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9."><svg viewBox="0 0 24 24" aria-hidden="true" class="wai"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.55 3.75 1.5 5.28L2 22l5-1.62a9.8 9.8 0 0 0 5.04 1.4c5.44 0 9.84-4.4 9.84-9.84S17.48 2 12.04 2zm5.7 13.9c-.24.68-1.4 1.3-1.94 1.34-.54.05-1.03.24-3.4-.86-2.36-1.1-3.83-3.6-3.95-3.77-.12-.17-.93-1.3-.9-2.45.03-1.15.65-1.7.88-1.94.23-.24.5-.3.67-.3h.48c.16 0 .37-.03.57.44.2.48.7 1.72.76 1.84.06.12.1.26.02.42-.08.16-.15.26-.3.42-.14.15-.3.34-.43.46-.14.14-.29.29-.13.57.16.28.72 1.2 1.55 1.94 1.06.94 1.72 1.1 1.99 1.22.2.09.42.07.57-.09.16-.17.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.8.85.26.13.44.2.5.3.06.11.06.63-.18 1.3z"/></svg> واتساب</a>
+      <a class="mono" href="tel:+20 155 243 6288">+20 155 243 6288</a>
+      <a class="mono" href="mailto:sales@emdadsteel.com">sales@emdadsteel.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>الصفحة دي اتعملت من المعلومات المنشورة على موقع إمداد ستيل الرسمي (التعريف، القدرات الإنتاجية، وصفحة التواصل).</p>
+    <p class="demo">نسخة عرض (Demo) اتعملت بواسطة Bolatech — مش الموقع الرسمي، وبتتنشر بموافقة الشركة.</p>
+  </footer>
+</main>
+<script>
+var btn=document.getElementById('burger'),ov=document.getElementById('overlay');
+function t(){ov.classList.toggle('on');document.body.classList.toggle('lock');btn.classList.toggle('x');}
+btn.addEventListener('click',t);
+ov.querySelectorAll('a').forEach(function(a){a.addEventListener('click',t);});
+</script>
+</body>
+</html>
